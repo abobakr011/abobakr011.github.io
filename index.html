@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>موقعي - وقتي</title>
+
+  <!-- ✅ كود التحقق من ExoClick -->
+  <meta name="6a97888e-site-verification" content="1d18948da3f18c46d7874cc6f3ce9ff1">
+
+  <!-- ✅ أيقونة الموقع -->
+  <link rel="icon" href="favicon.ico">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 1rem;
+    }
+    .logo {
+      width: 100px;
+      height: auto;
+    }
+    .tasks {
+      margin: 2rem auto;
+      max-width: 600px;
+      text-align: right;
+    }
+    .task {
+      background: white;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <!-- ✅ شعار الموقع -->
+  <header>
+    <img src="logo2.jpg" alt="شعار موقعي" class="logo">
+    <h1>مرحباً بك في موقع وقتي</h1>
+  </header>
+
+  <!-- ✅ قسم المهام اليومية -->
+  <div class="tasks">
+    <div class="task">
+      <h3>🕒 أضف مهمة جديدة حسب الوقت</h3>
+      <input type="time" id="taskTime">
+      <input type="text" id="taskText" placeholder="اكتب المهمة">
+      <button onclick="addTask()">إضافة</button>
+      <ul id="taskList"></ul>
+    </div>
+  </div>
+
+  <!-- ✅ كود المهام -->
+  <script>
+    function addTask() {
+      const time = document.getElementById("taskTime").value;
+      const text = document.getElementById("taskText").value;
+      if (time && text) {
+        const li = document.createElement("li");
+        li.textContent = time + " - " + text;
+        document.getElementById("taskList").appendChild(li);
+        document.getElementById("taskText").value = "";
+      }
+    }
+  </script>
+</body>
+</html>
