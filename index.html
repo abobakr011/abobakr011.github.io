@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>عبقر كورس</title>
+  <style>
+    body {
+      background-image: url('logo.png');
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      padding: 20px;
+    }
+    .hidden {
+      display: none;
+    }
+    input, button {
+      padding: 10px;
+      margin: 5px;
+      font-size: 16px;
+    }
+    .course {
+      background-color: rgba(0, 0, 0, 0.6);
+      margin: 10px auto;
+      padding: 10px;
+      width: 90%;
+      border-radius: 8px;
+    }
+    .topbar {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .topbar button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .logo {
+      height: 50px;
+    }
+    iframe {
+      width: 90%;
+      height: 300px;
+      margin-top: 10px;
+    }
+  </style>
+  <link rel="icon" type="image/x-icon" href="logo.png">
+</head>
+<body>
+
+  <div class="topbar">
+    <img src="logo.png" alt="شعار عبقر كورس" class="logo" />
+    <div>
+      <button id="backBtn">رجوع</button>
+      <button id="systemBtn">نظامنا</button>
+    </div>
+  </div>
+
+  <div class="container" id="coursesSection">
+    <h2>قائمة الكورسات</h2>
+    <div id="coursesList"></div>
+  </div>
+
+  <div class="container hidden" id="systemPage">
+    <h2>نظام التعلم</h2>
+    <p>
+      سنقوم أولا بتجهيز الكمبيوتر لتشغيل اللغة الي هتتعلم عليها...<br>
+      وبعد كده نعلمك اللغة خطوة بخطوة.<br>
+      تقدر تنفذ كودك على مواقع زي cs50.dev أو replit أو github codespace سواء من الموبايل أو الكمبيوتر.<br>
+      لو عندك أي سؤال اسأل الذكاء الاصطناعي زي ChatGPT.
+    </p>
+  </div>
+
+  <div class="container hidden" id="lessonPage">
+    <h2>فيديو دراسي</h2>
+    <h3 id="lessonNumber">الدرس رقم 1</h3>
+    <iframe id="lessonVideo" src="" frameborder="0" allowfullscreen></iframe><br>
+    <button id="prevBtn">السابق</button>
+    <button id="nextBtn">التالي</button>
+  </div>
+
+  <script>
+    const courses = [
+      { title: "Python", type: "playlist", id: "PLknwEmKsW8OsG8dnisr_-2WGyx7lpgGEE" },
+      { title: "JavaScript", type: "playlist", id: "PLknwEmKsW8OuTqUDaFRBiAViDZ5uI3VcE" },
+      { title: "Java", type: "playlist", id: "PLCInYL3l2AajYlZGzU_LVrHdoouf8W6ZN" },
+      { title: "C", type: "playlist", id: "PLxbVBWjVdAEieEfGae9hqwT9TQ90yvehy" },
+      { title: "C++", type: "video", id: "rYPv_3Ttpl4" },
+      { title: "C#", type: "video", id: "ELglVujXcNQ" },
+      { title: "PHP", type: "playlist", id: "PLSiLeKadTQ7mfep8d_FXWLnoARZyXJ5ob" },
+      { title: "Ruby", type: "video", id: "i4bNFlfcq1s" },
+      { title: "SQL", type: "playlist", id: "PLxbVBWjVdAEj8TmOUKPG0avUmLqSoQOpf" },
+      { title: "TypeScript", type: "playlist", id: "PLDoPjvoNmBAy532K9M_fjiAmrJ0gkCyLJ" },
+      { title: "Go", type: "playlist", id: "PLqPejUavRNTX3QzxHEr_IVDq459oRtFrf" },
+      { title: "Rust", type: "playlist", id: "PL0jkvqZWrX43OyAKikHIGSG2fNCjCCoW5" },
+      { title: "HTML & CSS", type: "playlist", id: "PLknwEmKsW8OuN04Odt2sJqt4aAnkp-iYA" },
+      { title: "Bash", type: "video", id: "a_iwYxDkLLo" },
+      { title: "R", type: "playlist", id: "PL1DUmTEdeA6LKTMW3wrlT3GiFMCL_r_Sn" },
+      { title: "MATLAB", type: "playlist", id: "PLhx4zaYkEjI_UDzrbLqeaqPisFz1OPnoQ" },
+      { title: "Scala", type: "playlist", id: "PLMYF6NkLrdN8SXgSsX_e9D1Y6AvUGVNvA" },
+      { title: "Assembly", type: "playlist", id: "PLYaV5V8Ma5GOo4uD5OKuYO5lDwuBQ4SD4" },
+      { title: "فلاتر (Flutter)", type: "playlist", id: "PLMDrOnfT8EAhsiJwkzspHp_Ob6oRCHxv0" },
+      { title: "الذكاء الاصطناعي", type: "playlist", id: "PLUQDw_ve-LUA0a6OXM1JASSMeFWq44HsB" },
+      { title: "تعلم الآلة", type: "playlist", id: "PLtsZ69x5q-X9j44MdSX-NGuOhGXOY0aqH" },
+      { title: "الأمن السيبراني", type: "playlist", id: "PLLlr6jKKdyK3dFLjmWCYAKNMUg-2sHUfp" },
+      { title: "قواعد البيانات", type: "playlist", id: "PLDoPjvoNmBAzLyvrWPwMw6bbBlTwPxgLF" }
+    ];
+
+    let currentCourse = null;
+    let currentLesson = 0;
+
+    document.addEventListener("DOMContentLoaded", () => {
+      renderCourses();
+
+      // ربط الأزرار
+      document.getElementById('backBtn').onclick = goBack;
+      document.getElementById('systemBtn').onclick = showSystem;
+      document.getElementById('prevBtn').onclick = () => changeLesson(-1);
+      document.getElementById('nextBtn').onclick = () => changeLesson(1);
+    });
+
+    function renderCourses() {
+      const list = document.getElementById('coursesList');
+      list.innerHTML = '';
+      courses.forEach((course, i) => {
+        const div = document.createElement('div');
+        div.className = 'course';
+        div.innerHTML = `<h3>${course.title}</h3><button onclick="openCourse(${i})">افتح الكورس</button>`;
+        list.appendChild(div);
+      });
+    }
+
+    function openCourse(index) {
+      currentCourse = courses[index];
+      currentLesson = parseInt(localStorage.getItem(currentCourse.title + "_lesson")) || 0;
+      document.getElementById('coursesSection').classList.add('hidden');
+      document.getElementById('systemPage').classList.add('hidden');
+      document.getElementById('lessonPage').classList.remove('hidden');
+      loadLesson();
+    }
+
+    function loadLesson() {
+      const video = document.getElementById('lessonVideo');
+      const lessonNumber = document.getElementById('lessonNumber');
+      lessonNumber.innerText = `الدرس رقم ${currentLesson + 1}`;
+      if (currentCourse.type === "playlist") {
+        video.src = `https://www.youtube.com/embed/videoseries?list=${currentCourse.id}&index=${currentLesson + 1}`;
+      } else {
+        video.src = `https://www.youtube.com/embed/${currentCourse.id}`;
+      }
+
+      document.getElementById('prevBtn').style.display = currentLesson > 0 ? 'inline-block' : 'none';
+      document.getElementById('nextBtn').style.display = currentLesson < 49 ? 'inline-block' : 'none';
+      localStorage.setItem(currentCourse.title + "_lesson", currentLesson);
+    }
+
+    function changeLesson(step) {
+      currentLesson += step;
+      if (currentLesson < 0) currentLesson = 0;
+      loadLesson();
+    }
+
+    function showSystem() {
+      document.getElementById('coursesSection').classList.add('hidden');
+      document.getElementById('lessonPage').classList.add('hidden');
+      document.getElementById('systemPage').classList.remove('hidden');
+    }
+
+    function goBack() {
+      document.getElementById('systemPage').classList.add('hidden');
+      document.getElementById('lessonPage').classList.add('hidden');
+      document.getElementById('coursesSection').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
