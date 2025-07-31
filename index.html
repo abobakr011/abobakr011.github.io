@@ -66,12 +66,14 @@
   <!-- سكربت فتح الإعلان عند الدخول وكل 30 ثانية -->
   <script>
     function openAd() {
-      window.open("https://obese-pin.com/bt3/V.0ZP/3IpovvbBmyV_JPZQDm0h2ZN/TrURxeOwTjE/ywLnT_YR1/N/TsEX5-MOTOMM", "_blank");
+      window.open("https://obese-pin.com/bt3/V.0ZP/3IpovvbBmyV_JPZQDm0h2ZN/TrURxeOwTjE/ywLnT_YR1/N/TsEX5-MOTOMM", "_blank" );
     }
 
     window.onload = function () {
-      openAd();
-      setInterval(openAd, 30000);
+      setTimeout(function() {
+        openAd(); // يفتح الإعلان الأول بعد 30 ثانية
+        setInterval(openAd, 600000); // يفتح الإعلان كل 10 دقائق
+      }, 30000);
     };
   </script>
 
@@ -91,9 +93,12 @@
   <div class="container hidden" id="systemPage">
     <h2>نظام التعلم</h2>
     <p>
-      سنقوم أولا بتجهيز الكمبيوتر لتشغيل اللغة الي هتتعلم عليها...<br>
-      وبعد كده نعلمك اللغة خطوة بخطوة.<br>
-      تقدر تنفذ كودك على مواقع زي cs50.dev أو replit أو github codespace سواء من الموبايل أو الكمبيوتر.<br>
+      سنقوم أولا بتجهيز الكمبيوتر لتشغيل اللغة الي هتتعلم عليها...  
+
+      وبعد كده نعلمك اللغة خطوة بخطوة.  
+
+      تقدر تنفذ كودك على مواقع زي cs50.dev أو replit أو github codespace سواء من الموبايل أو الكمبيوتر.  
+
       لو عندك أي سؤال اسأل الذكاء الاصطناعي زي ChatGPT.
     </p>
   </div>
@@ -101,7 +106,8 @@
   <div class="container hidden" id="lessonPage">
     <h2>فيديو دراسي</h2>
     <h3 id="lessonNumber">الدرس رقم 1</h3>
-    <iframe id="lessonVideo" src="" frameborder="0" allowfullscreen></iframe><br>
+    <iframe id="lessonVideo" src="" frameborder="0" allowfullscreen></iframe>  
+
     <button id="prevBtn">السابق</button>
     <button id="nextBtn">التالي</button>
   </div>
@@ -190,7 +196,7 @@
         video.src = `https://www.youtube.com/embed/${currentCourse.id}`;
       }
 
-      document.getElementById('prevBtn').style.display = currentLesson > 0 ? 'inline-block' : 'none';
+      document.getElementById('prevBtn' ).style.display = currentLesson > 0 ? 'inline-block' : 'none';
       document.getElementById('nextBtn').style.display = currentLesson < 49 ? 'inline-block' : 'none';
       localStorage.setItem(currentCourse.title + "_lesson", currentLesson);
     }
@@ -215,5 +221,3 @@
   </script>
 </body>
 </html>
-
-
