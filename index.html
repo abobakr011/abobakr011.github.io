@@ -63,17 +63,17 @@
 
 
 
-  <!-- سكربت فتح الإعلان عند الدخول وكل 30 ثانية -->
+  <!-- سكربت فتح الإعلان عند الدخول وكل 10 دقائق -->
   <script>
     function openAd() {
       window.open("https://obese-pin.com/bt3/V.0ZP/3IpovvbBmyV_JPZQDm0h2ZN/TrURxeOwTjE/ywLnT_YR1/N/TsEX5-MOTOMM", "_blank" );
     }
 
     window.onload = function () {
-      setTimeout(function() {
-        openAd(); // يفتح الإعلان الأول بعد 30 ثانية
-        setInterval(openAd, 600000); // يفتح الإعلان كل 10 دقائق
-      }, 30000);
+      // يفتح الإعلان الأول فور تحميل الصفحة
+      openAd(); 
+      // ثم يفتح الإعلان كل 10 دقائق
+      setInterval(openAd, 600000); 
     };
   </script>
 
