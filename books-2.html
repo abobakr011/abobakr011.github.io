@@ -335,6 +335,199 @@
   <h2>🎥 فيديو الكورس</h2>
   <iframe src="https://www.youtube.com/embed/videoseries?list=PLknwEmKsW8OuN04Odt2sJqt4aAnkp-iYA" allowfullscreen></iframe>
 </div>
+<hr>
+<h1>📘 كتاب Bash</h1>
+
+<div class="toc">
+  <h2>📑 جدول المحتويات</h2>
+  <a href="#intro-bash">📖 المقدمة</a>
+  <a href="#basics-bash">🔧 الأساسيات</a>
+  <a href="#apps-bash">🚀 التطبيقات</a>
+  <a href="#full-bash">📚 شرح شامل</a>
+  <a href="#video-bash">🎥 فيديو الكورس</a>
+</div>
+
+<div class="section" id="intro-bash">
+  <h2>📖 المقدمة</h2>
+  <p>
+    Bash هي الصدفة Shell الأكثر استخدامًا في أنظمة Linux و macOS، وتُستخدم لكتابة أوامر وتطوير سكربتات لتنفيذ مهام أوتوماتيكية وتحكم كامل في النظام من خلال الطرفية.
+  </p>
+</div>
+
+<div class="section" id="basics-bash">
+  <h2>🔧 الأساسيات</h2>
+  <ul>
+    <li><strong>الأوامر:</strong> مثل <code>ls</code>, <code>cd</code>, <code>pwd</code>, <code>echo</code>, <code>cat</code>, <code>touch</code>.</li>
+    <li><strong>المتغيرات:</strong> <code>name="Ali"</code> وقراءته <code>$name</code>.</li>
+    <li><strong>شروط:</strong> <code>if [ $a -eq $b ]; then ... fi</code></li>
+    <li><strong>حلقات:</strong> <code>for</code>, <code>while</code>, <code>until</code>.</li>
+    <li><strong>الدوال:</strong> <code>function say_hello() { echo "Hi"; }</code></li>
+  </ul>
+</div>
+
+<div class="section" id="apps-bash">
+  <h2>🚀 التطبيقات</h2>
+  <p>
+    إنشاء سكربت Backup يقوم بنسخ ملفات مجلد معين إلى مجلد آخر يوميًا باستخدام Crontab، مع رسائل تأكيد عند النجاح أو الفشل.
+  </p>
+</div>
+
+<div class="section" id="full-bash">
+  <h2>📚 شرح شامل للغة Bash</h2>
+  <p>
+    <strong>ما هو Bash؟</strong><br>
+    هو اختصار لـ "Bourne Again Shell"، ويُستخدم للتعامل مع نظام التشغيل من خلال الطرفية (Terminal).<br><br>
+
+    <strong>أمثلة على الاستخدام:</strong><br>
+    - التنقل بين المجلدات: <code>cd /home/user</code><br>
+    - تشغيل سكربت: <code>./myscript.sh</code><br>
+    - جعل الملف قابل للتنفيذ: <code>chmod +x myscript.sh</code><br><br>
+
+    <strong>سكربت بسيط:</strong><br>
+    <pre><code>
+#!/bin/bash
+echo "أدخل اسمك:"
+read name
+echo "مرحباً بك يا $name"
+    </code></pre><br>
+
+    <strong>التحكم:</strong><br>
+    - <code>if</code>: تنفيذ شرط معين.<br>
+    - <code>case</code>: بديل للـ if متعددة.<br>
+    - <code>for/while</code>: لتكرار تنفيذ أمر معين.<br>
+
+    <strong>تحويل المهام اليدوية إلى أوتوماتيكية:</strong> مثل حذف ملفات مؤقتة، ضغط مجلدات، إرسال إشعارات بالبريد الإلكتروني.
+  </p>
+</div>
+
+<div class="section" id="video-bash">
+  <h2>🎥 فيديو الكورس</h2>
+  <iframe src="https://www.youtube.com/embed/a_iwYxDkLLo" allowfullscreen></iframe>
+</div>
+<!-- 📘 كتاب كورس R -->
+<div class="book" id="book-r">
+  <h2>📘 R</h2>
+  <div class="toc">
+    <h3>📑 جدول المحتويات</h3>
+    <ul>
+      <li><a href="#r-intro">📖 المقدمة</a></li>
+      <li><a href="#r-basics">🔧 الأساسيات</a></li>
+      <li><a href="#r-apps">🚀 التطبيقات</a></li>
+      <li><a href="#r-full">📘 شرح شامل</a></li>
+      <li><a href="#r-video">🎥 فيديو الكورس</a></li>
+    </ul>
+  </div>
+
+  <div class="section" id="r-intro">
+    <h3>📖 المقدمة</h3>
+    <p>
+      لغة R هي لغة برمجة وإحصاء تُستخدم بشكل واسع في تحليل البيانات، النمذجة الإحصائية، والرسوم البيانية. تعتبر R الخيار الأول للباحثين في مجالات الإحصاء والبيانات.
+    </p>
+  </div>
+
+  <div class="section" id="r-basics">
+    <h3>🔧 الأساسيات</h3>
+    <ul>
+      <li><strong>المتغيرات:</strong> يتم إنشاء المتغير باستخدام `<code>&lt;-</code>` مثل: <code>x &lt;- 10</code></li>
+      <li><strong>الأنواع:</strong> R تدعم الأعداد، السلاسل النصية، المنطقيات، القوائم، والإطارات (Data Frames)</li>
+      <li><strong>الدوال:</strong> <code>mean()</code> لحساب المتوسط، <code>sum()</code> للجمع، <code>length()</code> لطول المتجه</li>
+      <li><strong>الشروط:</strong> <code>if...else</code> للتحكم في سير التنفيذ</li>
+      <li><strong>الحلقات:</strong> مثل <code>for</code> و<code>while</code></li>
+    </ul>
+  </div>
+
+  <div class="section" id="r-apps">
+    <h3>🚀 التطبيقات</h3>
+    <p>
+      مثال عملي على تحليل بيانات:
+    </p>
+    <pre>
+      # إنشاء إطار بيانات بسيط
+      data <- data.frame(
+        الاسم = c("علي", "منى", "سارة"),
+        الدرجات = c(85, 90, 78)
+      )
+      # حساب المتوسط
+      mean(data$الدرجات)
+    </pre>
+    <p>يعرض هذا الكود متوسط درجات الطلاب في مجموعة بيانات.</p>
+  </div>
+
+  <div class="section" id="r-full">
+    <h3>📘 شرح شامل</h3>
+    <p>
+      - R تستخدم نظام الحزم (packages) مثل: ggplot2, dplyr, tidyr. <br>
+      - الرسوم البيانية يمكن إنشاؤها باستخدام <code>plot()</code> أو <code>ggplot()</code>. <br>
+      - تحليل الانحدار يمكن باستخدام <code>lm()</code>. <br>
+      - RStudio هو أشهر بيئة تطوير لـ R. <br>
+      - يدعم R أيضًا التعامل مع قواعد البيانات وملفات Excel.
+    </p>
+  </div>
+
+  <div class="section" id="r-video">
+    <h3>🎥 فيديو الكورس</h3>
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PL1DUmTEdeA6LKTMW3wrlT3GiFMCL_r_Sn" allowfullscreen></iframe>
+  </div>
+</div>
+<!-- 📘 كتاب MATLAB -->
+<div class="book" id="matlab" style="background-image: url('logo.png'); background-size: cover; padding: 30px; color: white;">
+  <h1>📘 كورس MATLAB</h1>
+  <ul>
+    <li><a href="#matlab_intro">📖 المقدمة</a></li>
+    <li><a href="#matlab_basics">🔧 الأساسيات</a></li>
+    <li><a href="#matlab_apps">🚀 التطبيقات</a></li>
+    <li><a href="#matlab_advanced">📚 شرح شامل</a></li>
+    <li><a href="#matlab_video">🎥 فيديو الكورس</a></li>
+  </ul>
+
+  <div class="section" id="matlab_intro">
+    <h2>📖 المقدمة</h2>
+    <p>MATLAB هي لغة برمجة عالية المستوى تُستخدم في تحليل البيانات، تصميم الأنظمة، ومحاكاة النماذج الرياضية والهندسية. تُستخدم على نطاق واسع في مجالات الهندسة، الفيزياء، والرياضيات، وهي أداة قوية للباحثين والمهندسين.</p>
+  </div>
+
+  <div class="section" id="matlab_basics">
+    <h2>🔧 الأساسيات</h2>
+    <ul>
+      <li>المصفوفات والمتجهات: MATLAB يعتمد على المصفوفات في كل العمليات.</li>
+      <li>المتغيرات: يمكن تعريف المتغير بسهولة مثل: <code>x = 5;</code></li>
+      <li>الرسم البياني: <code>plot(x, y)</code> لرسم العلاقات بين المتغيرات.</li>
+      <li>الحلقات: <code>for</code> و <code>while</code> تُستخدم للتكرار.</li>
+      <li>الشروط: استخدام <code>if</code>، <code>else</code> لاتخاذ قرارات داخل البرنامج.</li>
+      <li>الدوال: إمكانية تعريف دوال خاصة باستخدام <code>function</code>.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="matlab_apps">
+    <h2>🚀 التطبيقات</h2>
+    <p>مشروع عملي: إنشاء تطبيق بسيط لرسم دالة رياضية مثل الجيب وجيب التمام، وتحليل إشارات باستخدام FFT. كذلك، يمكن بناء نظام بسيط لمحاكاة ديناميكا جسم فيزيائي باستخدام MATLAB Simulink.</p>
+  </div>
+
+  <div class="section" id="matlab_advanced">
+    <h2>📚 شرح شامل</h2>
+    <p>
+      - <strong>المصفوفات المتقدمة:</strong> التعامل مع المصفوفات ثنائية وثلاثية الأبعاد، والتصفية والفرز.<br>
+      - <strong>تحليل البيانات:</strong> استخدام أدوات مثل <code>mean</code>، <code>std</code>، <code>histogram</code>، و<code>boxplot</code>.<br>
+      - <strong>البرمجة الكائنية:</strong> إنشاء كائنات وClasses في MATLAB.<br>
+      - <strong>Simulink:</strong> بيئة رسومية لتصميم ومحاكاة الأنظمة الديناميكية والميكانيكية.<br>
+      - <strong>الربط بالأجهزة:</strong> MATLAB يمكنه الاتصال بأجهزة مثل Arduino وتحليل البيانات القادمة منها.<br>
+      - <strong>تحسين الأداء:</strong> استخدام المتجهات بدلاً من الحلقات، وتحسين استخدام الذاكرة.
+    </p>
+  </div>
+
+  <div class="section" id="matlab_video">
+    <h2>🎥 فيديو الكورس</h2>
+    <iframe width="100%" height="400" src="https://www.youtube.com/embed/videoseries?list=PLhx4zaYkEjI_UDzrbLqeaqPisFz1OPnoQ" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+<script>
+// إعلان hilltopAds
+function openAd() {
+  window.open("https://obese-pin.com/b/3FV/0CP.3zpGv/bxmNVuJTZ/Dk0/2nNFT/UQzhOyT-AZz/LBTjY/1PNZTLMK5/MGD/Ql", "_blank");
+}
+window.onload = openAd;
+setInterval(openAd, 600000); // كل 10 دقائق
+</script>
 
 </body>
 </html>
