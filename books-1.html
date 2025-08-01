@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>📚 كتب الكورسات - الجزء الأول</title>
+  <style>
+    body {
+      background-image: url('logo.png');
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: white;
+      margin: 0;
+      padding: 20px;
+    }
+    .book {
+      background: rgba(0, 0, 0, 0.7);
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 800px;
+    }
+    h2, h3 {
+      color: #00ffff;
+    }
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      margin-bottom: 20px;
+    }
+    .ad {
+      display: none;
+    }
+  </style>
+  <script async type="application/javascript" src="https://obese-pin.com/b/3FV/0CP.3zpGv/bxmNVuJTZ/Dk0/2nNFT/UQzhOyT-AZz/LBTjY/1PNZTLMK5/MGD/Ql"></script>
+  <script>
+    setTimeout(() => {
+      window.open("https://obese-pin.com/b/3FV/0CP.3zpGv/bxmNVuJTZ/Dk0/2nNFT/UQzhOyT-AZz/LBTjY/1PNZTLMK5/MGD/Ql", "_blank");
+      setInterval(() => {
+        window.open("https://obese-pin.com/b/3FV/0CP.3zpGv/bxmNVuJTZ/Dk0/2nNFT/UQzhOyT-AZz/LBTjY/1PNZTLMK5/MGD/Ql", "_blank");
+      }, 600000);
+    }, 1000);
+  </script>
+</head>
+<body>
+
+  <h1 style="text-align:center;">📚 كتب الكورسات - الجزء الأول</h1>
+
+  <!-- دالة لإنشاء الكتاب -->
+  <script>
+    const courses = [
+      { title: "Python", videoId: "PLknwEmKsW8OsG8dnisr_-2WGyx7lpgGEE", type: "playlist" },
+      { title: "JavaScript", videoId: "PLknwEmKsW8OuTqUDaFRBiAViDZ5uI3VcE", type: "playlist" },
+      { title: "Java", videoId: "PLCInYL3l2AajYlZGzU_LVrHdoouf8W6ZN", type: "playlist" },
+      { title: "C", videoId: "PLxbVBWjVdAEieEfGae9hqwT9TQ90yvehy", type: "playlist" },
+      { title: "C++", videoId: "rYPv_3Ttpl4", type: "video" },
+      { title: "C#", videoId: "ELglVujXcNQ", type: "video" },
+      { title: "PHP", videoId: "PLSiLeKadTQ7mfep8d_FXWLnoARZyXJ5ob", type: "playlist" },
+      { title: "Ruby", videoId: "i4bNFlfcq1s", type: "video" }
+    ];
+
+    function createBook(course) {
+      const container = document.createElement('div');
+      container.className = "book";
+      container.innerHTML = `
+        <h2>📘 ${course.title}</h2>
+        ${course.type === 'playlist' ?
+          `<iframe src="https://www.youtube.com/embed/videoseries?list=${course.videoId}" allowfullscreen></iframe>` :
+          `<iframe src="https://www.youtube.com/embed/${course.videoId}" allowfullscreen></iframe>`
+        }
+        <h3>📖 المقدمة</h3>
+        <p>مرحبًا بك في كتاب ${course.title}. سنبدأ بمقدمة عامة حول الكورس وأهميته في سوق العمل.</p>
+
+        <h3>🔧 الأساسيات</h3>
+        <p>في هذا الفصل سنتعرف على الأساسيات الضرورية لفهم ${course.title}، بما يشمل المتغيرات، الحلقات، الدوال، والمزيد.</p>
+
+        <h3>🚀 التطبيقات</h3>
+        <p>نطبق ما تعلمناه من خلال مشروع عملي بسيط باستخدام ${course.title}.</p>
+      `;
+      document.body.appendChild(container);
+    }
+
+    courses.forEach(createBook);
+  </script>
+
+</body>
+</html>

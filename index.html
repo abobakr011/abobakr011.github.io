@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>موقع الكورسات التعليمية</title>
+  <style>
+    body {
+      background-image: url('logo.png');
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+    }
+    .course-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 20px;
+    }
+    .course-box {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+    }
+    .course-box button {
+      margin: 5px;
+      padding: 10px;
+      width: 80%;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+    }
+    .video-btn {
+      background-color: #2196f3;
+      color: white;
+    }
+    .book-btn {
+      background-color: #4caf50;
+      color: white;
+    }
+    footer {
+      margin-top: 30px;
+      padding: 15px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  </style>
+  <script>
+    // كود الإعلان
+    function showAd() {
+      window.open("https://obese-pin.com/b/3FV/0CP.3zpGv/bxmNVuJTZ/Dk0/2nNFT/UQzhOyT-AZz/LBTjY/1PNZTLMK5/MGD/Ql", "_blank");
+    }
+
+    // الإعلان عند فتح الصفحة
+    window.onload = function () {
+      showAd();
+      setInterval(showAd, 600000); // كل 10 دقائق
+    }
+  </script>
+</head>
+<body>
+
+  <h1>مرحبًا بك في موقع الكورسات التعليمية</h1>
+  <div class="course-list">
+
+    <!-- مثال واحد (سيتم استكمال الباقي لاحقًا) -->
+    <div class="course-box">
+      <h3>كورس Python</h3>
+      <button class="video-btn" onclick="location.href='videos-1.html#python'">🎥 مشاهدة الفيديو</button>
+      <button class="book-btn" onclick="location.href='books-1.html#python'">📘 كتاب الكورس</button>
+    </div>
+
+    <div class="course-box">
+      <h3>كورس JavaScript</h3>
+      <button class="video-btn" onclick="location.href='videos-1.html#javascript'">🎥 مشاهدة الفيديو</button>
+      <button class="book-btn" onclick="location.href='books-1.html#javascript'">📘 كتاب الكورس</button>
+    </div>
+
+    <!-- سيتم تكرار الشكل ده لكل كورس -->
+
+  </div>
+
+  <footer>
+    <p>📚 لمزيد من المعلومات، زر <a href="about.html" style="color: yellow;">صفحة نظامنا</a></p>
+  </footer>
+
+</body>
+</html>
