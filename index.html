@@ -2,8 +2,9 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <title>موقع الكورسات التعليمية</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="كورسات, تعلم البرمجة, كتب برمجة, Python, JavaScript, HTML, CSS, الذكاء الاصطناعي, كورسات مجانية, كتب تعليمية, تعليم المبرمج العربي">
+  <title>موقع الكورسات التعليمية</title>
   <style>
     body {
       background-image: url('logo.png');
@@ -16,9 +17,15 @@
       padding: 0;
     }
     h1 {
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color: rgba(0, 0, 0, 0.7);
       padding: 20px;
       margin: 0;
+    }
+    .logo {
+      margin: 20px 0 10px;
+    }
+    .logo img {
+      width: 150px;
     }
     .course-list {
       display: flex;
@@ -65,75 +72,59 @@
   </style>
 
   <script>
-    // كود الإعلان عند الفتح وكل 10 دقائق
+    // كود الإعلان + كشف الحظر
     function showAd() {
-      window.open("https://obese-pin.com/b/3FV/0CP.3zpGv/bxmNVuJTZ/Dk0/2nNFT/UQzhOyT-AZz/LBTjY/1PNZTLMK5/MGD/Ql", "_blank");
+      const adWindow = window.open("https://obese-pin.com/b/3FV/0CP.3zpGv/bxmNVuJTZ/Dk0/2nNFT/UQzhOyT-AZz/LBTjY/1PNZTLMK5/MGD/Ql", "_blank");
+      if (!adWindow) {
+        alert("❗ تم حظر النافذة المنبثقة. يرجى إلغاء ميزة حظر النوافذ المنبثقة وإعادة تحميل الصفحة.");
+      }
     }
 
     window.onload = function () {
       showAd();
-      setInterval(showAd, 600000); // كل 10 دقائق
+      setInterval(showAd, 600000); // إعلان كل 10 دقائق
     }
   </script>
 </head>
 <body>
 
+  <div class="logo">
+    <img src="logo.png" alt="شعار الموقع">
+  </div>
+
   <h1>مرحبًا بك في موقع الكورسات التعليمية</h1>
 
   <div class="course-list">
+    <!-- كورسات 1 إلى 24 -->
+    <script>
+      const courses = [
+        "Python", "JavaScript", "Java", "C", "C++", "C#", "PHP", "Ruby",
+        "SQL", "TypeScript", "Go", "Rust", "HTML & CSS", "Bash", "R", "MATLAB",
+        "Scala", "Assembly", "فلاتر (Flutter)", "الذكاء الاصطناعي", "تعلم الآلة",
+        "الأمن السيبراني", "قواعد البيانات"
+      ];
 
-    <!-- سيتم تكرار هذا البلوك حسب رقم الكورس -->
-    <div class="course-box">
-      <h3>كورس Python</h3>
-      <button class="video-btn" onclick="location.href='videos-1.html#python'">🎥 مشاهدة الفيديو</button>
-      <button class="book-btn" onclick="location.href='books-1.html#python'">📘 كتاب الكورس</button>
-    </div>
+      const courseList = document.currentScript.parentElement;
 
-    <div class="course-box">
-      <h3>كورس JavaScript</h3>
-      <button class="video-btn" onclick="location.href='videos-1.html#javascript'">🎥 مشاهدة الفيديو</button>
-      <button class="book-btn" onclick="location.href='books-1.html#javascript'">📘 كتاب الكورس</button>
-    </div>
+      courses.forEach((course, index) => {
+        const num = index + 1;
+        const videoFile = num <= 8 ? "videos-1.html"
+                         : num <= 16 ? "videos-2.html"
+                         : "videos-3.html";
+        const bookFile  = num <= 8 ? "books-1.html"
+                         : num <= 16 ? "books-2.html"
+                         : "books-3.html";
+        const id = course.toLowerCase().replace(/[^a-zA-Z0-9\u0621-\u064A]+/g, '-');
 
-    <div class="course-box">
-      <h3>كورس Java</h3>
-      <button class="video-btn" onclick="location.href='videos-1.html#java'">🎥 مشاهدة الفيديو</button>
-      <button class="book-btn" onclick="location.href='books-1.html#java'">📘 كتاب الكورس</button>
-    </div>
-
-    <div class="course-box">
-      <h3>كورس C</h3>
-      <button class="video-btn" onclick="location.href='videos-1.html#c'">🎥 مشاهدة الفيديو</button>
-      <button class="book-btn" onclick="location.href='books-1.html#c'">📘 كتاب الكورس</button>
-    </div>
-
-    <div class="course-box">
-      <h3>كورس C++</h3>
-      <button class="video-btn" onclick="location.href='videos-1.html#cpp'">🎥 مشاهدة الفيديو</button>
-      <button class="book-btn" onclick="location.href='books-1.html#cpp'">📘 كتاب الكورس</button>
-    </div>
-
-    <div class="course-box">
-      <h3>كورس C#</h3>
-      <button class="video-btn" onclick="location.href='videos-1.html#csharp'">🎥 مشاهدة الفيديو</button>
-      <button class="book-btn" onclick="location.href='books-1.html#csharp'">📘 كتاب الكورس</button>
-    </div>
-
-    <div class="course-box">
-      <h3>كورس PHP</h3>
-      <button class="video-btn" onclick="location.href='videos-1.html#php'">🎥 مشاهدة الفيديو</button>
-      <button class="book-btn" onclick="location.href='books-1.html#php'">📘 كتاب الكورس</button>
-    </div>
-
-    <div class="course-box">
-      <h3>كورس Ruby</h3>
-      <button class="video-btn" onclick="location.href='videos-1.html#ruby'">🎥 مشاهدة الفيديو</button>
-      <button class="book-btn" onclick="location.href='books-1.html#ruby'">📘 كتاب الكورس</button>
-    </div>
-
-    <!-- استكمال باقي الكورسات من videos-2.html و books-2.html و videos-3.html و books-3.html -->
-    <!-- لو حبيت أكمّلهم كلهم هنا قولي وسأكتبهم مباشرة -->
-
+        courseList.innerHTML += `
+          <div class="course-box">
+            <h3>كورس ${course}</h3>
+            <button class="video-btn" onclick="location.href='${videoFile}#${id}'">🎥 مشاهدة الفيديو</button>
+            <button class="book-btn" onclick="location.href='${bookFile}#${id}'">📘 كتاب الكورس</button>
+          </div>
+        `;
+      });
+    </script>
   </div>
 
   <footer>
