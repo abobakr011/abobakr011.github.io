@@ -1,274 +1,128 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>📘 كتب كورسات البرمجة</title>
-  <link rel="icon" href="logo.png" />
+  <meta charset="UTF-8">
+  <title>📘 كتاب Python</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="تعلم Python, لغة بايثون, كورس بايثون, كتاب بايثون, تعليم برمجة, بايثون من الصفر">
   <style>
     body {
       font-family: Arial, sans-serif;
       background-image: url('logo.png');
       background-size: cover;
+      background-repeat: no-repeat;
       background-attachment: fixed;
-      margin: 0;
-      padding: 0;
+      margin: 0; padding: 0;
       color: #fff;
+      background-color: rgba(0,0,0,0.8);
+      background-blend-mode: overlay;
     }
-    header {
-      background-color: rgba(0, 0, 0, 0.8);
-      padding: 20px;
-      font-size: 28px;
-      text-align: center;
-    }
-    .book {
-      background-color: rgba(0, 0, 0, 0.7);
-      margin: 20px;
-      padding: 20px;
-      border-radius: 12px;
-    }
-    h2, h3 {
-      color: #00ffc8;
-    }
-    iframe {
-      width: 100%;
-      height: 400px;
-      border: none;
-      margin-top: 10px;
-    }
-    .toc a {
-      display: inline-block;
-      margin: 5px 10px;
-      color: #ffd700;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+    .content { padding: 20px; background: rgba(0,0,0,0.7); }
+    h1, h2, h3 { color: #00ffff; }
+    ul { list-style: none; padding: 0; }
+    ul li { margin: 10px 0; }
+    a { color: #ff0; text-decoration: none; }
+    .section { margin-top: 50px; }
+    iframe { width: 100%; height: 400px; margin-top: 20px; }
   </style>
   <script>
-    function openAd() {
-      const win = window.open("https://obese-pin.com/b/3FV/0CP.3zpGv/bxmNVuJTZ/Dk0/2nNFT/UQzhOyT-AZz/LBTjY/1PNZTLMK5/MGD/Ql", "_blank");
-      if (!win) alert("يرجى إلغاء حظر النوافذ المنبثقة لإظهار الإعلان.");
-    }
-    window.onload = () => {
-      openAd();
-      setInterval(openAd, 600000); // كل 10 دقائق
-    };
+    // إعلان يظهر بعد 10 دقائق
+    setTimeout(() => {
+      window.open("https://obese-pin.com/b/3FV/0CP.3zpGv/bxmNVuJTZ/Dk0/2nNFT/UQzhOyT-AZz/LBTjY/1PNZTLMK5/MGD/Ql", "_blank");
+    }, 600000);
   </script>
 </head>
 <body>
-  <header>📘 كتب كورسات البرمجة</header>
+  <!-- إعلان عند التحميل -->
+  <script>
+    window.onload = function () {
+      window.open("https://obese-pin.com/b/3FV/0CP.3zpGv/bxmNVuJTZ/Dk0/2nNFT/UQzhOyT-AZz/LBTjY/1PNZTLMK5/MGD/Ql", "_blank");
+    }
+  </script>
 
-  <!-- كتاب لكل كورس -->
-  <!-- Python -->
-  <div class="book" id="python">
-    <h2>📘 Python</h2>
-    <div class="toc">
-      <a href="#py-intro">المقدمة</a> | 
-      <a href="#py-basics">الأساسيات</a> | 
-      <a href="#py-apps">التطبيقات</a> | 
-      <a href="#py-full">شرح شامل</a> | 
-      <a href="#py-video">🎥 فيديو</a>
+  <div class="content">
+    <h1>📘 كتاب Python</h1>
+
+    <h2>🔗 جدول المحتويات</h2>
+    <ul>
+      <li><a href="#intro">📖 المقدمة</a></li>
+      <li><a href="#basics">🔧 الأساسيات</a></li>
+      <li><a href="#applications">🚀 التطبيقات</a></li>
+      <li><a href="#advanced">📘 شرح شامل</a></li>
+      <li><a href="#video">🎥 فيديو الكورس</a></li>
+    </ul>
+
+    <div class="section" id="intro">
+      <h2>📖 المقدمة</h2>
+      <p>Python هي واحدة من أكثر لغات البرمجة استخدامًا اليوم، وتُعرف بسهولة تعلمها ومرونتها. تُستخدم في تطوير الويب، تحليل البيانات، الذكاء الاصطناعي، والتطبيقات المختلفة.</p>
+      <p>في هذا الكتاب، سنأخذك من المبتدئ حتى المستوى المتقدم بأسلوب عملي واضح.</p>
     </div>
-    <h3 id="py-intro">📖 المقدمة</h3>
-    <p>مرحبًا بك في كتاب Python. سنبدأ بمقدمة عامة حول الكورس وأهميته في سوق العمل.</p>
 
-    <h3 id="py-basics">🔧 الأساسيات</h3>
-    <p>سنتعرف على المتغيرات، الحلقات، الدوال، الشروط، القوائم، وغيرها.</p>
-
-    <h3 id="py-apps">🚀 التطبيقات</h3>
-    <p>نطبق ما تعلمناه من خلال مشروع عملي بسيط باستخدام Python.</p>
-
-    <h3 id="py-full">📚 شرح شامل</h3>
-    <p>Python تُستخدم في الذكاء الاصطناعي، الويب، تحليل البيانات، وغير ذلك.</p>
-
-    <h3 id="py-video">🎥 فيديو</h3>
-    <iframe src="https://www.youtube.com/embed/videoseries?list=PLknwEmKsW8OsG8dnisr_-2WGyx7lpgGEE" allowfullscreen></iframe>
-  </div>
-
-  <!-- JavaScript -->
-  <div class="book" id="js">
-    <h2>📘 JavaScript</h2>
-    <div class="toc">
-      <a href="#js-intro">المقدمة</a> | 
-      <a href="#js-basics">الأساسيات</a> | 
-      <a href="#js-apps">التطبيقات</a> | 
-      <a href="#js-full">شرح شامل</a> | 
-      <a href="#js-video">🎥 فيديو</a>
+    <div class="section" id="basics">
+      <h2>🔧 الأساسيات</h2>
+      <ul>
+        <li>🔹 التعرف على المتغيرات وأنواع البيانات</li>
+        <li>🔹 استخدام الجمل الشرطية (if/else)</li>
+        <li>🔹 الحلقات (for / while)</li>
+        <li>🔹 الدوال (Functions)</li>
+        <li>🔹 القوائم Lists والتعامل معها</li>
+        <li>🔹 القواميس Dictionaries</li>
+        <li>🔹 المجموعات Sets والـ Tuples</li>
+      </ul>
+      <pre>
+x = 10
+if x > 5:
+    print("العدد أكبر من 5")
+      </pre>
     </div>
-    <h3 id="js-intro">📖 المقدمة</h3>
-    <p>مرحبًا بك في كتاب JavaScript. ستتعلم لغة التفاعل والواجهات الحديثة.</p>
 
-    <h3 id="js-basics">🔧 الأساسيات</h3>
-    <p>تشمل المتغيرات، الأحداث، الدوال، التحكم في DOM، والبرمجة الكائنية.</p>
-
-    <h3 id="js-apps">🚀 التطبيقات</h3>
-    <p>نطبق ما تعلمناه في مشروع ويب ديناميكي صغير.</p>
-
-    <h3 id="js-full">📚 شرح شامل</h3>
-    <p>JavaScript أساسية في تطوير الويب الحديث، تستخدم في الواجهة والخلفية.</p>
-
-    <h3 id="js-video">🎥 فيديو</h3>
-    <iframe src="https://www.youtube.com/embed/videoseries?list=PLknwEmKsW8OuTqUDaFRBiAViDZ5uI3VcE" allowfullscreen></iframe>
-  </div>
-  <!-- Java -->
-  <div class="book" id="java">
-    <h2>📘 Java</h2>
-    <div class="toc">
-      <a href="#java-intro">المقدمة</a> | 
-      <a href="#java-basics">الأساسيات</a> | 
-      <a href="#java-apps">التطبيقات</a> | 
-      <a href="#java-full">شرح شامل</a> | 
-      <a href="#java-video">🎥 فيديو</a>
+    <div class="section" id="applications">
+      <h2>🚀 التطبيقات</h2>
+      <p>في هذا الفصل، سنقوم بعمل مشروع بسيط: برنامج آلة حاسبة.</p>
+      <pre>
+def calculator():
+    op = input("اختر العملية (+ - * /): ")
+    x = float(input("العدد الأول: "))
+    y = float(input("العدد الثاني: "))
+    if op == '+':
+        print(x + y)
+    elif op == '-':
+        print(x - y)
+    elif op == '*':
+        print(x * y)
+    elif op == '/':
+        print(x / y)
+calculator()
+      </pre>
     </div>
-    <h3 id="java-intro">📖 المقدمة</h3>
-    <p>Java تُستخدم في تطبيقات المؤسسات، تطبيقات Android، وألعاب الفيديو.</p>
 
-    <h3 id="java-basics">🔧 الأساسيات</h3>
-    <p>تشمل بناء الجملة، الأصناف، الوراثة، الواجهات، والمصفوفات.</p>
+    <div class="section" id="advanced">
+      <h2>📘 شرح شامل</h2>
+      <ul>
+        <li>🔸 البرمجة الكائنية (OOP) – Classes & Objects</li>
+        <li>🔸 التعامل مع الملفات (فتح، قراءة، كتابة)</li>
+        <li>🔸 استخدام مكتبات مثل NumPy, Pandas, Matplotlib</li>
+        <li>🔸 تحليل البيانات والرسوم البيانية</li>
+        <li>🔸 البرمجة باستخدام الواجهات GUI عبر tkinter</li>
+        <li>🔸 بناء تطبيق ويب باستخدام Flask أو Django</li>
+      </ul>
+      <pre>
+class Person:
+    def __init__(self, name):
+        self.name = name
 
-    <h3 id="java-apps">🚀 التطبيقات</h3>
-    <p>بناء تطبيق بسيط لإدارة المهام باستخدام Java.</p>
+    def say_hello(self):
+        print(f"مرحبًا، اسمي {self.name}")
 
-    <h3 id="java-full">📚 شرح شامل</h3>
-    <p>تعد Java من أكثر اللغات طلبًا بفضل الاستقرار وتعدد المنصات.</p>
-
-    <h3 id="java-video">🎥 فيديو</h3>
-    <iframe src="https://www.youtube.com/embed/videoseries?list=PLCInYL3l2AajYlZGzU_LVrHdoouf8W6ZN" allowfullscreen></iframe>
-  </div>
-
-  <!-- C -->
-  <div class="book" id="c">
-    <h2>📘 C</h2>
-    <div class="toc">
-      <a href="#c-intro">المقدمة</a> | 
-      <a href="#c-basics">الأساسيات</a> | 
-      <a href="#c-apps">التطبيقات</a> | 
-      <a href="#c-full">شرح شامل</a> | 
-      <a href="#c-video">🎥 فيديو</a>
+p = Person("أحمد")
+p.say_hello()
+      </pre>
     </div>
-    <h3 id="c-intro">📖 المقدمة</h3>
-    <p>C هي اللغة الأم للعديد من اللغات الحديثة، وتُستخدم في أنظمة التشغيل.</p>
 
-    <h3 id="c-basics">🔧 الأساسيات</h3>
-    <p>شرح المتغيرات، المؤشرات، الحلقات، الدوال، وإدارة الذاكرة.</p>
-
-    <h3 id="c-apps">🚀 التطبيقات</h3>
-    <p>مشروع بسيط لحاسبة باستخدام لغة C.</p>
-
-    <h3 id="c-full">📚 شرح شامل</h3>
-    <p>تعلم C يُمهد لفهم الهاردوير وأنظمة التشغيل بشكل أفضل.</p>
-
-    <h3 id="c-video">🎥 فيديو</h3>
-    <iframe src="https://www.youtube.com/embed/videoseries?list=PLxbVBWjVdAEieEfGae9hqwT9TQ90yvehy" allowfullscreen></iframe>
-  </div>
-
-  <!-- C++ -->
-  <div class="book" id="cpp">
-    <h2>📘 C++</h2>
-    <div class="toc">
-      <a href="#cpp-intro">المقدمة</a> | 
-      <a href="#cpp-basics">الأساسيات</a> | 
-      <a href="#cpp-apps">التطبيقات</a> | 
-      <a href="#cpp-full">شرح شامل</a> | 
-      <a href="#cpp-video">🎥 فيديو</a>
+    <div class="section" id="video">
+      <h2>🎥 فيديو الكورس</h2>
+      <iframe src="https://www.youtube.com/embed/videoseries?list=PLknwEmKsW8OsG8dnisr_-2WGyx7lpgGEE" allowfullscreen></iframe>
     </div>
-    <h3 id="cpp-intro">📖 المقدمة</h3>
-    <p>C++ تُستخدم في الألعاب، المحاكاة، البرامج الهندسية.</p>
-
-    <h3 id="cpp-basics">🔧 الأساسيات</h3>
-    <p>شرح الكائنات، الوراثة، المؤشرات، والقوالب.</p>
-
-    <h3 id="cpp-apps">🚀 التطبيقات</h3>
-    <p>إنشاء لعبة بسيطة تعتمد على إدخال المستخدم.</p>
-
-    <h3 id="cpp-full">📚 شرح شامل</h3>
-    <p>C++ قوية ومرنة، لكنها تتطلب إدارة دقيقة للذاكرة.</p>
-
-    <h3 id="cpp-video">🎥 فيديو</h3>
-    <iframe src="https://www.youtube.com/embed/rYPv_3Ttpl4" allowfullscreen></iframe>
   </div>
-
-  <!-- C# -->
-  <div class="book" id="csharp">
-    <h2>📘 C#</h2>
-    <div class="toc">
-      <a href="#cs-intro">المقدمة</a> | 
-      <a href="#cs-basics">الأساسيات</a> | 
-      <a href="#cs-apps">التطبيقات</a> | 
-      <a href="#cs-full">شرح شامل</a> | 
-      <a href="#cs-video">🎥 فيديو</a>
-    </div>
-    <h3 id="cs-intro">📖 المقدمة</h3>
-    <p>C# تُستخدم في تطبيقات الويندوز والألعاب باستخدام Unity.</p>
-
-    <h3 id="cs-basics">🔧 الأساسيات</h3>
-    <p>شرح الكائنات، الأحداث، الفئات، والواجهات.</p>
-
-    <h3 id="cs-apps">🚀 التطبيقات</h3>
-    <p>بناء تطبيق واجهة رسومية بسيط بـ C#.</p>
-
-    <h3 id="cs-full">📚 شرح شامل</h3>
-    <p>لغة سهلة لمن لديهم خلفية بـ Java أو C++.</p>
-
-    <h3 id="cs-video">🎥 فيديو</h3>
-    <iframe src="https://www.youtube.com/embed/ELglVujXcNQ" allowfullscreen></iframe>
-  </div>
-
-  <!-- PHP -->
-  <div class="book" id="php">
-    <h2>📘 PHP</h2>
-    <div class="toc">
-      <a href="#php-intro">المقدمة</a> | 
-      <a href="#php-basics">الأساسيات</a> | 
-      <a href="#php-apps">التطبيقات</a> | 
-      <a href="#php-full">شرح شامل</a> | 
-      <a href="#php-video">🎥 فيديو</a>
-    </div>
-    <h3 id="php-intro">📖 المقدمة</h3>
-    <p>PHP من أكثر لغات الويب استخدامًا في بناء المواقع الديناميكية.</p>
-
-    <h3 id="php-basics">🔧 الأساسيات</h3>
-    <p>شرح المتغيرات، الدوال، الجلسات، الاتصال بقاعدة البيانات.</p>
-
-    <h3 id="php-apps">🚀 التطبيقات</h3>
-    <p>مشروع مدونة بسيطة باستخدام PHP وMySQL.</p>
-
-    <h3 id="php-full">📚 شرح شامل</h3>
-    <p>PHP ما تزال حجر الزاوية لكثير من المواقع مثل WordPress.</p>
-
-    <h3 id="php-video">🎥 فيديو</h3>
-    <iframe src="https://www.youtube.com/embed/videoseries?list=PLSiLeKadTQ7mfep8d_FXWLnoARZyXJ5ob" allowfullscreen></iframe>
-  </div>
-
-  <!-- Ruby -->
-  <div class="book" id="ruby">
-    <h2>📘 Ruby</h2>
-    <div class="toc">
-      <a href="#ruby-intro">المقدمة</a> | 
-      <a href="#ruby-basics">الأساسيات</a> | 
-      <a href="#ruby-apps">التطبيقات</a> | 
-      <a href="#ruby-full">شرح شامل</a> | 
-      <a href="#ruby-video">🎥 فيديو</a>
-    </div>
-    <h3 id="ruby-intro">📖 المقدمة</h3>
-    <p>Ruby مشهورة بإطار العمل Rails، وتُستخدم لتطوير تطبيقات ويب بسرعة.</p>
-
-    <h3 id="ruby-basics">🔧 الأساسيات</h3>
-    <p>شرح الكائنات، الفئات، الكتل، والـ Gems.</p>
-
-    <h3 id="ruby-apps">🚀 التطبيقات</h3>
-    <p>مشروع تطبيق ويب بسيط باستخدام Ruby on Rails.</p>
-
-    <h3 id="ruby-full">📚 شرح شامل</h3>
-    <p>Ruby لغة مرنة وسهلة الكتابة، وتُركز على متعة المطور.</p>
-
-    <h3 id="ruby-video">🎥 فيديو</h3>
-    <iframe src="https://www.youtube.com/embed/i4bNFlfcq1s" allowfullscreen></iframe>
-  </div>
-
-  
 </body>
 </html>
