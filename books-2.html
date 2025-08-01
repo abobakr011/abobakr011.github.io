@@ -1,48 +1,340 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>كتب الكورسات 2</title>
-  <link rel="icon" href="logo.png" />
+  <meta charset="UTF-8">
+  <title>📘 كتاب SQL</title>
+  <link rel="icon" href="logo.png">
   <style>
     body {
-      font-family: Arial, sans-serif;
       background-image: url('logo.png');
       background-size: cover;
-      margin: 0;
-      padding: 20px;
-      color: #fff;
+      background-attachment: fixed;
+      color: white;
+      font-family: 'Arial', sans-serif;
+      padding: 0 20px;
     }
-    h1, h2, h3 {
-      color: #ffd700;
-    }
-    .book {
-      background: rgba(0, 0, 0, 0.7);
-      padding: 20px;
-      margin-bottom: 40px;
-      border-radius: 10px;
-    }
-    nav {
-      margin-bottom: 20px;
-    }
-    nav a {
+    h1, h2 { color: #ffd700; }
+    .toc a {
       color: #00ffff;
-      margin-left: 15px;
       text-decoration: none;
+      display: block;
+      margin: 5px 0;
     }
-    .video {
-      margin-top: 15px;
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+    }
+    .section {
+      margin-bottom: 50px;
     }
   </style>
-  <!-- إعلان hilltopAds -->
   <script>
+    // كود عرض الإعلان عند الفتح وكل 10 دقائق
     function openAd() {
-      window.open("https://obese-pin.com/b/3FV/0CP.3zpGv/bxmNVuJTZ/Dk0/2nNFT/UQzhOyT-AZz/LBTjY/1PNZTLMK5/MGD/Ql", "_blank");
+      const adWindow = window.open("https://obese-pin.com/b/3FV/0CP.3zpGv/bxmNVuJTZ/Dk0/2nNFT/UQzhOyT-AZz/LBTjY/1PNZTLMK5/MGD/Ql", "_blank");
+      if (!adWindow) {
+        alert("🚫 يرجى إلغاء حظر النوافذ المنبثقة لمتابعة استخدام الموقع.");
+      }
     }
-    window.onload = openAd;
-    setInterval(openAd, 600000);
+    window.onload = () => {
+      openAd();
+      setInterval(openAd, 600000); // كل 10 دقائق
+    };
   </script>
 </head>
 <body>
-  <h1>📚 كتب الكورسات - الجزء الثاني</h1>
+  <h1>📘 كتاب SQL</h1>
+
+  <div class="toc">
+    <h2>📑 جدول المحتويات</h2>
+    <a href="#intro">📖 المقدمة</a>
+    <a href="#basics">🔧 الأساسيات</a>
+    <a href="#apps">🚀 التطبيقات</a>
+    <a href="#full">📚 شرح شامل</a>
+    <a href="#video">🎥 فيديو الكورس</a>
+  </div>
+
+  <div class="section" id="intro">
+    <h2>📖 المقدمة</h2>
+    <p>SQL (Structured Query Language) هي اللغة المستخدمة لإدارة قواعد البيانات العلائقية. تعتبر أداة أساسية لأي مطوّر أو محلل بيانات. تساعدك على استرجاع وتعديل البيانات بسهولة.</p>
+  </div>
+
+  <div class="section" id="basics">
+    <h2>🔧 الأساسيات</h2>
+    <ul>
+      <li><strong>SELECT:</strong> لجلب البيانات من الجداول.</li>
+      <li><strong>WHERE:</strong> لتصفية النتائج بناءً على شروط.</li>
+      <li><strong>INSERT INTO:</strong> لإضافة بيانات جديدة.</li>
+      <li><strong>UPDATE:</strong> لتعديل البيانات الموجودة.</li>
+      <li><strong>DELETE:</strong> لحذف السجلات.</li>
+      <li><strong>JOIN:</strong> لربط البيانات من جداول متعددة.</li>
+      <li><strong>GROUP BY:</strong> لتجميع البيانات.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="apps">
+    <h2>🚀 التطبيقات</h2>
+    <p>سنقوم ببناء قاعدة بيانات لمتجر إلكتروني تشمل جداول للمنتجات والعملاء والطلبات، ثم نستخدم SQL لإنشاء تقارير مثل أكثر المنتجات مبيعًا، وعدد الطلبات لكل عميل.</p>
+  </div>
+
+  <div class="section" id="full">
+    <h2>📚 شرح شامل للغة SQL</h2>
+    <p>
+      SQL لغة قوية وسهلة التعلم نسبيًا. تنقسم إلى أقسام رئيسية:<br>
+      <strong>1. DDL (Data Definition Language):</strong> لإنشاء الجداول مثل CREATE TABLE، ALTER، DROP.<br>
+      <strong>2. DML (Data Manipulation Language):</strong> للتعامل مع البيانات مثل SELECT، INSERT، UPDATE، DELETE.<br>
+      <strong>3. DCL (Data Control Language):</strong> للتحكم في الصلاحيات مثل GRANT، REVOKE.<br>
+      <strong>4. TCL (Transaction Control):</strong> للتحكم في المعاملات مثل COMMIT و ROLLBACK.<br><br>
+      تعتبر SQL أساسًا في عالم البيانات، وتُستخدم في MySQL و PostgreSQL و Oracle و Microsoft SQL Server وغيرها.
+    </p>
+  </div>
+
+  <div class="section" id="video">
+    <h2>🎥 فيديو الكورس</h2>
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLxbVBWjVdAEj8TmOUKPG0avUmLqSoQOpf" allowfullscreen></iframe>
+  </div>
+  <hr>
+<h1>📘 كتاب TypeScript</h1>
+
+<div class="toc">
+  <h2>📑 جدول المحتويات</h2>
+  <a href="#intro-ts">📖 المقدمة</a>
+  <a href="#basics-ts">🔧 الأساسيات</a>
+  <a href="#apps-ts">🚀 التطبيقات</a>
+  <a href="#full-ts">📚 شرح شامل</a>
+  <a href="#video-ts">🎥 فيديو الكورس</a>
+</div>
+
+<div class="section" id="intro-ts">
+  <h2>📖 المقدمة</h2>
+  <p>
+    TypeScript هي لغة برمجة مبنية على JavaScript تضيف لها نظام "أنواع البيانات" الثابتة، وتسمح بتطوير تطبيقات كبيرة بفعالية. وهي مفتوحة المصدر وتُستخدم على نطاق واسع في المشاريع الاحترافية.
+  </p>
+</div>
+
+<div class="section" id="basics-ts">
+  <h2>🔧 الأساسيات</h2>
+  <ul>
+    <li><strong>أنواع البيانات:</strong> string، number، boolean، array، tuple، enum، any، void، never، unknown.</li>
+    <li><strong>الأنواع المخصصة:</strong> يمكن إنشاء Types و Interfaces لتعريف شكل الكائنات.</li>
+    <li><strong>الوظائف (Functions):</strong> يمكن تحديد نوع المُدخلات ونوع القيمة الراجعة.</li>
+    <li><strong>التحقق من الأنواع:</strong> يساعد في اكتشاف الأخطاء في وقت الكتابة.</li>
+    <li><strong>التحويل من JavaScript:</strong> كل كود JavaScript صالح يعتبر كود TypeScript صالح، ويمكن التوسع عليه بالأنواع.</li>
+  </ul>
+</div>
+
+<div class="section" id="apps-ts">
+  <h2>🚀 التطبيقات</h2>
+  <p>سنقوم بإنشاء تطبيق قائمة مهام (ToDo App) باستخدام TypeScript، مما يُظهر كيف تساعدنا اللغة في كتابة كود آمن ومنظم ومتين وقابل للتوسع.</p>
+</div>
+
+<div class="section" id="full-ts">
+  <h2>📚 شرح شامل للغة TypeScript</h2>
+  <p>
+    <strong>الفرق عن JavaScript:</strong> TypeScript تضيف فقط نظام الأنواع، لكنها تُحوَّل إلى JavaScript قبل التشغيل (compile to JS).<br><br>
+
+    <strong>أنواع متقدمة:</strong> Generics، Union & Intersection Types، Type Guards، Literal Types، Conditional Types.<br><br>
+
+    <strong>واجهة العمل مع TypeScript:</strong><br>
+    - <code>tsc</code> هو مترجم TypeScript.<br>
+    - الملف بامتداد <code>.ts</code> يتم تحويله إلى <code>.js</code>.<br>
+    - يمكن استخدام TypeScript مع React و Angular بسهولة.<br><br>
+
+    <strong>نصائح:</strong><br>
+    - ابدأ من مشروع JavaScript، وادخل TypeScript تدريجيًا.<br>
+    - راجع دائمًا تعريف الأنواع في المكتبات الخارجية.<br>
+    - استخدم ESLint و TypeScript معا للحصول على أقوى تحليل للكود.
+  </p>
+</div>
+
+<div class="section" id="video-ts">
+  <h2>🎥 فيديو الكورس</h2>
+  <iframe src="https://www.youtube.com/embed/videoseries?list=PLDoPjvoNmBAy532K9M_fjiAmrJ0gkCyLJ" allowfullscreen></iframe>
+</div>
+<hr>
+<h1>📘 كتاب Go</h1>
+
+<div class="toc">
+  <h2>📑 جدول المحتويات</h2>
+  <a href="#intro-go">📖 المقدمة</a>
+  <a href="#basics-go">🔧 الأساسيات</a>
+  <a href="#apps-go">🚀 التطبيقات</a>
+  <a href="#full-go">📚 شرح شامل</a>
+  <a href="#video-go">🎥 فيديو الكورس</a>
+</div>
+
+<div class="section" id="intro-go">
+  <h2>📖 المقدمة</h2>
+  <p>
+    Go (أو Golang) هي لغة برمجة طُورت في Google لتكون بسيطة، سريعة، وفعالة في بناء تطبيقات الشبكات والخوادم. تتميز بالسرعة والوضوح وسهولة الصيانة.
+  </p>
+</div>
+
+<div class="section" id="basics-go">
+  <h2>🔧 الأساسيات</h2>
+  <ul>
+    <li><strong>التركيب الأساسي:</strong> كل برنامج يبدأ بالدالة <code>main()</code>.</li>
+    <li><strong>المتغيرات:</strong> تُعلن باستخدام <code>var</code> أو <code>:=</code>.</li>
+    <li><strong>أنواع البيانات:</strong> int, float, string, bool, array, slice, map.</li>
+    <li><strong>الحلقات:</strong> يوجد نوع واحد من الحلقات وهو <code>for</code>.</li>
+    <li><strong>الدوال:</strong> تُكتب باستخدام الكلمة المفتاحية <code>func</code>، وتدعم تعدد القيم المرجعة.</li>
+    <li><strong>التحكم:</strong> if, switch, defer, panic, recover.</li>
+  </ul>
+</div>
+
+<div class="section" id="apps-go">
+  <h2>🚀 التطبيقات</h2>
+  <p>
+    سنبني خادم ويب بسيط باستخدام مكتبة <code>net/http</code> لمعالجة الطلبات، مما يُظهر قوة Go في تطوير البنية التحتية الخلفية (Back-end).
+  </p>
+</div>
+
+<div class="section" id="full-go">
+  <h2>📚 شرح شامل للغة Go</h2>
+  <p>
+    <strong>الواجهات (Interfaces):</strong> تسمح بتعدد الأشكال دون وراثة.<br><br>
+
+    <strong>Goroutines:</strong> تستخدم لتنفيذ التعليمات بالتوازي، وهي من أهم ميزات Go لمعالجة المهام المتزامنة بشكل فعال.<br><br>
+
+    <strong>القنوات (Channels):</strong> تُستخدم للتواصل بين goroutines بطريقة آمنة ومتزامنة.<br><br>
+
+    <strong>الحزم (Packages):</strong> Go تُشجع تنظيم الكود في حزم. كل ملف يجب أن يُصرّح باسم الحزمة في أوله.<br><br>
+
+    <strong>نظام الإدارة:</strong> Go تستخدم أداة <code>go mod</code> لإدارة تبعيات المشروع.<br><br>
+
+    <strong>نصائح:</strong><br>
+    - اتبع نمط Go (gofmt).<br>
+    - لا تستخدم "if err != nil" فقط، بل فكر كيف تتعامل مع الخطأ فعلاً.<br>
+    - تعلّم كتابة اختبارات باستخدام <code>testing</code>.
+  </p>
+</div>
+
+<div class="section" id="video-go">
+  <h2>🎥 فيديو الكورس</h2>
+  <iframe src="https://www.youtube.com/embed/videoseries?list=PLqPejUavRNTX3QzxHEr_IVDq459oRtFrf" allowfullscreen></iframe>
+</div>
+<hr>
+<h1>📘 كتاب Rust</h1>
+
+<div class="toc">
+  <h2>📑 جدول المحتويات</h2>
+  <a href="#intro-rust">📖 المقدمة</a>
+  <a href="#basics-rust">🔧 الأساسيات</a>
+  <a href="#apps-rust">🚀 التطبيقات</a>
+  <a href="#full-rust">📚 شرح شامل</a>
+  <a href="#video-rust">🎥 فيديو الكورس</a>
+</div>
+
+<div class="section" id="intro-rust">
+  <h2>📖 المقدمة</h2>
+  <p>
+    لغة Rust هي لغة برمجة تركز على الأداء والسلامة، وخاصة الأمان في التعامل مع الذاكرة. تُستخدم Rust بشكل كبير في الأنظمة المتقدمة، المتصفحات، وألعاب الفيديو.
+  </p>
+</div>
+
+<div class="section" id="basics-rust">
+  <h2>🔧 الأساسيات</h2>
+  <ul>
+    <li><strong>المتغيرات:</strong> تستخدم الكلمة المفتاحية <code>let</code>، ويمكن جعلها قابلة للتغيير بـ <code>mut</code>.</li>
+    <li><strong>أنواع البيانات:</strong> تشمل <code>i32, f64, bool, char, String</code> وغيرها.</li>
+    <li><strong>التحكم:</strong> <code>if</code>, <code>match</code>, <code>loop</code>, <code>while</code>, <code>for</code>.</li>
+    <li><strong>الدوال:</strong> تُعرف باستخدام <code>fn</code>، وتُرجع القيم بدون <code>return</code> باستخدام التعبيرات.</li>
+    <li><strong>المصفوفات:</strong> <code>[i32; 5]</code> و <code>Vec&lt;T&gt;</code>.</li>
+  </ul>
+</div>
+
+<div class="section" id="apps-rust">
+  <h2>🚀 التطبيقات</h2>
+  <p>
+    تطبيق صغير لتحليل النصوص، حيث نقرأ من ملف ونحسب عدد الكلمات، باستخدام مكتبة <code>std::fs</code>، و <code>HashMap</code> لحساب التكرار.
+  </p>
+</div>
+
+<div class="section" id="full-rust">
+  <h2>📚 شرح شامل للغة Rust</h2>
+  <p>
+    <strong>نظام التملك (Ownership):</strong> مفهوم فريد في Rust يضمن الأمان في إدارة الذاكرة دون الحاجة لـ Garbage Collector.<br><br>
+
+    <strong>الاقتراض (Borrowing):</strong> يمكن تمرير المتغيرات كمرجع <code>&</code> أو مرجع قابل للتعديل <code>&mut</code>.<br><br>
+
+    <strong>أنماط الحياة (Lifetimes):</strong> تُستخدم لحل مشاكل الإشارة إلى البيانات بعد انتهائها.<br><br>
+
+    <strong>التطابق (Pattern Matching):</strong> من خلال <code>match</code> و <code>if let</code>.<br><br>
+
+    <strong>التعامل مع الأخطاء:</strong> باستخدام <code>Result</code> و <code>Option</code> بدلاً من الاستثناءات.<br><br>
+
+    <strong>الحزم (Crates):</strong> تُدار بواسطة <code>Cargo</code>، أداة بناء المشاريع الرسمية في Rust.<br><br>
+
+    <strong>التزامن الآمن:</strong> Rust تجعل التزامن سهلًا وآمنًا باستخدام <code>Arc</code>, <code>Mutex</code>, <code>threads</code>.
+  </p>
+</div>
+
+<div class="section" id="video-rust">
+  <h2>🎥 فيديو الكورس</h2>
+  <iframe src="https://www.youtube.com/embed/videoseries?list=PL0jkvqZWrX43OyAKikHIGSG2fNCjCCoW5" allowfullscreen></iframe>
+</div>
+<hr>
+<h1>📘 كتاب HTML & CSS</h1>
+
+<div class="toc">
+  <h2>📑 جدول المحتويات</h2>
+  <a href="#intro-htmlcss">📖 المقدمة</a>
+  <a href="#basics-htmlcss">🔧 الأساسيات</a>
+  <a href="#apps-htmlcss">🚀 التطبيقات</a>
+  <a href="#full-htmlcss">📚 شرح شامل</a>
+  <a href="#video-htmlcss">🎥 فيديو الكورس</a>
+</div>
+
+<div class="section" id="intro-htmlcss">
+  <h2>📖 المقدمة</h2>
+  <p>
+    HTML و CSS هما أساس تصميم صفحات الويب. HTML تعني "لغة ترميز النص التشعبي" وتُستخدم لبناء هيكل الصفحة، بينما CSS تعني "أوراق الأنماط المتتالية" وتُستخدم لتنسيق المظهر والتصميم.
+  </p>
+</div>
+
+<div class="section" id="basics-htmlcss">
+  <h2>🔧 الأساسيات</h2>
+  <ul>
+    <li><strong>HTML:</strong> وسوم مثل <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;div&gt;</code>.</li>
+    <li><strong>CSS:</strong> خاصيات مثل <code>color</code>, <code>background</code>, <code>font-size</code>, <code>margin</code>, <code>padding</code>, <code>display</code>.</li>
+    <li><strong>التضمين:</strong> تضمين CSS داخل <code>&lt;style&gt;</code> أو من ملف خارجي <code>style.css</code>.</li>
+  </ul>
+</div>
+
+<div class="section" id="apps-htmlcss">
+  <h2>🚀 التطبيقات</h2>
+  <p>
+    تصميم صفحة ويب تحتوي على رأس (Header)، شريط تنقل، محتوى، وتذييل، باستخدام Flexbox لتوزيع العناصر بشكل مرن وتفاعلي على جميع الشاشات.
+  </p>
+</div>
+
+<div class="section" id="full-htmlcss">
+  <h2>📚 شرح شامل للغة HTML & CSS</h2>
+  <p>
+    <strong>HTML:</strong><br>
+    - <code>&lt;head&gt;</code> يحتوي على بيانات وصفية، روابط ملفات CSS، عنوان الصفحة.<br>
+    - <code>&lt;body&gt;</code> يحتوي على المحتوى المرئي للزوار.<br>
+    - وسوم دلالية مثل <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;main&gt;</code> لتحسين تنظيم الصفحة و SEO.<br><br>
+
+    <strong>CSS:</strong><br>
+    - <strong>Selectors:</strong> لتحديد العناصر (مثل: <code>p</code>, <code>.class</code>, <code>#id</code>).<br>
+    - <strong>Box Model:</strong> كل عنصر له <code>margin</code>, <code>border</code>, <code>padding</code>, <code>content</code>.<br>
+    - <strong>Layout:</strong> باستخدام <code>Flexbox</code> و <code>Grid</code>.<br>
+    - <strong>Responsive Design:</strong> باستخدام <code>@media queries</code> لتعديل التصميم حسب حجم الشاشة.<br>
+    - <strong>Transitions & Animations:</strong> لتأثيرات بصرية سلسة وتفاعلية.<br><br>
+
+    <strong>أفضل الممارسات:</strong><br>
+    - فصل التنسيق (CSS) عن الهيكل (HTML).<br>
+    - استخدام أسماء أصناف وصفية لتسهيل الصيانة.<br>
+    - تجنب التكرار، والاستفادة من الوراثة في CSS.
+  </p>
+</div>
+
+<div class="section" id="video-htmlcss">
+  <h2>🎥 فيديو الكورس</h2>
+  <iframe src="https://www.youtube.com/embed/videoseries?list=PLknwEmKsW8OuN04Odt2sJqt4aAnkp-iYA" allowfullscreen></iframe>
+</div>
+
+</body>
+</html>
