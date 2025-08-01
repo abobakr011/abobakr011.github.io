@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <title>موقع الكورسات التعليمية</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
       background-image: url('logo.png');
       background-size: cover;
+      background-position: center;
       font-family: Arial, sans-serif;
       color: white;
       text-align: center;
@@ -16,6 +18,7 @@
     h1 {
       background-color: rgba(0, 0, 0, 0.6);
       padding: 20px;
+      margin: 0;
     }
     .course-list {
       display: flex;
@@ -29,6 +32,9 @@
       padding: 20px;
       border-radius: 10px;
       width: 250px;
+    }
+    .course-box h3 {
+      margin-bottom: 10px;
     }
     .course-box button {
       margin: 5px;
@@ -52,14 +58,18 @@
       padding: 15px;
       background-color: rgba(0, 0, 0, 0.5);
     }
+    footer a {
+      color: yellow;
+      text-decoration: none;
+    }
   </style>
+
   <script>
-    // كود الإعلان
+    // كود الإعلان عند الفتح وكل 10 دقائق
     function showAd() {
       window.open("https://obese-pin.com/b/3FV/0CP.3zpGv/bxmNVuJTZ/Dk0/2nNFT/UQzhOyT-AZz/LBTjY/1PNZTLMK5/MGD/Ql", "_blank");
     }
 
-    // الإعلان عند فتح الصفحة
     window.onload = function () {
       showAd();
       setInterval(showAd, 600000); // كل 10 دقائق
@@ -69,9 +79,10 @@
 <body>
 
   <h1>مرحبًا بك في موقع الكورسات التعليمية</h1>
+
   <div class="course-list">
 
-    <!-- مثال واحد (سيتم استكمال الباقي لاحقًا) -->
+    <!-- سيتم تكرار هذا البلوك حسب رقم الكورس -->
     <div class="course-box">
       <h3>كورس Python</h3>
       <button class="video-btn" onclick="location.href='videos-1.html#python'">🎥 مشاهدة الفيديو</button>
@@ -84,12 +95,49 @@
       <button class="book-btn" onclick="location.href='books-1.html#javascript'">📘 كتاب الكورس</button>
     </div>
 
-    <!-- سيتم تكرار الشكل ده لكل كورس -->
+    <div class="course-box">
+      <h3>كورس Java</h3>
+      <button class="video-btn" onclick="location.href='videos-1.html#java'">🎥 مشاهدة الفيديو</button>
+      <button class="book-btn" onclick="location.href='books-1.html#java'">📘 كتاب الكورس</button>
+    </div>
+
+    <div class="course-box">
+      <h3>كورس C</h3>
+      <button class="video-btn" onclick="location.href='videos-1.html#c'">🎥 مشاهدة الفيديو</button>
+      <button class="book-btn" onclick="location.href='books-1.html#c'">📘 كتاب الكورس</button>
+    </div>
+
+    <div class="course-box">
+      <h3>كورس C++</h3>
+      <button class="video-btn" onclick="location.href='videos-1.html#cpp'">🎥 مشاهدة الفيديو</button>
+      <button class="book-btn" onclick="location.href='books-1.html#cpp'">📘 كتاب الكورس</button>
+    </div>
+
+    <div class="course-box">
+      <h3>كورس C#</h3>
+      <button class="video-btn" onclick="location.href='videos-1.html#csharp'">🎥 مشاهدة الفيديو</button>
+      <button class="book-btn" onclick="location.href='books-1.html#csharp'">📘 كتاب الكورس</button>
+    </div>
+
+    <div class="course-box">
+      <h3>كورس PHP</h3>
+      <button class="video-btn" onclick="location.href='videos-1.html#php'">🎥 مشاهدة الفيديو</button>
+      <button class="book-btn" onclick="location.href='books-1.html#php'">📘 كتاب الكورس</button>
+    </div>
+
+    <div class="course-box">
+      <h3>كورس Ruby</h3>
+      <button class="video-btn" onclick="location.href='videos-1.html#ruby'">🎥 مشاهدة الفيديو</button>
+      <button class="book-btn" onclick="location.href='books-1.html#ruby'">📘 كتاب الكورس</button>
+    </div>
+
+    <!-- استكمال باقي الكورسات من videos-2.html و books-2.html و videos-3.html و books-3.html -->
+    <!-- لو حبيت أكمّلهم كلهم هنا قولي وسأكتبهم مباشرة -->
 
   </div>
 
   <footer>
-    <p>📚 لمزيد من المعلومات، زر <a href="about.html" style="color: yellow;">صفحة نظامنا</a></p>
+    <p>📚 لمزيد من المعلومات، زر <a href="about.html">صفحة نظامنا</a></p>
   </footer>
 
 </body>
