@@ -1,42 +1,34 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>📘 كتب كورسات البرمجة</title>
-  <link rel="icon" href="logo.png">
+  <link rel="icon" href="logo.png" />
   <style>
     body {
       font-family: Arial, sans-serif;
       background-image: url('logo.png');
       background-size: cover;
-      background-repeat: no-repeat;
       background-attachment: fixed;
-      color: #fff;
       margin: 0;
       padding: 0;
+      color: #fff;
     }
     header {
-      background-color: rgba(0,0,0,0.7);
+      background-color: rgba(0, 0, 0, 0.8);
       padding: 20px;
-      text-align: center;
       font-size: 28px;
+      text-align: center;
     }
     .book {
-      background-color: rgba(0,0,0,0.6);
+      background-color: rgba(0, 0, 0, 0.7);
       margin: 20px;
       padding: 20px;
-      border-radius: 10px;
+      border-radius: 12px;
     }
-    h2 {
-      color: #00ffcc;
-    }
-    a {
-      color: #ffff66;
-    }
-    .toc a {
-      display: block;
-      margin-bottom: 5px;
+    h2, h3 {
+      color: #00ffc8;
     }
     iframe {
       width: 100%;
@@ -44,9 +36,18 @@
       border: none;
       margin-top: 10px;
     }
+    .toc a {
+      display: inline-block;
+      margin: 5px 10px;
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
   <script>
-    // إعلان hilltopAds عند الفتح وكل 10 دقائق
     function openAd() {
       const win = window.open("https://obese-pin.com/b/3FV/0CP.3zpGv/bxmNVuJTZ/Dk0/2nNFT/UQzhOyT-AZz/LBTjY/1PNZTLMK5/MGD/Ql", "_blank");
       if (!win) alert("يرجى إلغاء حظر النوافذ المنبثقة لإظهار الإعلان.");
@@ -59,3 +60,60 @@
 </head>
 <body>
   <header>📘 كتب كورسات البرمجة</header>
+
+  <!-- كتاب لكل كورس -->
+  <!-- Python -->
+  <div class="book" id="python">
+    <h2>📘 Python</h2>
+    <div class="toc">
+      <a href="#py-intro">المقدمة</a> | 
+      <a href="#py-basics">الأساسيات</a> | 
+      <a href="#py-apps">التطبيقات</a> | 
+      <a href="#py-full">شرح شامل</a> | 
+      <a href="#py-video">🎥 فيديو</a>
+    </div>
+    <h3 id="py-intro">📖 المقدمة</h3>
+    <p>مرحبًا بك في كتاب Python. سنبدأ بمقدمة عامة حول الكورس وأهميته في سوق العمل.</p>
+
+    <h3 id="py-basics">🔧 الأساسيات</h3>
+    <p>سنتعرف على المتغيرات، الحلقات، الدوال، الشروط، القوائم، وغيرها.</p>
+
+    <h3 id="py-apps">🚀 التطبيقات</h3>
+    <p>نطبق ما تعلمناه من خلال مشروع عملي بسيط باستخدام Python.</p>
+
+    <h3 id="py-full">📚 شرح شامل</h3>
+    <p>Python تُستخدم في الذكاء الاصطناعي، الويب، تحليل البيانات، وغير ذلك.</p>
+
+    <h3 id="py-video">🎥 فيديو</h3>
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLknwEmKsW8OsG8dnisr_-2WGyx7lpgGEE" allowfullscreen></iframe>
+  </div>
+
+  <!-- JavaScript -->
+  <div class="book" id="js">
+    <h2>📘 JavaScript</h2>
+    <div class="toc">
+      <a href="#js-intro">المقدمة</a> | 
+      <a href="#js-basics">الأساسيات</a> | 
+      <a href="#js-apps">التطبيقات</a> | 
+      <a href="#js-full">شرح شامل</a> | 
+      <a href="#js-video">🎥 فيديو</a>
+    </div>
+    <h3 id="js-intro">📖 المقدمة</h3>
+    <p>مرحبًا بك في كتاب JavaScript. ستتعلم لغة التفاعل والواجهات الحديثة.</p>
+
+    <h3 id="js-basics">🔧 الأساسيات</h3>
+    <p>تشمل المتغيرات، الأحداث، الدوال، التحكم في DOM، والبرمجة الكائنية.</p>
+
+    <h3 id="js-apps">🚀 التطبيقات</h3>
+    <p>نطبق ما تعلمناه في مشروع ويب ديناميكي صغير.</p>
+
+    <h3 id="js-full">📚 شرح شامل</h3>
+    <p>JavaScript أساسية في تطوير الويب الحديث، تستخدم في الواجهة والخلفية.</p>
+
+    <h3 id="js-video">🎥 فيديو</h3>
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLknwEmKsW8OuTqUDaFRBiAViDZ5uI3VcE" allowfullscreen></iframe>
+  </div>
+
+  <!-- 🟡 ملاحظة: سيتم في الرد التالي إدراج كتب Java، C، C++، C#، PHP، Ruby -->
+</body>
+</html>
