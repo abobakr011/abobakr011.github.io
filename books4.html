@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📘 كتاب الكورس</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #202020;
+      color: white;
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    h1, h2, h3 {
+      color: #00d9ff;
+    }
+    pre {
+      background-color: #333;
+      color: #0f0;
+      padding: 15px;
+      overflow-x: auto;
+      border-radius: 5px;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- كتاب Python -->
+    <div id="python" class="book">
+      <h1>📘 كتاب Python</h1>
+
+      <div class="section">
+        <h2>📖 المقدمة</h2>
+        <p>لغة Python هي واحدة من أكثر لغات البرمجة استخدامًا وسهولةً في العالم، وتُستخدم في تطوير المواقع، تحليل البيانات، الذكاء الاصطناعي، والأتمتة.</p>
+      </div>
+
+      <div class="section">
+        <h2>🔧 المتغيرات</h2>
+        <p>تستخدم لتخزين البيانات. لا تحتاج لتحديد نوع المتغير.</p>
+        <pre>name = "Ahmed"
+age = 25
+pi = 3.14</pre>
+        <p><strong>ما يفعله هذا الكود:</strong> يخزن الاسم كسلسلة نصية، والعمر كعدد صحيح، و pi كعدد عشري.</p>
+      </div>
+
+      <div class="section">
+        <h2>🔁 الشروط</h2>
+        <pre>
+age = 18
+if age >= 18:
+    print("مسموح بالدخول")
+else:
+    print("ممنوع الدخول")
+        </pre>
+        <p>يفحص ما إذا كان العمر أكبر أو يساوي 18. إذا كان كذلك، يطبع "مسموح بالدخول".</p>
+      </div>
+
+      <div class="section">
+        <h2>🔄 الحلقات</h2>
+        <pre>
+# حلقة for
+for i in range(5):
+    print(i)
+
+# حلقة while
+x = 0
+while x < 3:
+    print(x)
+    x += 1
+        </pre>
+        <p>حلقة <code>for</code> تكرر الكود 5 مرات من 0 إلى 4. حلقة <code>while</code> تكرر حتى يصبح x أكبر من أو يساوي 3.</p>
+      </div>
+
+      <div class="section">
+        <h2>🔣 الدوال</h2>
+        <pre>
+def greet(name):
+    return "مرحبًا " + name
+
+print(greet("أحمد"))
+        </pre>
+        <p>تعرف دالة <code>greet</code> وتستخدم لإرجاع تحية باسم معين.</p>
+      </div>
+
+      <div class="section">
+        <h2>🏗️ الكائنات (OOP)</h2>
+        <pre>
+class Student:
+    def __init__(self, name):
+        self.name = name
+
+    def say_hello(self):
+        print("مرحبًا، أنا " + self.name)
+
+s = Student("ليلى")
+s.say_hello()
+        </pre>
+        <p>يعرف صنف (class) باسم Student يحتوي على اسم ودالة للترحيب.</p>
+      </div>
+
+      <div class="section">
+        <h2>🚀 مشروع تطبيقي بسيط</h2>
+        <p>مشروع لحساب عدد الأحرف في نص معين.</p>
+        <pre>
+def count_letters(text):
+    return len(text)
+
+user_input = input("أدخل نصًا: ")
+print("عدد الأحرف:", count_letters(user_input))
+        </pre>
+      </div>
+
+      <div class="section">
+        <h2>📌 خاتمة</h2>
+        <p>تعلمنا أساسيات Python من المتغيرات والدوال إلى المشروع التطبيقي. يمكنك الآن البدء في بناء مشاريع حقيقية باستخدام هذه اللغة.</p>
+      </div>
+    </div>
+
+  
+<!-- كتاب JavaScript -->
+<div id="javascript" class="book">
+  <h1>📘 كتاب JavaScript</h1>
+
+  <div class="section">
+    <h2>📖 المقدمة</h2>
+    <p>JavaScript هي لغة برمجة تُستخدم في تطوير صفحات الويب التفاعلية، وتُعتبر جزءًا أساسيًا من تقنيات الويب الحديثة بجانب HTML وCSS.</p>
+  </div>
+
+  <div class="section">
+    <h2>🔧 المتغيرات</h2>
+    <pre>
+let name = "Ali";
+const age = 30;
+var country = "Egypt";
+    </pre>
+    <p><strong>الشرح:</strong> <code>let</code> تُستخدم لتعريف متغير قابل للتغيير، <code>const</code> لمتغير ثابت، و<code>var</code> طريقة قديمة لتعريف المتغيرات.</p>
+  </div>
+
+  <div class="section">
+    <h2>🔁 الشروط</h2>
+    <pre>
+if (age >= 18) {
+  console.log("مسموح بالدخول");
+} else {
+  console.log("ممنوع الدخول");
+}
+    </pre>
+    <p>يتحقق من العمر، إذا كان 18 أو أكثر يطبع رسالة الدخول.</p>
+  </div>
+
+  <div class="section">
+    <h2>🔄 الحلقات</h2>
+    <pre>
+// حلقة for
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+
+// حلقة while
+let x = 0;
+while (x < 3) {
+  console.log(x);
+  x++;
+}
+    </pre>
+    <p>حلقة for تُستخدم لتكرار عدد معين من المرات. while تكرر حتى يتحقق شرط معين.</p>
+  </div>
+
+  <div class="section">
+    <h2>🔣 الدوال</h2>
+    <pre>
+function greet(name) {
+  return "مرحبًا " + name;
+}
+
+console.log(greet("سارة"));
+    </pre>
+    <p>تعرف دالة باسم greet ترجع رسالة ترحيبية باسم المستخدم.</p>
+  </div>
+
+  <div class="section">
+    <h2>📦 الكائنات (Objects)</h2>
+    <pre>
+let user = {
+  name: "Omar",
+  age: 25,
+  sayHello: function () {
+    console.log("مرحبًا، أنا " + this.name);
+  }
+};
+
+user.sayHello();
+    </pre>
+    <p>تم إنشاء كائن user يحتوي على خصائص ودالة لطباعة الترحيب.</p>
+  </div>
+
+  <div class="section">
+    <h2>🧱 المصفوفات</h2>
+    <pre>
+let fruits = ["تفاح", "موز", "برتقال"];
+console.log(fruits[1]); // يطبع "موز"
+    </pre>
+    <p>المصفوفات تُستخدم لتخزين مجموعة من القيم في متغير واحد.</p>
+  </div>
+
+  <div class="section">
+    <h2>📜 الأحداث (Events)</h2>
+    <pre>
+document.getElementById("myBtn").addEventListener("click", function() {
+  alert("تم النقر على الزر!");
+});
+    </pre>
+    <p>يعني: عندما يتم النقر على الزر ذو id = myBtn، يتم تنفيذ التنبيه.</p>
+  </div>
+
+  <div class="section">
+    <h2>🚀 مشروع تطبيقي</h2>
+    <p>مثال على آلة جمع بسيطة:</p>
+    <pre>
+function addNumbers(a, b) {
+  return a + b;
+}
+
+console.log(addNumbers(10, 5));
+    </pre>
+  </div>
+
+  <div class="section">
+    <h2>📌 خاتمة</h2>
+    <p>JavaScript لغة مرنة ومهمة جدًا لكل مطور ويب. تعلمنا المتغيرات، الشروط، الحلقات، الدوال، الكائنات، الأحداث والمصفوفات. ننصحك بالتجريب كثيرًا لاحترافها.</p>
+  </div>
+</div>
+<!-- كتاب Java -->
+<div id="java" class="book">
+  <h1>📘 كتاب Java</h1>
+
+  <div class="section">
+    <h2>📖 المقدمة</h2>
+    <p>Java هي لغة برمجة كائنية التوجه (Object-Oriented) تُستخدم في تطبيقات الويب، تطبيقات سطح المكتب، وبرمجة الهواتف.</p>
+  </div>
+
+  <div class="section">
+    <h2>🔧 المتغيرات والأنواع</h2>
+    <pre>
+int age = 25;
+double price = 19.99;
+boolean isActive = true;
+String name = "Ali";
+    </pre>
+    <p>Java لغة صارمة في كتابة الأنواع: <code>int</code> للأعداد الصحيحة، <code>double</code> للأرقام العشرية، <code>boolean</code> للقيم المنطقية، و<code>String</code> للنصوص.</p>
+  </div>
+
+  <div class="section">
+    <h2>🔁 الشروط</h2>
+    <pre>
+if (age >= 18) {
+  System.out.println("بالغ");
+} else {
+  System.out.println("قاصر");
+}
+    </pre>
+    <p>شرط بسيط يحدد ما إذا كان المستخدم بالغًا أو لا.</p>
+  </div>
+
+  <div class="section">
+    <h2>🔄 الحلقات</h2>
+    <pre>
+// حلقة for
+for (int i = 0; i < 5; i++) {
+  System.out.println(i);
+}
+
+// حلقة while
+int x = 0;
+while (x < 3) {
+  System.out.println(x);
+  x++;
+}
+    </pre>
+    <p>الحلقات تُستخدم لتكرار الأوامر، مع شرط توقف واضح.</p>
+  </div>
+
+  <div class="section">
+    <h2>🔣 الدوال (Methods)</h2>
+    <pre>
+public static String greet(String name) {
+  return "أهلاً " + name;
+}
+
+public static void main(String[] args) {
+  System.out.println(greet("سارة"));
+}
+    </pre>
+    <p>تعريف دالة تُعيد رسالة ترحيب وتأخذ اسم المستخدم كوسيط.</p>
+  </div>
+
+  <div class="section">
+    <h2>🧱 الكائنات (Objects) والفئات (Classes)</h2>
+    <pre>
+class Person {
+  String name;
+  int age;
+
+  Person(String n, int a) {
+    name = n;
+    age = a;
+  }
+
+  void sayHello() {
+    System.out.println("أنا " + name);
+  }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    Person p = new Person("Omar", 30);
+    p.sayHello();
+  }
+}
+    </pre>
+    <p>هنا أنشأنا كائن من الفئة Person وطبعنا رسالة ترحيب.</p>
+  </div>
+
+  <div class="section">
+    <h2>📦 المصفوفات</h2>
+    <pre>
+int[] numbers = {1, 2, 3, 4};
+System.out.println(numbers[1]); // يطبع 2
+    </pre>
+    <p>المصفوفات تُستخدم لتخزين أكثر من قيمة من نفس النوع.</p>
+  </div>
+
+  <div class="section">
+    <h2>🧪 التعامل مع السلاسل النصية</h2>
+    <pre>
+String message = "Hello";
+System.out.println(message.length());
+System.out.println(message.toUpperCase());
+    </pre>
+    <p>يمكنك تعديل وتحليل السلاسل النصية باستخدام دوال جاهزة.</p>
+  </div>
+
+  <div class="section">
+    <h2>🚀 مشروع بسيط: آلة جمع</h2>
+    <pre>
+public class Calculator {
+  public static int add(int a, int b) {
+    return a + b;
+  }
+
+  public static void main(String[] args) {
+    System.out.println("النتيجة: " + add(10, 5));
+  }
+}
+    </pre>
+    <p>برنامج بسيط لإجراء عملية جمع بين عددين.</p>
+  </div>
+
+  <div class="section">
+    <h2>📌 خاتمة</h2>
+    <p>Java من أقوى لغات البرمجة، وتُستخدم في الشركات والمؤسسات الكبرى. تعلمنا الأساسيات مثل المتغيرات، الحلقات، الدوال، الكائنات، والمصفوفات.</p>
+  </div>
+</div>
+<!-- كتاب C -->
+<div id="c" class="book">
+  <h1>📘 كتاب C</h1>
+
+  <div class="section">
+    <h2>📖 المقدمة</h2>
+    <p>لغة C تُعد من أقدم وأهم لغات البرمجة، وهي لغة قوية وسريعة تُستخدم في أنظمة التشغيل، الأنظمة المضمنة (Embedded Systems)، وغيرها.</p>
+  </div>
+
+  <div class="section">
+    <h2>🔧 المتغيرات والأنواع</h2>
+    <pre>
+int age = 20;
+float rate = 3.14;
+char letter = 'A';
+char name[] = "Ali";
+    </pre>
+    <p>في C، نُحدد نوع المتغير قبل استخدامه. <code>int</code> للأعداد، <code>float</code> للأرقام العشرية، <code>char</code> للحروف المفردة، والمصفوفة النصية <code>char[]</code> للنصوص.</p>
+  </div>
+
+  <div class="section">
+    <h2>🔁 الشروط</h2>
+    <pre>
+if (age >= 18) {
+  printf("بالغ\n");
+} else {
+  printf("قاصر\n");
+}
+    </pre>
+    <p>الشروط تُستخدم لاتخاذ قرارات حسب القيم.</p>
+  </div>
+
+  <div class="section">
+    <h2>🔄 الحلقات</h2>
+    <pre>
+for (int i = 0; i < 5; i++) {
+  printf("%d\n", i);
+}
+
+int x = 0;
+while (x < 3) {
+  printf("%d\n", x);
+  x++;
+}
+    </pre>
+    <p>تُستخدم الحلقات لتنفيذ مجموعة من التعليمات أكثر من مرة.</p>
+  </div>
+
+  <div class="section">
+    <h2>🔣 الدوال</h2>
+    <pre>
+int sum(int a, int b) {
+  return a + b;
+}
+
+int main() {
+  printf("المجموع: %d\n", sum(3, 4));
+  return 0;
+}
+    </pre>
+    <p>الدوال تُستخدم لتقسيم البرنامج إلى أجزاء قابلة لإعادة الاستخدام.</p>
+  </div>
+
+  <div class="section">
+    <h2>🧱 المصفوفات</h2>
+    <pre>
+int nums[] = {1, 2, 3, 4};
+printf("%d\n", nums[1]); // يطبع 2
+    </pre>
+    <p>المصفوفات تسمح لك بتخزين مجموعة من القيم تحت نفس الاسم.</p>
+  </div>
+
+  <div class="section">
+    <h2>📦 المؤشرات (Pointers)</h2>
+    <pre>
+int a = 5;
+int *p = &a;
+printf("قيمة a: %d\n", *p);
+    </pre>
+    <p>المؤشرات تسمح بالوصول المباشر إلى الذاكرة. <code>*p</code> تعني القيمة المخزنة في العنوان الذي يشير إليه المؤشر.</p>
+  </div>
+
+  <div class="section">
+    <h2>📄 بنية البرنامج</h2>
+    <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+  printf("مرحبا بلغة C\n");
+  return 0;
+}
+    </pre>
+    <p>هذا هو الشكل الأساسي لأي برنامج بلغة C.</p>
+  </div>
+
+  <div class="section">
+    <h2>🚀 مشروع بسيط: آلة جمع</h2>
+    <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+  int a, b;
+  printf("أدخل عددين: ");
+  scanf("%d %d", &a, &b);
+  printf("الناتج: %d\n", a + b);
+  return 0;
+}
+    </pre>
+    <p>برنامج بسيط يطلب من المستخدم رقمين ويطبع ناتج جمعهما.</p>
+  </div>
+
+  <div class="section">
+    <h2>📌 خاتمة</h2>
+    <p>لغة C أساس كثير من لغات البرمجة الحديثة، وفهمها يمنحك قوة في التعامل مع الأنظمة والذاكرة.</p>
+  </div>
+</div>
+<!-- كتاب C++ -->
+<div id="cpp" class="book">
+  <h1>📘 كتاب C++</h1>
+
+  <div class="section">
+    <h2>📖 المقدمة</h2>
+    <p>لغة C++ هي تطوير للغة C، وتُستخدم في الألعاب، البرمجيات المعقدة، أنظمة التشغيل، ومحركات الرسوميات. تدعم البرمجة الكائنية (OOP).</p>
+  </div>
+
+  <div class="section">
+    <h2>🔧 المتغيرات وأنواع البيانات</h2>
+    <pre>
+int age = 30;
+double pi = 3.1415;
+char grade = 'A';
+string name = "Ahmed";
+    </pre>
+    <p>مثل C، ولكن يمكنك استخدام <code>string</code> بدلًا من <code>char[]</code> للتعامل مع النصوص بسهولة.</p>
+  </div>
+
+  <div class="section">
+    <h2>🔁 الشروط</h2>
+    <pre>
+if (age > 18) {
+  cout << "بالغ" << endl;
+} else {
+  cout << "قاصر" << endl;
+}
+    </pre>
+    <p>نفس صيغة C تقريبًا، ولكن تُستخدم <code>cout</code> لطباعة النص.</p>
+  </div>
+
+  <div class="section">
+    <h2>🔄 الحلقات</h2>
+    <pre>
+for (int i = 0; i < 5; i++) {
+  cout << i << endl;
+}
+
+int j = 0;
+while (j < 3) {
+  cout << j << endl;
+  j++;
+}
+    </pre>
+    <p>نفس الحلقات المعتادة: for و while.</p>
+  </div>
+
+  <div class="section">
+    <h2>🔣 الدوال</h2>
+    <pre>
+int multiply(int a, int b) {
+  return a * b;
+}
+
+int main() {
+  cout << multiply(4, 5) << endl;
+  return 0;
+}
+    </pre>
+    <p>الدوال تُستخدم لتنظيم الكود وإعادة استخدام الوظائف.</p>
+  </div>
+
+  <div class="section">
+    <h2>🎭 الكائنات (Classes)</h2>
+    <pre>
+class Car {
+public:
+  string brand;
+  int year;
+
+  void drive() {
+    cout << "السيارة تسير" << endl;
+  }
+};
+
+int main() {
+  Car myCar;
+  myCar.brand = "Toyota";
+  myCar.year = 2020;
+  myCar.drive();
+}
+    </pre>
+    <p>البرمجة الكائنية OOP تُستخدم لتمثيل الأشياء ككائنات.</p>
+  </div>
+
+  <div class="section">
+    <h2>📦 المصفوفات و الـ Vectors</h2>
+    <pre>
+int nums[3] = {1, 2, 3};
+cout << nums[0] << endl;
+
+#include &lt;vector&gt;
+vector&lt;int&gt; v = {10, 20};
+v.push_back(30);
+    </pre>
+    <p>يمكنك استخدام <code>vector</code> بدلاً من المصفوفات الثابتة.</p>
+  </div>
+
+  <div class="section">
+    <h2>📚 المكتبات</h2>
+    <pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;string&gt;
+using namespace std;
+    </pre>
+    <p>مكتبات C++ تضيف وظائف جاهزة مثل الإخراج، النصوص، المصفوفات الديناميكية.</p>
+  </div>
+
+  <div class="section">
+    <h2>🚀 مشروع صغير: آلة ضرب</h2>
+    <pre>
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+  int x, y;
+  cout << "أدخل رقمين: ";
+  cin >> x >> y;
+  cout << "الناتج: " << x * y << endl;
+  return 0;
+}
+    </pre>
+    <p>برنامج صغير يطلب من المستخدم رقمين ويضربهما.</p>
+  </div>
+
+  <div class="section">
+    <h2>📌 الخاتمة</h2>
+    <p>C++ قوية جدًا ومناسبة للمشاريع الكبيرة، وتُستخدم في مجالات تتطلب الأداء العالي مثل الألعاب وأنظمة التشغيل.</p>
+  </div>
+</div>
+<!-- كتاب C# -->
+<div id="csharp" class="book">
+  <h1>📘 كتاب C#</h1>
+
+  <div class="section">
+    <h2>📖 المقدمة</h2>
+    <p>C# هي لغة برمجة حديثة تم تطويرها من مايكروسوفت، وتُستخدم في تطوير تطبيقات سطح المكتب، الويب، الجوال، والألعاب باستخدام منصة .NET.</p>
+  </div>
+
+  <div class="section">
+    <h2>🔧 المتغيرات والأنواع</h2>
+    <pre>
+int age = 25;
+double price = 99.99;
+char letter = 'A';
+string name = "Ahmed";
+bool isValid = true;
+    </pre>
+    <p>في C#، تُكتب الأنواع بشكل صريح، والكود يبدأ دائمًا داخل كائن أو دالة.</p>
+  </div>
+
+  <div class="section">
+    <h2>🔁 الشروط</h2>
+    <pre>
+if (age > 18)
+{
+  Console.WriteLine("بالغ");
+}
+else
+{
+  Console.WriteLine("قاصر");
+}
+    </pre>
+    <p>الشروط تُكتب بنفس أسلوب Java و C++ ولكن باستخدام <code>Console.WriteLine</code> للطباعة.</p>
+  </div>
+
+  <div class="section">
+    <h2>🔄 الحلقات</h2>
+    <pre>
+for (int i = 0; i < 5; i++)
+{
+  Console.WriteLine(i);
+}
+
+int j = 0;
+while (j < 3)
+{
+  Console.WriteLine(j);
+  j++;
+}
+    </pre>
+    <p>حلقات for و while متوفرة، والشرط محاط بالأقواس دائمًا.</p>
+  </div>
+
+  <div class="section">
+    <h2>🔣 الدوال (Methods)</h2>
+    <pre>
+static int Add(int a, int b)
+{
+  return a + b;
+}
+
+static void Main()
+{
+  Console.WriteLine(Add(5, 7));
+}
+    </pre>
+    <p>الدوال تُعرف باستخدام <code>static</code> داخل الكلاس، وتُستدعى من الدالة الرئيسية <code>Main</code>.</p>
+  </div>
+
+  <div class="section">
+    <h2>🧱 الكائنات (Classes)</h2>
+    <pre>
+class Person
+{
+  public string Name;
+  public int Age;
+
+  public void Greet()
+  {
+    Console.WriteLine("مرحبًا " + Name);
+  }
+}
+
+class Program
+{
+  static void Main()
+  {
+    Person p = new Person();
+    p.Name = "Ali";
+    p.Greet();
+  }
+}
+    </pre>
+    <p>البرمجة الكائنية (OOP) جوهر C#، تُستخدم الكلاسات لتعريف الكائنات.</p>
+  </div>
+
+  <div class="section">
+    <h2>📦 القوائم (Lists)</h2>
+    <pre>
+using System.Collections.Generic;
+
+List&lt;string&gt; items = new List&lt;string&gt;();
+items.Add("تفاحة");
+items.Add("موز");
+Console.WriteLine(items[0]);
+    </pre>
+    <p>باستخدام <code>List</code> يمكنك التعامل مع مجموعة من العناصر مثل المصفوفات.</p>
+  </div>
+
+  <div class="section">
+    <h2>📚 المكتبات</h2>
+    <pre>
+using System;
+using System.Collections.Generic;
+    </pre>
+    <p>المكتبات تُستورد باستخدام <code>using</code> في أعلى الملف. توفر وظائف للطباعة، القوائم، الملفات، وغيرها.</p>
+  </div>
+
+  <div class="section">
+    <h2>🚀 مشروع بسيط: برنامج آلة جمع</h2>
+    <pre>
+class Program
+{
+  static void Main()
+  {
+    Console.Write("أدخل رقم 1: ");
+    int x = int.Parse(Console.ReadLine());
+
+    Console.Write("أدخل رقم 2: ");
+    int y = int.Parse(Console.ReadLine());
+
+    Console.WriteLine("المجموع = " + (x + y));
+  }
+}
+    </pre>
+    <p>برنامج بسيط يطلب رقمين من المستخدم ويطبع المجموع.</p>
+  </div>
+
+  <div class="section">
+    <h2>📌 الخاتمة</h2>
+    <p>C# من أقوى اللغات في بيئة مايكروسوفت، ومناسبة لتطبيقات سطح المكتب والويب باستخدام ASP.NET أو الألعاب باستخدام Unity.</p>
+  </div>
+</div>
+<!-- كتاب PHP -->
+<div id="php" class="book">
+  <h1>📘 كتاب PHP</h1>
+
+  <div class="section">
+    <h2>📖 المقدمة</h2>
+    <p>PHP هي لغة برمجة تُستخدم بشكل أساسي لتطوير تطبيقات الويب الديناميكية. يمكن دمجها بسهولة مع HTML وتعمل على السيرفر لإنشاء صفحات تفاعلية.</p>
+  </div>
+
+  <div class="section">
+    <h2>🔧 كتابة أول كود</h2>
+    <pre>
+&lt;?php
+echo "مرحبًا بك في PHP!";
+?&gt;
+    </pre>
+    <p>الكود داخل وسم <code>&lt;?php ?&gt;</code>، وتُستخدم <code>echo</code> لطباعة النصوص.</p>
+  </div>
+
+  <div class="section">
+    <h2>🔢 المتغيرات</h2>
+    <pre>
+&lt;?php
+$name = "Ahmed";
+$age = 30;
+$isActive = true;
+?&gt;
+    </pre>
+    <p>كل المتغيرات تبدأ بعلامة <code>$</code>، ولا حاجة لتعريف نوع المتغير مسبقًا.</p>
+  </div>
+
+  <div class="section">
+    <h2>🔁 الشروط</h2>
+    <pre>
+&lt;?php
+if ($age &gt; 18) {
+  echo "بالغ";
+} else {
+  echo "قاصر";
+}
+?&gt;
+    </pre>
+    <p>تشبه شروط PHP الشروط في C أو JavaScript، ولكن داخل وسم PHP.</p>
+  </div>
+
+  <div class="section">
+    <h2>🔄 الحلقات</h2>
+    <pre>
+&lt;?php
+for ($i = 0; $i &lt; 5; $i++) {
+  echo $i . "&lt;br&gt;";
+}
+
+$j = 0;
+while ($j &lt; 3) {
+  echo $j . "&lt;br&gt;";
+  $j++;
+}
+?&gt;
+    </pre>
+    <p>الحلقات <code>for</code> و <code>while</code> تُستخدم كما في باقي لغات البرمجة.</p>
+  </div>
+
+  <div class="section">
+    <h2>🔣 الدوال</h2>
+    <pre>
+&lt;?php
+function greet($name) {
+  return "أهلًا " . $name;
+}
+
+echo greet("Ali");
+?&gt;
+    </pre>
+    <p>الدوال تُعرف بكلمة <code>function</code> وتُستدعى مثل أي لغة أخرى.</p>
+  </div>
+
+  <div class="section">
+    <h2>📂 التعامل مع النماذج (Forms)</h2>
+    <pre>
+&lt;form method="post"&gt;
+  الاسم: &lt;input type="text" name="username"&gt;
+  &lt;input type="submit"&gt;
+&lt;/form&gt;
+
+&lt;?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  echo "أهلًا " . $_POST["username"];
+}
+?&gt;
+    </pre>
+    <p>يمكن استقبال البيانات من المستخدم باستخدام <code>$_POST</code> أو <code>$_GET</code>.</p>
+  </div>
+
+  <div class="section">
+    <h2>🛢 الاتصال بقاعدة البيانات (MySQL)</h2>
+    <pre>
+&lt;?php
+$conn = mysqli_connect("localhost", "root", "", "test");
+
+if ($conn) {
+  echo "تم الاتصال!";
+} else {
+  echo "فشل الاتصال!";
+}
+?&gt;
+    </pre>
+    <p>تُستخدم <code>mysqli_connect</code> للاتصال بقاعدة البيانات MySQL.</p>
+  </div>
+
+  <div class="section">
+    <h2>🚀 مشروع بسيط: صفحة تسجيل دخول</h2>
+    <pre>
+&lt;form method="post"&gt;
+  اسم المستخدم: &lt;input name="user"&gt;&lt;br&gt;
+  كلمة المرور: &lt;input type="password" name="pass"&gt;&lt;br&gt;
+  &lt;input type="submit"&gt;
+&lt;/form&gt;
+
+&lt;?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if ($_POST["user"] == "admin" &amp;&amp; $_POST["pass"] == "1234") {
+    echo "تم تسجيل الدخول!";
+  } else {
+    echo "اسم المستخدم أو كلمة المرور خاطئة.";
+  }
+}
+?&gt;
+    </pre>
+    <p>مثال عملي بسيط على مصادقة المستخدم باستخدام نموذج HTML وPHP.</p>
+  </div>
+
+  <div class="section">
+    <h2>📌 الخاتمة</h2>
+    <p>PHP ما زالت من أكثر اللغات استخدامًا في تطوير مواقع الإنترنت، خصوصًا مع أنظمة مثل WordPress وLaravel.</p>
+  </div>
+</div>
+
+</div>
+  <script>
+    // إخفاء كل الكتب عدا الكتاب المختار بالرابط
+    const allBooks = document.querySelectorAll('.book');
+    const hash = window.location.hash.replace('#', '').toLowerCase();
+    allBooks.forEach(book => {
+      book.style.display = (book.id === hash) ? 'block' : 'none';
+    });
+  </script>
+</body>
+</html>
