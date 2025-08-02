@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>📘 كتب الكورسات</title>
+  <link rel="icon" href="logo.png" />
+  <style>
+    body {
+      background-image: url('logo.png');
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: white;
+      margin: 0;
+      padding: 0;
+      text-align: right;
+    }
+    .book {
+      display: none;
+      padding: 20px;
+    }
+    .book.active {
+      display: block;
+    }
+    h1, h2 {
+      color: #ffcc00;
+    }
+    .section {
+      background: rgba(0,0,0,0.6);
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    iframe {
+      width: 100%;
+      height: 400px;
+    }
+  </style>
+
+  <!-- إعلان hilltopAds -->
+  <script async src="https://obese-pin.com/b/3FV/0CP.3zpGv/bxmNVuJTZ/Dk0/2nNFT/UQzhOyT-AZz/LBTjY/1PNZTLMK5/MGD/Ql"></script>
+  <script>
+    setInterval(() => {
+      let ad = document.createElement("script");
+      ad.src = "https://obese-pin.com/b/3FV/0CP.3zpGv/bxmNVuJTZ/Dk0/2nNFT/UQzhOyT-AZz/LBTjY/1PNZTLMK5/MGD/Ql";
+      document.body.appendChild(ad);
+    }, 600000); // كل 10 دقائق
+  </script>
+
+</head>
+<body>
+  <h1>📘 كتب الكورسات</h1>
+
+  <!-- كتاب Python -->
+  <div id="python" class="book">
+    <div class="section">
+      <h2>📘 Python</h2>
+      <h3>📖 المقدمة</h3>
+      <p>Python هي لغة برمجة عالية المستوى وسهلة التعلم، تُستخدم في تطوير الويب، الذكاء الاصطناعي، تحليل البيانات، والأتمتة.</p>
+    </div>
+    <div class="section">
+      <h3>🔧 الأساسيات</h3>
+      <ul>
+        <li>المتغيرات: <code>x = 10</code></li>
+        <li>الشروط: <code>if x > 5:</code></li>
+        <li>الحلقات: <code>for i in range(5):</code></li>
+        <li>الدوال: <code>def greet(name):</code></li>
+        <li>القوائم، القواميس، التكرار، الاستثناءات، الملفات.</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h3>🚀 التطبيقات</h3>
+      <p>إنشاء سكربت بسيط لتحليل البيانات من ملف CSV، وبرنامج واجهة مستخدم باستخدام Tkinter.</p>
+    </div>
+    <div class="section" id="video">
+      <h3>🎥 فيديو الكورس</h3>
+      <iframe src="https://www.youtube.com/embed/videoseries?list=PLknwEmKsW8OsG8dnisr_-2WGyx7lpgGEE" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- سيتم إضافة باقي الكتب هنا -->
+
+  <script>
+    // عرض الكتاب المناسب فقط بناءً على الـ ID
+    window.onload = () => {
+      const hash = window.location.hash.replace("#", "");
+      document.querySelectorAll(".book").forEach(b => b.classList.remove("active"));
+      const activeBook = document.getElementById(hash);
+      if (activeBook) activeBook.classList.add("active");
+    };
+  </script>
+</body>
+</html>
