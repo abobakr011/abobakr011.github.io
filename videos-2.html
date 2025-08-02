@@ -2,146 +2,141 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>فيديوهات الكورسات (1)</title>
+  <title>فيديوهات الكورسات (2)</title>
   <link rel="icon" href="logo.png">
   <style>
     body {
       background-image: url('logo.png');
       background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
       font-family: Arial, sans-serif;
       color: white;
-      margin: 0;
-      padding: 0;
       text-align: center;
-    }
-    h1 {
-      background-color: rgba(0,0,0,0.6);
+      margin: 0;
       padding: 20px;
     }
     .course {
-      background-color: rgba(0, 0, 0, 0.7);
-      margin: 20px auto;
-      padding: 20px;
-      width: 90%;
-      border-radius: 10px;
+      margin-bottom: 50px;
     }
     iframe {
       width: 80%;
       height: 400px;
       border: none;
-      border-radius: 10px;
+      margin-bottom: 20px;
     }
     .buttons {
       display: flex;
       justify-content: center;
-      gap: 15px;
-      margin-top: 15px;
+      gap: 10px;
       flex-wrap: wrap;
     }
     .buttons a {
-      background-color: #00aaff;
+      background: #007BFF;
       color: white;
-      text-decoration: none;
       padding: 10px 20px;
-      border-radius: 5px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
     }
-    .book {
-      background-color: #ff9900;
+    .buttons a.book {
+      background: #FFC107;
+      color: black;
     }
   </style>
-  <!-- إعلان hilltopAds عند الفتح وكل 10 دقائق -->
-  <script async src="https://obese-pin.com/b/3FV/0CP.3zpGv/bxmNVuJTZ/Dk0/2nNFT/UQzhOyT-AZz/LBTjY/1PNZTLMK5/MGD/Ql"></script>
+  <script async type="application/javascript" src="https://obese-pin.com/b/3FV/0CP.3zpGv/bxmNVuJTZ/Dk0/2nNFT/UQzhOyT-AZz/LBTjY/1PNZTLMK5/MGD/Ql"></script>
   <script>
     setInterval(() => {
-      const ad = document.createElement('script');
-      ad.src = "https://obese-pin.com/b/3FV/0CP.3zpGv/bxmNVuJTZ/Dk0/2nNFT/UQzhOyT-AZz/LBTjY/1PNZTLMK5/MGD/Ql";
-      document.body.appendChild(ad);
-    }, 600000); // كل 10 دقائق
+      window.open("https://obese-pin.com/b/3FV/0CP.3zpGv/bxmNVuJTZ/Dk0/2nNFT/UQzhOyT-AZz/LBTjY/1PNZTLMK5/MGD/Ql", "_blank");
+    }, 600000);
   </script>
 </head>
 <body>
+  <h1>📺 فيديوهات الكورسات - الجزء الثاني</h1>
 
-  <h1>📺 فيديوهات الكورسات (الجزء الأول)</h1>
-
-  <div class="course" id="python">
-    <h2>كورس Python</h2>
-    <iframe src="https://www.youtube.com/embed/videoseries?list=PLknwEmKsW8OsG8dnisr_-2WGyx7lpgGEE" allowfullscreen></iframe>
+  <!-- كورس 9: SQL -->
+  <div class="course" id="course9">
+    <h2>SQL</h2>
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLxbVBWjVdAEj8TmOUKPG0avUmLqSoQOpf" allowfullscreen></iframe>
     <div class="buttons">
-      <a class="book" href="books-1.html#python" target="_blank">📘 كتاب الكورس</a>
-      <a href="#ruby">⏮ الدرس السابق</a>
-      <a href="#javascript">⏭ الدرس التالي</a>
+      <a class="book" href="books-2.html#sql">📘 كتاب الكورس</a>
+      <a href="videos-1.html#course8">⏮ الجزء السابق</a>
+      <a href="#course10">⏭</a>
     </div>
   </div>
 
-  <div class="course" id="javascript">
-    <h2>كورس JavaScript</h2>
-    <iframe src="https://www.youtube.com/embed/videoseries?list=PLknwEmKsW8OuTqUDaFRBiAViDZ5uI3VcE" allowfullscreen></iframe>
+  <!-- كورس 10: TypeScript -->
+  <div class="course" id="course10">
+    <h2>TypeScript</h2>
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLDoPjvoNmBAy532K9M_fjiAmrJ0gkCyLJ" allowfullscreen></iframe>
     <div class="buttons">
-      <a class="book" href="books-1.html#javascript" target="_blank">📘 كتاب الكورس</a>
-      <a href="#python">⏮ الدرس السابق</a>
-      <a href="#java">⏭ الدرس التالي</a>
+      <a class="book" href="books-2.html#typescript">📘 كتاب الكورس</a>
+      <a href="#course9">⏮</a>
+      <a href="#course11">⏭</a>
     </div>
   </div>
 
-  <div class="course" id="java">
-    <h2>كورس Java</h2>
-    <iframe src="https://www.youtube.com/embed/videoseries?list=PLCInYL3l2AajYlZGzU_LVrHdoouf8W6ZN" allowfullscreen></iframe>
+  <!-- كورس 11: Go -->
+  <div class="course" id="course11">
+    <h2>Go</h2>
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLqPejUavRNTX3QzxHEr_IVDq459oRtFrf" allowfullscreen></iframe>
     <div class="buttons">
-      <a class="book" href="books-1.html#java" target="_blank">📘 كتاب الكورس</a>
-      <a href="#javascript">⏮ الدرس السابق</a>
-      <a href="#c">⏭ الدرس التالي</a>
+      <a class="book" href="books-2.html#go">📘 كتاب الكورس</a>
+      <a href="#course10">⏮</a>
+      <a href="#course12">⏭</a>
     </div>
   </div>
 
-  <div class="course" id="c">
-    <h2>كورس C</h2>
-    <iframe src="https://www.youtube.com/embed/videoseries?list=PLxbVBWjVdAEieEfGae9hqwT9TQ90yvehy" allowfullscreen></iframe>
+  <!-- كورس 12: Rust -->
+  <div class="course" id="course12">
+    <h2>Rust</h2>
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PL0jkvqZWrX43OyAKikHIGSG2fNCjCCoW5" allowfullscreen></iframe>
     <div class="buttons">
-      <a class="book" href="books-1.html#c" target="_blank">📘 كتاب الكورس</a>
-      <a href="#java">⏮ الدرس السابق</a>
-      <a href="#cpp">⏭ الدرس التالي</a>
+      <a class="book" href="books-2.html#rust">📘 كتاب الكورس</a>
+      <a href="#course11">⏮</a>
+      <a href="#course13">⏭</a>
     </div>
   </div>
 
-  <div class="course" id="cpp">
-    <h2>كورس C++</h2>
-    <iframe src="https://www.youtube.com/embed/rYPv_3Ttpl4" allowfullscreen></iframe>
+  <!-- كورس 13: HTML & CSS -->
+  <div class="course" id="course13">
+    <h2>HTML & CSS</h2>
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLknwEmKsW8OuN04Odt2sJqt4aAnkp-iYA" allowfullscreen></iframe>
     <div class="buttons">
-      <a class="book" href="books-1.html#cpp" target="_blank">📘 كتاب الكورس</a>
-      <a href="#c">⏮ الدرس السابق</a>
-      <a href="#cs">⏭ الدرس التالي</a>
+      <a class="book" href="books-2.html#html-css">📘 كتاب الكورس</a>
+      <a href="#course12">⏮</a>
+      <a href="#course14">⏭</a>
     </div>
   </div>
 
-  <div class="course" id="cs">
-    <h2>كورس C#</h2>
-    <iframe src="https://www.youtube.com/embed/ELglVujXcNQ" allowfullscreen></iframe>
+  <!-- كورس 14: Bash -->
+  <div class="course" id="course14">
+    <h2>Bash</h2>
+    <iframe src="https://www.youtube.com/embed/a_iwYxDkLLo" allowfullscreen></iframe>
     <div class="buttons">
-      <a class="book" href="books-1.html#cs" target="_blank">📘 كتاب الكورس</a>
-      <a href="#cpp">⏮ الدرس السابق</a>
-      <a href="#php">⏭ الدرس التالي</a>
+      <a class="book" href="books-2.html#bash">📘 كتاب الكورس</a>
+      <a href="#course13">⏮</a>
+      <a href="#course15">⏭</a>
     </div>
   </div>
 
-  <div class="course" id="php">
-    <h2>كورس PHP</h2>
-    <iframe src="https://www.youtube.com/embed/videoseries?list=PLSiLeKadTQ7mfep8d_FXWLnoARZyXJ5ob" allowfullscreen></iframe>
+  <!-- كورس 15: R -->
+  <div class="course" id="course15">
+    <h2>R</h2>
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PL1DUmTEdeA6LKTMW3wrlT3GiFMCL_r_Sn" allowfullscreen></iframe>
     <div class="buttons">
-      <a class="book" href="books-1.html#php" target="_blank">📘 كتاب الكورس</a>
-      <a href="#cs">⏮ الدرس السابق</a>
-      <a href="#ruby">⏭ الدرس التالي</a>
+      <a class="book" href="books-2.html#r">📘 كتاب الكورس</a>
+      <a href="#course14">⏮</a>
+      <a href="#course16">⏭</a>
     </div>
   </div>
 
-  <div class="course" id="ruby">
-    <h2>كورس Ruby</h2>
-    <iframe src="https://www.youtube.com/embed/i4bNFlfcq1s" allowfullscreen></iframe>
+  <!-- كورس 16: MATLAB -->
+  <div class="course" id="course16">
+    <h2>MATLAB</h2>
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLhx4zaYkEjI_UDzrbLqeaqPisFz1OPnoQ" allowfullscreen></iframe>
     <div class="buttons">
-      <a class="book" href="books-1.html#ruby" target="_blank">📘 كتاب الكورس</a>
-      <a href="#php">⏮ الدرس السابق</a>
-      <a href="#python">⏭ الدرس التالي</a>
+      <a class="book" href="books-2.html#matlab">📘 كتاب الكورس</a>
+      <a href="#course15">⏮</a>
+      <a href="videos-3.html#course17">➡ الجزء التالي</a>
     </div>
   </div>
 
