@@ -14,6 +14,10 @@
       margin: 0;
       padding: 20px;
     }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
     #video-title {
       font-size: 24px;
       margin-bottom: 10px;
@@ -50,9 +54,9 @@
     }
   </style>
 
-  <!-- hilltopAds عند الفتح -->
+  <!-- إعلان hilltopAds عند الفتح -->
   <script async src="https://obese-pin.com/b/3FV/0CP.3zpGv/bxmNVuJTZ/Dk0/2nNFT/UQzhOyT-AZz/LBTjY/1PNZTLMK5/MGD/Ql"></script>
-  <!-- hilltopAds كل 10 دقائق -->
+  <!-- إعلان كل 10 دقائق -->
   <script>
     setInterval(() => {
       window.open("https://obese-pin.com/b/3FV/0CP.3zpGv/bxmNVuJTZ/Dk0/2nNFT/UQzhOyT-AZz/LBTjY/1PNZTLMK5/MGD/Ql", "_blank");
@@ -73,42 +77,55 @@
 
   <script>
     const courses = [
-      { title: "Python",        video: "videoseries?list=PLknwEmKsW8OsG8dnisr_-2WGyx7lpgGEE", book: "books-1.html#python" },
-      { title: "JavaScript",    video: "videoseries?list=PLknwEmKsW8OuTqUDaFRBiAViDZ5uI3VcE", book: "books-1.html#javascript" },
-      { title: "Java",          video: "videoseries?list=PLCInYL3l2AajYlZGzU_LVrHdoouf8W6ZN", book: "books-1.html#java" },
-      { title: "C",             video: "videoseries?list=PLxbVBWjVdAEieEfGae9hqwT9TQ90yvehy", book: "books-1.html#c" },
-      { title: "C++",           video: "rYPv_3Ttpl4",                               book: "books-1.html#cpp" },
-      { title: "C#",            video: "ELglVujXcNQ",                              book: "books-1.html#csharp" },
-      { title: "PHP",           video: "videoseries?list=PLSiLeKadTQ7mfep8d_FXWLnoARZyXJ5ob", book: "books-1.html#php" },
-      { title: "Ruby",          video: "i4bNFlfcq1s",                              book: "books-1.html#ruby" }
+      { id: "python", title: "Python",        video: "videoseries?list=PLknwEmKsW8OsG8dnisr_-2WGyx7lpgGEE", book: "books-1.html#python" },
+      { id: "javascript", title: "JavaScript", video: "videoseries?list=PLknwEmKsW8OuTqUDaFRBiAViDZ5uI3VcE", book: "books-1.html#javascript" },
+      { id: "java", title: "Java",            video: "videoseries?list=PLCInYL3l2AajYlZGzU_LVrHdoouf8W6ZN", book: "books-1.html#java" },
+      { id: "c", title: "C",                  video: "videoseries?list=PLxbVBWjVdAEieEfGae9hqwT9TQ90yvehy", book: "books-1.html#c" },
+      { id: "cpp", title: "C++",              video: "rYPv_3Ttpl4",                              book: "books-1.html#cpp" },
+      { id: "csharp", title: "C#",            video: "ELglVujXcNQ",                             book: "books-1.html#csharp" },
+      { id: "php", title: "PHP",              video: "videoseries?list=PLSiLeKadTQ7mfep8d_FXWLnoARZyXJ5ob", book: "books-1.html#php" },
+      { id: "ruby", title: "Ruby",            video: "i4bNFlfcq1s",                             book: "books-1.html#ruby" }
     ];
 
-    let idx = 0;
     const titleEl = document.getElementById('video-title');
     const frame = document.getElementById('video-frame');
     const bookLink = document.getElementById('book-link');
     const prevBtn = document.getElementById('prev-btn');
     const nextBtn = document.getElementById('next-btn');
 
-    function loadCourse(i) {
-      const c = courses[i];
-      titleEl.textContent = c.title;
+    let idx = 0;
+
+    function loadCourse(index) {
+      const c = courses[index];
+      titleEl.textContent = `📘 كورس ${c.title}`;
       frame.src = `https://www.youtube.com/embed/${c.video}`;
       bookLink.href = c.book;
     }
+
+    // استخراج id من الرابط
+    function getInitialIndex() {
+      const hash = window.location.hash.slice(1);
+      const found = courses.findIndex(c => c.id === hash);
+      return found >= 0 ? found : 0;
+    }
+
+    idx = getInitialIndex();
+    loadCourse(idx);
 
     prevBtn.onclick = () => {
       idx = (idx - 1 + courses.length) % courses.length;
       loadCourse(idx);
     };
+
     nextBtn.onclick = () => {
       idx = (idx + 1) % courses.length;
       loadCourse(idx);
     };
-
-    // Initial load
-    loadCourse(idx);
   </script>
 
 </body>
 </html>
+
+
+
+
