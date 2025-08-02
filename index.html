@@ -106,21 +106,13 @@
 
       const courseList = document.currentScript.parentElement;
 
-      courses.forEach((course, index) => {
-        const num = index + 1;
-        const videoFile = num <= 8 ? "videos-1.html"
-                         : num <= 16 ? "videos-2.html"
-                         : "videos-3.html";
-        const bookFile  = num <= 8 ? "books-1.html"
-                         : num <= 16 ? "books-2.html"
-                         : "books-3.html";
+      courses.forEach((course) => {
         const id = course.toLowerCase().replace(/[^a-zA-Z0-9\u0621-\u064A]+/g, '-');
-
         courseList.innerHTML += `
           <div class="course-box">
             <h3>كورس ${course}</h3>
-            <button class="video-btn" onclick="location.href='${videoFile}#${id}'">🎥 مشاهدة الفيديو</button>
-            <button class="book-btn" onclick="location.href='${bookFile}#${id}'">📘 كتاب الكورس</button>
+            <button class="video-btn" onclick="location.href='videos.html#${id}'">🎥 مشاهدة الفيديو</button>
+            <button class="book-btn" onclick="location.href='books.html#${id}'">📘 كتاب الكورس</button>
           </div>
         `;
       });
@@ -133,3 +125,7 @@
 
 </body>
 </html>
+
+
+
+
