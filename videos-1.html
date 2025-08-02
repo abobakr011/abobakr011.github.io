@@ -8,140 +8,135 @@
     body {
       background-image: url('logo.png');
       background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
       font-family: Arial, sans-serif;
       color: white;
-      margin: 0;
-      padding: 0;
       text-align: center;
-    }
-    h1 {
-      background-color: rgba(0,0,0,0.6);
+      margin: 0;
       padding: 20px;
     }
     .course {
-      background-color: rgba(0, 0, 0, 0.7);
-      margin: 20px auto;
-      padding: 20px;
-      width: 90%;
-      border-radius: 10px;
+      margin-bottom: 50px;
     }
     iframe {
       width: 80%;
       height: 400px;
       border: none;
-      border-radius: 10px;
+      margin-bottom: 20px;
     }
     .buttons {
       display: flex;
       justify-content: center;
-      gap: 15px;
-      margin-top: 15px;
+      gap: 10px;
       flex-wrap: wrap;
     }
     .buttons a {
-      background-color: #00aaff;
+      background: #007BFF;
       color: white;
-      text-decoration: none;
       padding: 10px 20px;
-      border-radius: 5px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
     }
-    .book {
-      background-color: #ff9900;
+    .buttons a.book {
+      background: #FFC107;
+      color: black;
     }
   </style>
-  <!-- إعلان hilltopAds عند الفتح وكل 10 دقائق -->
-  <script async src="https://obese-pin.com/b/3FV/0CP.3zpGv/bxmNVuJTZ/Dk0/2nNFT/UQzhOyT-AZz/LBTjY/1PNZTLMK5/MGD/Ql"></script>
+  <script async type="application/javascript" src="https://obese-pin.com/b/3FV/0CP.3zpGv/bxmNVuJTZ/Dk0/2nNFT/UQzhOyT-AZz/LBTjY/1PNZTLMK5/MGD/Ql"></script>
   <script>
     setInterval(() => {
-      const ad = document.createElement('script');
-      ad.src = "https://obese-pin.com/b/3FV/0CP.3zpGv/bxmNVuJTZ/Dk0/2nNFT/UQzhOyT-AZz/LBTjY/1PNZTLMK5/MGD/Ql";
-      document.body.appendChild(ad);
-    }, 600000); // كل 10 دقائق
+      window.open("https://obese-pin.com/b/3FV/0CP.3zpGv/bxmNVuJTZ/Dk0/2nNFT/UQzhOyT-AZz/LBTjY/1PNZTLMK5/MGD/Ql", "_blank");
+    }, 600000);
   </script>
 </head>
 <body>
+  <h1>📺 فيديوهات الكورسات - الجزء الأول</h1>
 
-  <h1>📺 فيديوهات الكورسات (الجزء الأول)</h1>
-
-  <div class="course" id="python">
-    <h2>كورس Python</h2>
+  <!-- كورس 1: Python -->
+  <div class="course" id="course1">
+    <h2>Python</h2>
     <iframe src="https://www.youtube.com/embed/videoseries?list=PLknwEmKsW8OsG8dnisr_-2WGyx7lpgGEE" allowfullscreen></iframe>
     <div class="buttons">
-      <a class="book" href="books-1.html#python" target="_blank">📘 كتاب الكورس</a>
-      <a href="#ruby">⏮ الدرس السابق</a>
-      <a href="#javascript">⏭ الدرس التالي</a>
+      <a class="book" href="books-1.html#python">📘 كتاب الكورس</a>
+      <a href="#">⏮</a>
+      <a href="#course2">⏭</a>
     </div>
   </div>
 
-  <div class="course" id="javascript">
-    <h2>كورس JavaScript</h2>
+  <!-- كورس 2: JavaScript -->
+  <div class="course" id="course2">
+    <h2>JavaScript</h2>
     <iframe src="https://www.youtube.com/embed/videoseries?list=PLknwEmKsW8OuTqUDaFRBiAViDZ5uI3VcE" allowfullscreen></iframe>
     <div class="buttons">
-      <a class="book" href="books-1.html#javascript" target="_blank">📘 كتاب الكورس</a>
-      <a href="#python">⏮ الدرس السابق</a>
-      <a href="#java">⏭ الدرس التالي</a>
+      <a class="book" href="books-1.html#javascript">📘 كتاب الكورس</a>
+      <a href="#course1">⏮</a>
+      <a href="#course3">⏭</a>
     </div>
   </div>
 
-  <div class="course" id="java">
-    <h2>كورس Java</h2>
+  <!-- كورس 3: Java -->
+  <div class="course" id="course3">
+    <h2>Java</h2>
     <iframe src="https://www.youtube.com/embed/videoseries?list=PLCInYL3l2AajYlZGzU_LVrHdoouf8W6ZN" allowfullscreen></iframe>
     <div class="buttons">
-      <a class="book" href="books-1.html#java" target="_blank">📘 كتاب الكورس</a>
-      <a href="#javascript">⏮ الدرس السابق</a>
-      <a href="#c">⏭ الدرس التالي</a>
+      <a class="book" href="books-1.html#java">📘 كتاب الكورس</a>
+      <a href="#course2">⏮</a>
+      <a href="#course4">⏭</a>
     </div>
   </div>
 
-  <div class="course" id="c">
-    <h2>كورس C</h2>
+  <!-- كورس 4: C -->
+  <div class="course" id="course4">
+    <h2>C</h2>
     <iframe src="https://www.youtube.com/embed/videoseries?list=PLxbVBWjVdAEieEfGae9hqwT9TQ90yvehy" allowfullscreen></iframe>
     <div class="buttons">
-      <a class="book" href="books-1.html#c" target="_blank">📘 كتاب الكورس</a>
-      <a href="#java">⏮ الدرس السابق</a>
-      <a href="#cpp">⏭ الدرس التالي</a>
+      <a class="book" href="books-1.html#c">📘 كتاب الكورس</a>
+      <a href="#course3">⏮</a>
+      <a href="#course5">⏭</a>
     </div>
   </div>
 
-  <div class="course" id="cpp">
-    <h2>كورس C++</h2>
+  <!-- كورس 5: C++ -->
+  <div class="course" id="course5">
+    <h2>C++</h2>
     <iframe src="https://www.youtube.com/embed/rYPv_3Ttpl4" allowfullscreen></iframe>
     <div class="buttons">
-      <a class="book" href="books-1.html#cpp" target="_blank">📘 كتاب الكورس</a>
-      <a href="#c">⏮ الدرس السابق</a>
-      <a href="#cs">⏭ الدرس التالي</a>
+      <a class="book" href="books-1.html#cpp">📘 كتاب الكورس</a>
+      <a href="#course4">⏮</a>
+      <a href="#course6">⏭</a>
     </div>
   </div>
 
-  <div class="course" id="cs">
-    <h2>كورس C#</h2>
+  <!-- كورس 6: C# -->
+  <div class="course" id="course6">
+    <h2>C#</h2>
     <iframe src="https://www.youtube.com/embed/ELglVujXcNQ" allowfullscreen></iframe>
     <div class="buttons">
-      <a class="book" href="books-1.html#cs" target="_blank">📘 كتاب الكورس</a>
-      <a href="#cpp">⏮ الدرس السابق</a>
-      <a href="#php">⏭ الدرس التالي</a>
+      <a class="book" href="books-1.html#csharp">📘 كتاب الكورس</a>
+      <a href="#course5">⏮</a>
+      <a href="#course7">⏭</a>
     </div>
   </div>
 
-  <div class="course" id="php">
-    <h2>كورس PHP</h2>
+  <!-- كورس 7: PHP -->
+  <div class="course" id="course7">
+    <h2>PHP</h2>
     <iframe src="https://www.youtube.com/embed/videoseries?list=PLSiLeKadTQ7mfep8d_FXWLnoARZyXJ5ob" allowfullscreen></iframe>
     <div class="buttons">
-      <a class="book" href="books-1.html#php" target="_blank">📘 كتاب الكورس</a>
-      <a href="#cs">⏮ الدرس السابق</a>
-      <a href="#ruby">⏭ الدرس التالي</a>
+      <a class="book" href="books-1.html#php">📘 كتاب الكورس</a>
+      <a href="#course6">⏮</a>
+      <a href="#course8">⏭</a>
     </div>
   </div>
 
-  <div class="course" id="ruby">
-    <h2>كورس Ruby</h2>
+  <!-- كورس 8: Ruby -->
+  <div class="course" id="course8">
+    <h2>Ruby</h2>
     <iframe src="https://www.youtube.com/embed/i4bNFlfcq1s" allowfullscreen></iframe>
     <div class="buttons">
-      <a class="book" href="books-1.html#ruby" target="_blank">📘 كتاب الكورس</a>
-      <a href="#php">⏮ الدرس السابق</a>
-      <a href="#python">⏭ الدرس التالي</a>
+      <a class="book" href="books-1.html#ruby">📘 كتاب الكورس</a>
+      <a href="#course7">⏮</a>
+      <a href="videos-2.html">➡ الجزء التالي</a>
     </div>
   </div>
 
