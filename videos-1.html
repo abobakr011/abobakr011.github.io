@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>فيديوهات الكورسات (1)</title>
+  <title>📺 فيديوهات الكورس</title>
   <link rel="icon" href="logo.png">
   <style>
     body {
@@ -14,35 +14,45 @@
       margin: 0;
       padding: 20px;
     }
-    .course {
-      margin-bottom: 50px;
+    #video-title {
+      font-size: 24px;
+      margin-bottom: 10px;
     }
-    iframe {
+    #video-frame {
       width: 80%;
       height: 400px;
       border: none;
-      margin-bottom: 20px;
+      border-radius: 8px;
     }
-    .buttons {
+    .controls {
+      margin-top: 15px;
       display: flex;
       justify-content: center;
       gap: 10px;
       flex-wrap: wrap;
     }
-    .buttons a {
-      background: #007BFF;
-      color: white;
+    .controls button, .controls a {
       padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 6px;
+      font-size: 16px;
       font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      cursor: pointer;
     }
-    .buttons a.book {
-      background: #FFC107;
+    .controls button {
+      background-color: #007BFF;
+      color: white;
+    }
+    .controls a.book {
+      background-color: #FFC107;
       color: black;
     }
   </style>
-  <script async type="application/javascript" src="https://obese-pin.com/b/3FV/0CP.3zpGv/bxmNVuJTZ/Dk0/2nNFT/UQzhOyT-AZz/LBTjY/1PNZTLMK5/MGD/Ql"></script>
+
+  <!-- hilltopAds عند الفتح -->
+  <script async src="https://obese-pin.com/b/3FV/0CP.3zpGv/bxmNVuJTZ/Dk0/2nNFT/UQzhOyT-AZz/LBTjY/1PNZTLMK5/MGD/Ql"></script>
+  <!-- hilltopAds كل 10 دقائق -->
   <script>
     setInterval(() => {
       window.open("https://obese-pin.com/b/3FV/0CP.3zpGv/bxmNVuJTZ/Dk0/2nNFT/UQzhOyT-AZz/LBTjY/1PNZTLMK5/MGD/Ql", "_blank");
@@ -50,95 +60,55 @@
   </script>
 </head>
 <body>
-  <h1>📺 فيديوهات الكورسات - الجزء الأول</h1>
 
-  <!-- كورس 1: Python -->
-  <div class="course" id="course1">
-    <h2>Python</h2>
-    <iframe src="https://www.youtube.com/embed/videoseries?list=PLknwEmKsW8OsG8dnisr_-2WGyx7lpgGEE" allowfullscreen></iframe>
-    <div class="buttons">
-      <a class="book" href="books-1.html#python">📘 كتاب الكورس</a>
-      <a href="#">⏮</a>
-      <a href="#course2">⏭</a>
-    </div>
+  <h1>📺 فيديوهات الكورس</h1>
+  <div id="video-title"></div>
+  <iframe id="video-frame" allowfullscreen></iframe>
+
+  <div class="controls">
+    <button id="prev-btn">⏮ الدرس السابق</button>
+    <a id="book-link" class="book" target="_blank">📘 كتاب الكورس</a>
+    <button id="next-btn">⏭ الدرس التالي</button>
   </div>
 
-  <!-- كورس 2: JavaScript -->
-  <div class="course" id="course2">
-    <h2>JavaScript</h2>
-    <iframe src="https://www.youtube.com/embed/videoseries?list=PLknwEmKsW8OuTqUDaFRBiAViDZ5uI3VcE" allowfullscreen></iframe>
-    <div class="buttons">
-      <a class="book" href="books-1.html#javascript">📘 كتاب الكورس</a>
-      <a href="#course1">⏮</a>
-      <a href="#course3">⏭</a>
-    </div>
-  </div>
+  <script>
+    const courses = [
+      { title: "Python",        video: "videoseries?list=PLknwEmKsW8OsG8dnisr_-2WGyx7lpgGEE", book: "books-1.html#python" },
+      { title: "JavaScript",    video: "videoseries?list=PLknwEmKsW8OuTqUDaFRBiAViDZ5uI3VcE", book: "books-1.html#javascript" },
+      { title: "Java",          video: "videoseries?list=PLCInYL3l2AajYlZGzU_LVrHdoouf8W6ZN", book: "books-1.html#java" },
+      { title: "C",             video: "videoseries?list=PLxbVBWjVdAEieEfGae9hqwT9TQ90yvehy", book: "books-1.html#c" },
+      { title: "C++",           video: "rYPv_3Ttpl4",                               book: "books-1.html#cpp" },
+      { title: "C#",            video: "ELglVujXcNQ",                              book: "books-1.html#csharp" },
+      { title: "PHP",           video: "videoseries?list=PLSiLeKadTQ7mfep8d_FXWLnoARZyXJ5ob", book: "books-1.html#php" },
+      { title: "Ruby",          video: "i4bNFlfcq1s",                              book: "books-1.html#ruby" }
+    ];
 
-  <!-- كورس 3: Java -->
-  <div class="course" id="course3">
-    <h2>Java</h2>
-    <iframe src="https://www.youtube.com/embed/videoseries?list=PLCInYL3l2AajYlZGzU_LVrHdoouf8W6ZN" allowfullscreen></iframe>
-    <div class="buttons">
-      <a class="book" href="books-1.html#java">📘 كتاب الكورس</a>
-      <a href="#course2">⏮</a>
-      <a href="#course4">⏭</a>
-    </div>
-  </div>
+    let idx = 0;
+    const titleEl = document.getElementById('video-title');
+    const frame = document.getElementById('video-frame');
+    const bookLink = document.getElementById('book-link');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
 
-  <!-- كورس 4: C -->
-  <div class="course" id="course4">
-    <h2>C</h2>
-    <iframe src="https://www.youtube.com/embed/videoseries?list=PLxbVBWjVdAEieEfGae9hqwT9TQ90yvehy" allowfullscreen></iframe>
-    <div class="buttons">
-      <a class="book" href="books-1.html#c">📘 كتاب الكورس</a>
-      <a href="#course3">⏮</a>
-      <a href="#course5">⏭</a>
-    </div>
-  </div>
+    function loadCourse(i) {
+      const c = courses[i];
+      titleEl.textContent = c.title;
+      frame.src = `https://www.youtube.com/embed/${c.video}`;
+      bookLink.href = c.book;
+    }
 
-  <!-- كورس 5: C++ -->
-  <div class="course" id="course5">
-    <h2>C++</h2>
-    <iframe src="https://www.youtube.com/embed/rYPv_3Ttpl4" allowfullscreen></iframe>
-    <div class="buttons">
-      <a class="book" href="books-1.html#cpp">📘 كتاب الكورس</a>
-      <a href="#course4">⏮</a>
-      <a href="#course6">⏭</a>
-    </div>
-  </div>
+    prevBtn.onclick = () => {
+      idx = (idx - 1 + courses.length) % courses.length;
+      loadCourse(idx);
+    };
+    nextBtn.onclick = () => {
+      idx = (idx + 1) % courses.length;
+      loadCourse(idx);
+    };
 
-  <!-- كورس 6: C# -->
-  <div class="course" id="course6">
-    <h2>C#</h2>
-    <iframe src="https://www.youtube.com/embed/ELglVujXcNQ" allowfullscreen></iframe>
-    <div class="buttons">
-      <a class="book" href="books-1.html#csharp">📘 كتاب الكورس</a>
-      <a href="#course5">⏮</a>
-      <a href="#course7">⏭</a>
-    </div>
-  </div>
-
-  <!-- كورس 7: PHP -->
-  <div class="course" id="course7">
-    <h2>PHP</h2>
-    <iframe src="https://www.youtube.com/embed/videoseries?list=PLSiLeKadTQ7mfep8d_FXWLnoARZyXJ5ob" allowfullscreen></iframe>
-    <div class="buttons">
-      <a class="book" href="books-1.html#php">📘 كتاب الكورس</a>
-      <a href="#course6">⏮</a>
-      <a href="#course8">⏭</a>
-    </div>
-  </div>
-
-  <!-- كورس 8: Ruby -->
-  <div class="course" id="course8">
-    <h2>Ruby</h2>
-    <iframe src="https://www.youtube.com/embed/i4bNFlfcq1s" allowfullscreen></iframe>
-    <div class="buttons">
-      <a class="book" href="books-1.html#ruby">📘 كتاب الكورس</a>
-      <a href="#course7">⏮</a>
-      <a href="videos-2.html">➡ الجزء التالي</a>
-    </div>
-  </div>
+    // Initial load
+    loadCourse(idx);
+  </script>
 
 </body>
 </html>
