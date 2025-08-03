@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>📘 كتب الكورسات</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      margin: 0;
+    }
+    .book {
+      display: none;
+    }
+    .book.active {
+      display: block;
+    }
+    h2 {
+      color: #4caf50;
+    }
+    pre {
+      background: #222;
+      color: #0f0;
+      padding: 15px;
+      border-radius: 10px;
+      overflow-x: auto;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+<!-- لم يتم العثور على محتوى الكتب -->
+  <script>
+    const hash = window.location.hash.replace('#', '') || 'python';
+    const activeBook = document.getElementById(hash.toLowerCase());
+    if (activeBook) activeBook.classList.add('active');
+  </script>
+</body>
+</html>
