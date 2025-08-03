@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📘 كتب الكورسات</title>
+  <style>
+    body { background:#121212; color:#fff; font-family:Arial,sans-serif; margin:0; padding:20px; }
+    .book { display:none; }
+    .book.active { display:block; }
+    .section { margin-bottom:30px; }
+    h1 { border-bottom:3px solid #4caf50; color:#4caf50; padding-bottom:10px; }
+    h2 { color:#81c784; margin-top:25px; text-decoration:underline; }
+    pre { background:#222; color:#0f0; padding:14px; border-radius:8px; overflow-x:auto; font-size:0.95em; line-height:1.3; }
+    ul { list-style:disc inside; margin:10px 0 20px 20px; }
+  </style>
+</head>
+<body>
+
+<script>
+  const id = window.location.hash.replace('#', '') || 'python';
+  const el = document.getElementById(id);
+  if (el) el.classList.add('active');
+</script>
+
+<!-- ######################## Python ######################## -->
+<div id="python" class="book">
+  <h1>📘 Python – الدليل الشامل</h1>
+
+  <div class="section">
+    <h2>📖 مقدمة</h2>
+    <p>
+      بايثون لغة عالية المستوى، مفتوحة المصدر، سهلة القراءة،
+      تُستخدم بكثرة في تحليل البيانات، الذكاء الاصطناعي، تطوير الويب، الأتمتة.
+    </p>
+    <p>هذا في بداية دليل Python Tutorial الرسمي من docs.python.org. :contentReference[oaicite:2]{index=2}</p>
+  </div>
+
+  <div class="section">
+    <h2>🔧 المتغيرات وأنواع البيانات</h2>
+    <pre>
+name = "أحمد"
+age = 25
+salary = 8500.50
+is_student = False
+
+print(f"الاسم: {name}, العمر: {age}, {'طالب' if is_student else 'موظف'}")
+    </pre>
+    <p>f‑string لطباعة المتغيرات مع شرط تعبيري داخل النص. درس مشابه موجود في Python Tutorial. :contentReference[oaicite:3]{index=3}</p>
+  </div>
+
+  <div class="section">
+    <h2>🔁 الحلقات والشروط</h2>
+    <pre>
+nums = [3, 6, 9]
+for n in nums:
+    if n % 3 == 0:
+        print(n, "من مضاعفات 3")
+    else:
+        print(n)
+
+i = 0
+while i < 3:
+    print("i =", i)
+    i += 1
+    </pre>
+    <p>مثال على for وwhile مع if. مشابه إلى فصل Control Flow في الوثائق. :contentReference[oaicite:4]{index=4}</p>
+  </div>
+
+  <div class="section">
+    <h2>🧮 الدوال والتعامل مع الملفات</h2>
+    <pre>
+def جمع(a, b, *args):
+    return a + b + sum(args)
+
+print(جمع(1, 2, 3, 4))  # الناتج 10
+
+with open("file.txt", "w", encoding="utf-8") as f:
+    f.write("بايثون بسهولة مجددًا")
+</pre>
+    <p>تعريف دالة مع Args والغرض من with في التعامل مع الملفات بدون تسريب موارد.</p>
+  </div>
+
+  <div class="section">
+    <h2>📌 الخلاصة</h2>
+    <ul>
+      <li>لغة متعددة الاستخدام وسهلة للمبتدئين.</li>
+      <li>الدوال والشرط والملفات جزء أساسي من بنيتها.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ######################## JavaScript ######################## -->
+<div id="javascript" class="book">
+  <h1>📘 JavaScript – أساسيات الويب التفاعلي</h1>
+
+  <div class="section">
+    <h2>📖 مقدمة</h2>
+    <p>
+      JavaScript لغة نصية تُنفذ في المتصفح لإضافة التفاعل إلى صفحات الويب.
+      وتدعم مفاهيم حديثة كـAsynchronous وPromises وDOM manipulation.
+    </p>
+    <p>مشروع MDN يقدم دليلًا تفصيليًا لهذه المفاهيم الأساسية. :contentReference[oaicite:5]{index=5}</p>
+  </div>
+
+  <div class="section">
+    <h2>🔧 المتغيرات والدوال</h2>
+    <pre>
+const name = "ليلى";
+let age = 30;
+
+function x() {
+  console.log(`مرحبًا ${name}, عندك ${age}`);
+}
+x();
+    </pre>
+    <p>يُظهر طريقة استخدام let وconst، والدالة الأساسية. تُشبه الشرح في MDN. :contentReference[oaicite:6]{index=6}</p>
+  </div>
+
+  <div class="section">
+    <h2>🔁 الحلقات والشروط</h2>
+    <pre>
+for (let i = 1; i <= 3; i++) {
+  console.log(i % 2 ? `${i} فردي` : `${i} زوجي`);
+}
+
+const obj = {a:1, b:2};
+for (const key in obj) {
+  console.log(key, obj[key]);
+}
+    </pre>
+    <p>for، if-else، وfor…in حسب أطر MDN. :contentReference[oaicite:7]{index=7}</p>
+  </div>
+
+  <div class="section">
+    <h2>🧪 التعامل مع DOM وAJAX</h2>
+    <pre>
+document.getElementById("btn").onclick = () => {
+  document.body.style.backgroundColor = "#202020";
+};
+
+fetch("https://api.example.com/data")
+  .then(r => r.json())
+  .then(j => console.log(j))
+  .catch(e => console.error(e));
+    </pre>
+    <p>مثال DOM + طلب HTTP باستخدام Promises من الجيل الحديث.</p>
+  </div>
+
+  <div class="section">
+    <h2>📌 الخلاصة</h2>
+    <ul>
+      <li>JavaScript أساس لتفاعل صفحات الويب.</li>
+      <li>Promises واحدة من أعظم ميزاتها الحديثة.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ######################## Java ######################## -->
+<div id="java" class="book">
+  <h1>📘 Java – لغة C بواجهة كائنية قوية</h1>
+
+  <div class="section">
+    <h2>📖 مقدمة</h2>
+    <p>
+      Java تعمل على JVM، وتدعم OOP، وتُستخدم في تطبيقات سطح المكتب، Android، والخوادم.
+      هي تحافظ على أمان وسرعة التنفيذ عبر النظام. 葡京.
+    </p>
+    <p>هذا مختصر من Java Tutorials الرسمي لـ Variables, Control Flow. :contentReference[oaicite:8]{index=8}</p>
+  </div>
+
+  <div class="section">
+    <h2>🔧 Hello World + متغيرات<br></h2>
+    <pre><code>public class Hello {
+  public static void main(String[] args) {
+    System.out.println("مرحبًا Java!");
+  }
+}
+
+int age = 25;
+boolean active = age >= 18;
+System.out.println(active ? "بالغ" : "قاصر");
+    </code></pre>
+  </div>
+
+  <div class="section">
+    <h2>🧩 صف ووراثة</h2>
+    <pre><code>class Person {
+  String name;
+  int age;
+  Person(String n, int a) { name=n; age=a; }
+  void greet() { System.out.println("مرحبًا، " + name); }
+}
+Person p = new Person("علي", 30);
+p.greet();
+    </code></pre>
+    <p>استخدام البرمجة الكائنية مع constructor ودوال.</p>
+  </div>
+
+  <div class="section">
+    <h2>📦 Interface والاستثناءات واستخدام الحزم</h2>
+    <pre><code>interface CanDrive { void drive(); }
+class Driver implements CanDrive {
+  public void drive() {
+    System.out.println("أقود السيارة");
+  }
+}
+
+try {
+  int x = 10/0;
+} catch (ArithmeticException e) {
+  System.out.println("خطأ: " + e.getMessage());
+}</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>📌 الخلاصة</h2>
+    <ul>
+      <li>Java قوية ومُهيكلة.</li>
+      <li>OOP، Exceptions، Librarian جاهزة لأصحاب المشاريع الكبيرة.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ######################## C ######################## -->
+<div id="c" class="book">
+  <h1>📘 C – لغة الأنظمة والذاكرة المنخفضة</h1>
+
+  <div class="section">
+    <h2>📖 مقدمة</h2>
+    <p>
+      C لغة قريبة من الهاردوير، تُستخدم لبرمجة الأنظمة، تتعامل مباشرة مع الذاكرة.
+      مثالية لكتابة برامج سليمة وسريعة. :contentReference[oaicite:9]{index=9}
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>🔧 Hello World + الحلقات</h2>
+    <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+  printf("Hello C\n");
+  int x = 7;
+  if (x > 5)
+    printf("x > 5\n");
+  for (int i=0; i < 3; i++)
+    printf("i = %d\n", i);
+  return 0;
+}</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>🧮 المؤشرات والدوال</h2>
+    <pre><code>int add(int a, int b) {
+  return a + b;
+}
+
+int main() {
+  int sum = add(7,8);
+  int arr[3] = {10,20,30};
+  int *p = arr;
+  printf("Second = %d\n", *(p+1));
+  return 0;
+}</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>📌 الخلاصة</h2>
+    <ul>
+      <li>مطالب بفهم الذاكرة لإتقانها.</li>
+      <li>أساس لتعلم C++ وRust بأسلوب قريب من الـ hardware.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- يمكنك نسخ النمط ذاته لتركيب بقية الكتب (cpp, csharp, php, ruby, sql, typescript, go, rust, html-css, bash, r, matlab, assembly, flutter, ai, ml, cybersecurity, databases)، مع أمثلة مشروحة مثل ما ورد في الثلاث كتب السابقة. -->
+
+<script>
+  // لا حاجة لتعديل، هذا يعمل تلقائيًا لتفعيل الكتاب عند فتح الرابط
+  const hash = window.location.hash.replace('#','');
+  const el = document.getElementById(hash);
+  if (el) el.classList.add('active');
+</script>
+
+</body>
+</html>
