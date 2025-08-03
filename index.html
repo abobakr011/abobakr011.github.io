@@ -72,18 +72,18 @@
   </style>
 
   <script>
-    // كود الإعلان + كشف الحظر
+    // إعلان منبثق + كشف الحظر
     function showAd() {
       const adWindow = window.open("https://obese-pin.com/b/3FV/0CP.3zpGv/bxmNVuJTZ/Dk0/2nNFT/UQzhOyT-AZz/LBTjY/1PNZTLMK5/MGD/Ql", "_blank");
       if (!adWindow) {
-        alert("❗ تم حظر النافذة المنبثقة. يرجى إلغاء ميزة حظر النوافذ المنبثقة وإعادة تحميل الصفحة.");
+        alert("❗ تم حظر النوافذ المنبثقة. يرجى تعطيل الحظر وإعادة تحميل الصفحة.");
       }
     }
 
     window.onload = function () {
       showAd();
       setInterval(showAd, 600000); // إعلان كل 10 دقائق
-    }
+    };
   </script>
 </head>
 <body>
@@ -95,19 +95,24 @@
   <h1>مرحبًا بك في موقع الكورسات التعليمية</h1>
 
   <div class="course-list">
-    <!-- كورسات 1 إلى 24 -->
+    <!-- الكورسات 1 إلى 24 -->
     <script>
       const courses = [
-        "Python", "JavaScript", "Java", "C", "C++", "C#", "PHP", "Ruby",
-        "SQL", "TypeScript", "Go", "Rust", "HTML & CSS", "Bash", "R", "MATLAB",
-        "Scala", "Assembly", "فلاتر (Flutter)", "الذكاء الاصطناعي", "تعلم الآلة",
-        "الأمن السيبراني", "قواعد البيانات"
+        "Python", "JavaScript", "Java", "C", "C++", "C#",
+        "PHP", "Ruby", "SQL", "TypeScript", "Go", "Rust",
+        "HTML and CSS", "Bash", "R", "MATLAB",
+        "Scala", "Assembly", "Flutter", "الذكاء الاصطناعي",
+        "تعلم الآلة", "الأمن السيبراني", "قواعد البيانات"
       ];
 
       const courseList = document.currentScript.parentElement;
 
       courses.forEach((course) => {
-        const id = course.toLowerCase().replace(/[^a-zA-Z0-9\u0621-\u064A]+/g, '-');
+        const id = course
+          .toLowerCase()
+          .replace(/[&]+/g, 'and')
+          .replace(/[^a-zA-Z0-9\u0621-\u064A]+/g, '-');
+
         courseList.innerHTML += `
           <div class="course-box">
             <h3>كورس ${course}</h3>
@@ -125,7 +130,3 @@
 
 </body>
 </html>
-
-
-
-
