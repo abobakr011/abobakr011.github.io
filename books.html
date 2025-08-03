@@ -1,694 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8" />
-  <title>📘 كتب الكورسات</title>
-  <style>
-    body {
-      background-color: #121212;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      margin: 0;
-    }
-    .book {
-      display: none;
-    }
-    .book.active {
-      display: block;
-    }
-    h1 {
-      color: #4caf50;
-    }
-    h2 {
-      color: #81c784;
-    }
-    pre {
-      background: #222;
-      color: #0f0;
-      padding: 15px;
-      border-radius: 10px;
-      overflow-x: auto;
-    }
-    .section {
-      margin-bottom: 30px;
-    }
-  </style>
-</head>
-<body>
-<div id="python" class="book">
-  <h1>📘 Python</h1>
-
-  <div class="section">
-    <h2>📖 مقدمة</h2>
-    <p>بايثون لغة برمجة عالية المستوى، سهلة القراءة، تُستخدم في تطوير الويب، تحليل البيانات، الذكاء الاصطناعي، الأتمتة، وأكثر.</p>
-  </div>
-
-  <div class="section">
-    <h2>🧮 المتغيرات والطباعة</h2>
-    <pre>
-name = "أحمد"
-age = 25
-print("الاسم:", name)
-print("العمر:", age)
-    </pre>
-    <p>يتم تخزين بيانات في متغيرات، وطباعتها على الشاشة.</p>
-  </div>
-
-  <div class="section">
-    <h2>🔁 الحلقات</h2>
-    <pre>
-for i in range(5):
-    print(i)
-    </pre>
-    <p>تستخدم لطباعة الأرقام من 0 إلى 4.</p>
-  </div>
-
-  <div class="section">
-    <h2>🧠 الشروط</h2>
-    <pre>
-x = 10
-if x > 5:
-    print("x أكبر من 5")
-else:
-    print("x أقل أو يساوي 5")
-    </pre>
-    <p>تنفيذ كود بناءً على شرط.</p>
-  </div>
-
-  <div class="section">
-    <h2>📦 الدوال</h2>
-    <pre>
-def جمع(a, b):
-    return a + b
-
-print(جمع(3, 5))
-    </pre>
-    <p>الدالة تعيد ناتج جمع رقمين.</p>
-  </div>
-</div>
-<div id="javascript" class="book">
-  <h1>📘 JavaScript</h1>
-
-  <div class="section">
-    <h2>📖 مقدمة</h2>
-    <p>JavaScript لغة موجهة للويب تُستخدم في صفحات الإنترنت التفاعلية، كما يمكن استخدامها في الخوادم (Node.js).</p>
-  </div>
-
-  <div class="section">
-    <h2>🔧 المتغيرات والدوال</h2>
-    <pre>
-let name = "Ali";
-function sayHello() {
-  console.log("Hello " + name);
-}
-sayHello();
-    </pre>
-    <p>تعريف دالة تطبع رسالة.</p>
-  </div>
-
-  <div class="section">
-    <h2>🔁 الحلقات</h2>
-    <pre>
-for (let i = 1; i <= 5; i++) {
-  console.log(i);
-}
-    </pre>
-    <p>حلقة من 1 إلى 5.</p>
-  </div>
-
-  <div class="section">
-    <h2>🧠 الشروط</h2>
-    <pre>
-let age = 18;
-if (age >= 18) {
-  console.log("بالغ");
-} else {
-  console.log("قاصر");
-}
-    </pre>
-    <p>تطبيق شرط للتحقق من العمر.</p>
-  </div>
-</div>
-<div id="java" class="book">
-  <h1>📘 Java</h1>
-
-  <div class="section">
-    <h2>📖 مقدمة</h2>
-    <p>Java لغة قوية، تُستخدم في التطبيقات المكتبية، الأندرويد، السيرفرات، وتدعم OOP.</p>
-  </div>
-
-  <div class="section">
-    <h2>🔧 مثال Hello</h2>
-    <pre>
-public class Hello {
-  public static void main(String[] args) {
-    System.out.println("مرحبًا");
-  }
-}
-    </pre>
-    <p>برنامج بسيط لطباعة رسالة.</p>
-  </div>
-
-  <div class="section">
-    <h2>🧠 الشروط</h2>
-    <pre>
-int x = 10;
-if (x > 5) {
-  System.out.println("x > 5");
-}
-    </pre>
-  </div>
-</div>
-<div id="c" class="book">
-  <h1>📘 C</h1>
-
-  <div class="section">
-    <h2>📖 مقدمة</h2>
-    <p>لغة برمجة أساسية، تُستخدم في الأنظمة وبرامج الهاردوير.</p>
-  </div>
-
-  <div class="section">
-    <h2>🔧 Hello World</h2>
-    <pre>
-#include &lt;stdio.h&gt;
-
-int main() {
-  printf("Hello C\n");
-  return 0;
-}
-    </pre>
-  </div>
-</div>
-<div id="cpp" class="book">
-  <h1>📘 C++</h1>
-
-  <div class="section">
-    <h2>📖 مقدمة</h2>
-    <p>لغة تدعم البرمجة الكائنية ومبنية على C.</p>
-  </div>
-
-  <div class="section">
-    <h2>🔧 كود Hello</h2>
-    <pre>
-#include &lt;iostream&gt;
-using namespace std;
-
-int main() {
-  cout &lt;&lt; "Hello C++" &lt;&lt; endl;
-  return 0;
-}
-    </pre>
-  </div>
-</div>
-<div id="csharp" class="book">
-  <h1>📘 C#</h1>
-
-  <div class="section">
-    <h2>📖 مقدمة</h2>
-    <p>C# هي لغة برمجة طورتها Microsoft تُستخدم لتطوير تطبيقات ويندوز والألعاب (Unity).</p>
-  </div>
-
-  <div class="section">
-    <h2>🔧 مثال</h2>
-    <pre>
-using System;
-
-class Program {
-  static void Main() {
-    Console.WriteLine("Hello C#");
-  }
-}
-    </pre>
-  </div>
-    <div id="php" class="book">
-    <h1>📘 PHP</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>PHP هي لغة برمجة تعمل على الخادم، تُستخدم بشكل رئيسي لتطوير تطبيقات الويب الديناميكية.</p>
-    </div>
-    <div class="section">
-      <h2>🔧 المتغيرات والطباعة</h2>
-      <pre>
-&lt;?php
-$name = "أحمد";
-$age = 25;
-echo "الاسم: $name&lt;br&gt;";
-echo "العمر: $age";
-?&gt;
-      </pre>
-      <p>الشرح: يتم تعريف متغيرات باستخدام <code>$</code>، وتُطبع القيم باستخدام <code>echo</code>.</p>
-    </div>
-    <div class="section">
-      <h2>🔁 الحلقات</h2>
-      <pre>
-&lt;?php
-for ($i = 0; $i &lt; 5; $i++) {
-  echo "العدد: $i&lt;br&gt;";
-}
-?&gt;
-      </pre>
-    </div>
-    <div class="section">
-      <h2>🧠 الشروط</h2>
-      <pre>
-&lt;?php
-$x = 10;
-if ($x > 5) {
-  echo "x أكبر من 5";
-} else {
-  echo "x أصغر أو يساوي 5";
-}
-?&gt;
-      </pre>
-    </div>
-  </div>
-
-  <div id="ruby" class="book">
-    <h1>📘 Ruby</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>روبي هي لغة برمجة عالية الإنتاجية وسهلة الاستخدام، وتُستخدم في تطوير تطبيقات الويب مثل Ruby on Rails.</p>
-    </div>
-    <div class="section">
-      <h2>🔧 المتغيرات والدوال</h2>
-      <pre>
-name = "سارة"
-age = 30
-
-def greet(name)
-  puts "مرحبًا، #{name}"
-end
-
-greet(name)
-      </pre>
-    </div>
-    <div class="section">
-      <h2>🔁 الحلقات</h2>
-      <pre>
-5.times do |i|
-  puts "عدد: #{i}"
-end
-      </pre>
-    </div>
-  </div>
-
-  <div id="sql" class="book">
-    <h1>📘 SQL</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>SQL (لغة الاستعلام البنيوي) تُستخدم لإدارة قواعد البيانات، وإنشاء الجداول، وتنفيذ استعلامات البيانات.</p>
-    </div>
-    <div class="section">
-      <h2>🔧 إنشاء جدول</h2>
-      <pre>
-CREATE TABLE users (
-  id INT PRIMARY KEY,
-  name VARCHAR(100),
-  age INT
-);
-      </pre>
-    </div>
-    <div class="section">
-      <h2>🔍 إدخال واستعلام</h2>
-      <pre>
-INSERT INTO users (id, name, age) VALUES (1, 'أحمد', 25);
-
-SELECT * FROM users WHERE age &gt; 20;
-      </pre>
-    </div>
-  </div>
-
-  <div id="typescript" class="book">
-    <h1>📘 TypeScript</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>TypeScript هي نسخة محسّنة من JavaScript تدعم الأنواع الساكنة، وتُستخدم في التطبيقات الكبيرة لتنظيم الكود.</p>
-    </div>
-    <div class="section">
-      <h2>🔧 المتغيرات والدوال</h2>
-      <pre>
-let name: string = "علي";
-let age: number = 28;
-
-function greet(name: string): void {
-  console.log("Hello " + name);
-}
-
-greet(name);
-      </pre>
-    </div>
-  </div>
-
-  <div id="go" class="book">
-    <h1>📘 Go</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>Go (أو Golang) هي لغة برمجة من تطوير Google، معروفة بالسرعة والبساطة والفعالية في تطبيقات الشبكة والخوادم.</p>
-    </div>
-    <div class="section">
-      <h2>🔧 كود بسيط</h2>
-      <pre>
-package main
-
-import "fmt"
-
-func main() {
-  fmt.Println("Hello, Go!")
-}
-      </pre>
-    </div>
-  </div>
-
-  <div id="rust" class="book">
-    <h1>📘 Rust</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>Rust هي لغة برمجة تركز على الأمان والأداء، وتُستخدم في تطوير الأنظمة والألعاب وبرامج الحماية.</p>
-    </div>
-    <div class="section">
-      <h2>🔧 كود بسيط</h2>
-      <pre>
-fn main() {
-  let name = "سامي";
-  println!("مرحبًا يا {}", name);
-}
-      </pre>
-    </div>
-  </div>
-  <div id="scala" class="book">
-    <h1>📘 Scala</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>Scala هي لغة برمجة حديثة تمزج بين البرمجة الكائنية والوظيفية، وتعمل على منصة Java.</p>
-    </div>
-
-    <div class="section">
-      <h2>🔧 مثال Hello World</h2>
-      <pre>
-object Hello {
-  def main(args: Array[String]): Unit = {
-    println("مرحبًا بك في Scala")
-  }
-}
-      </pre>
-      <p>الشرح: نُعرّف كائنًا يسمى Hello يحتوي على دالة main لبدء التنفيذ.</p>
-    </div>
-
-    <div class="section">
-      <h2>🧠 الدوال والأنماط</h2>
-      <pre>
-def جمع(a: Int, b: Int): Int = a + b
-println(جمع(3, 4))
-      </pre>
-      <p>الشرح: دالة تُرجع مجموع عددين، وتُستخدم طريقة الكتابة المختصرة.</p>
-    </div>
-  </div>
-
-  <div id="assembly" class="book">
-    <h1>📘 Assembly</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>Assembly هي لغة منخفضة المستوى تعتمد على معمارية المعالج، وتستخدم للتعامل المباشر مع الهاردوير.</p>
-    </div>
-
-    <div class="section">
-      <h2>🔧 طباعة رسالة باستخدام NASM</h2>
-      <pre>
-section .data
-  msg db "Hello, World!",0Ah
-  len equ $ - msg
-
-section .text
-  global _start
-
-_start:
-  mov eax, 4      
-  mov ebx, 1      
-  mov ecx, msg    
-  mov edx, len    
-  int 0x80        
-
-  mov eax, 1      
-  xor ebx, ebx    
-  int 0x80
-      </pre>
-      <p>الشرح: يتم استدعاء دالة النظام sys_write لطباعة الرسالة، ثم sys_exit لإنهاء البرنامج.</p>
-    </div>
-  </div>
-
-  <div id="flutter" class="book">
-    <h1>📘 Flutter</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>Flutter هو إطار عمل من Google لبناء تطبيقات موبايل وويب وسطح مكتب باستخدام لغة Dart.</p>
-    </div>
-
-    <div class="section">
-      <h2>🔧 تطبيق بسيط</h2>
-      <pre>
-import 'package:flutter/material.dart';
-
-void main() {
-  runApp(MaterialApp(
-    home: Scaffold(
-      appBar: AppBar(title: Text('مرحبًا Flutter')),
-      body: Center(child: Text('أول تطبيق Flutter')),
-    ),
-  ));
-}
-      </pre>
-      <p>الشرح: هذا التطبيق يعرض صفحة بها عنوان ونص في الوسط باستخدام أدوات Flutter.</p>
-    </div>
-  </div>
-
-  <div id="ai" class="book">
-    <h1>📘 الذكاء الاصطناعي</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>الذكاء الاصطناعي (AI) هو مجال يهدف إلى تطوير أنظمة ذكية قادرة على محاكاة التفكير البشري.</p>
-    </div>
-
-    <div class="section">
-      <h2>🧠 مثال باستخدام Python</h2>
-      <pre>
-from sklearn.tree import DecisionTreeClassifier
-
-X = [[0, 0], [1, 1]]
-y = [0, 1]
-
-clf = DecisionTreeClassifier()
-clf.fit(X, y)
-
-print(clf.predict([[2, 2]]))
-      </pre>
-      <p>الشرح: نستخدم خوارزمية الشجرة لاتخاذ قرار بناءً على البيانات.</p>
-    </div>
-  </div>
-
-  <div id="ml" class="book">
-    <h1>📘 تعلم الآلة</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>تعلم الآلة (Machine Learning) يتيح للبرامج التعلم من البيانات دون برمجة صريحة.</p>
-    </div>
-
-    <div class="section">
-      <h2>🔧 تصنيف بيانات</h2>
-      <pre>
-from sklearn.linear_model import LogisticRegression
-
-X = [[0], [1], [2], [3]]
-y = [0, 0, 1, 1]
-
-clf = LogisticRegression()
-clf.fit(X, y)
-
-print(clf.predict([[1.5]]))
-      </pre>
-      <p>الشرح: النموذج يتعلم العلاقة بين المدخلات والمخرجات ثم يتنبأ بقيمة جديدة.</p>
-    </div>
-  </div>
-
-  <div id="cyber" class="book">
-    <h1>📘 الأمن السيبراني</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>الأمن السيبراني يختص بحماية الأنظمة والمعلومات من التهديدات الرقمية.</p>
-    </div>
-
-    <div class="section">
-      <h2>🛡 أدوات سطر الأوامر</h2>
-      <pre>
-nmap -sS 192.168.1.1
-      </pre>
-      <p>الشرح: يستخدم Nmap لفحص المنافذ المفتوحة على عنوان IP.</p>
-    </div>
-  </div>
-
-  <div id="databases" class="book">
-    <h1>📘 قواعد البيانات</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>قواعد البيانات تُستخدم لتخزين المعلومات بطريقة منظمة وقابلة للاستعلام.</p>
-    </div>
-
-    <div class="section">
-      <h2>🔧 مثال SQL</h2>
-      <pre>
-CREATE TABLE طلاب (
-  id INT PRIMARY KEY,
-  الاسم VARCHAR(100),
-  العمر INT
-);
-
-INSERT INTO طلاب (id, الاسم, العمر)
-VALUES (1, 'أحمد', 20);
-
-SELECT * FROM طلاب;
-      </pre>
-      <p>الشرح: تعريف جدول طلاب وإضافة واسترجاع البيانات منه.</p>
-    </div>
-  </div>
-  <div id="html-css" class="book">
-    <h1>📘 HTML & CSS</h1>
-
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>HTML (لغة ترميز النص التشعبي) تُستخدم لبناء الهيكل العام للمواقع. CSS (أوراق الأنماط المتتالية) تُستخدم لتنسيق وتجميل المواقع.</p>
-    </div>
-
-    <div class="section">
-      <h2>🔧 هيكل صفحة HTML</h2>
-      <pre>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;مثال&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;عنوان رئيسي&lt;/h1&gt;
-    &lt;p&gt;هذه فقرة.&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-      </pre>
-      <p>الشرح: هذا هو الهيكل الأساسي لأي صفحة HTML.</p>
-    </div>
-
-    <div class="section">
-      <h2>🎨 تنسيق بـ CSS</h2>
-      <pre>
-p {
-  color: red;
-  font-size: 16px;
-}
-      </pre>
-      <p>الشرح: يتم تغيير لون الفقرة إلى أحمر وحجم الخط إلى 16px.</p>
-    </div>
-  </div>
-
-  <div id="bash" class="book">
-    <h1>📘 Bash</h1>
-
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>Bash هي لغة سطر أوامر تُستخدم على أنظمة Linux/Unix لتنفيذ الأوامر والبرامج النصية.</p>
-    </div>
-
-    <div class="section">
-      <h2>🔧 أوامر أساسية</h2>
-      <pre>
-ls      # عرض الملفات
-cd dir  # الدخول إلى مجلد
-mkdir newdir # إنشاء مجلد
-touch file.txt # إنشاء ملف
-rm file.txt   # حذف ملف
-      </pre>
-      <p>الشرح: أوامر Bash تُستخدم لإدارة الملفات والمجلدات.</p>
-    </div>
-
-    <div class="section">
-      <h2>🧠 حلقات وشروط</h2>
-      <pre>
-for i in {1..5}
-do
-  echo "العدد $i"
-done
-      </pre>
-      <p>الشرح: حلقة تطبع الأرقام من 1 إلى 5.</p>
-    </div>
-  </div>
-
-  <div id="r" class="book">
-    <h1>📘 R</h1>
-
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>R هي لغة برمجة تُستخدم لتحليل البيانات، الإحصاء، والرسوم البيانية.</p>
-    </div>
-
-    <div class="section">
-      <h2>📊 إنشاء متغيرات ورسم بياني</h2>
-      <pre>
-x &lt;- c(1, 2, 3, 4, 5)
-y &lt;- c(2, 4, 6, 8, 10)
-
-plot(x, y, type="b", col="blue", main="مثال")
-      </pre>
-      <p>الشرح: يتم إنشاء رسم بياني يوضح العلاقة بين x و y.</p>
-    </div>
-
-    <div class="section">
-      <h2>🧮 المتوسط والانحراف</h2>
-      <pre>
-mean(y)
-sd(y)
-      </pre>
-      <p>الشرح: حساب المتوسط والانحراف المعياري لمجموعة بيانات.</p>
-    </div>
-  </div>
-
-  <div id="matlab" class="book">
-    <h1>📘 MATLAB</h1>
-
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>MATLAB تُستخدم في الحسابات الهندسية، محاكاة الأنظمة، ومعالجة البيانات.</p>
-    </div>
-
-    <div class="section">
-      <h2>🔧 مصفوفات ورسم</h2>
-      <pre>
-x = 0:0.1:10;
-y = sin(x);
-plot(x, y);
-title('دالة الجيب');
-      </pre>
-      <p>الشرح: رسم بياني لدالة الجيب على المجال من 0 إلى 10.</p>
-    </div>
-
-    <div class="section">
-      <h2>🧠 دوال وحلقات</h2>
-      <pre>
-function z = squareNumber(n)
-  z = n^2;
-end
-
-for i = 1:5
-  disp(squareNumber(i))
-end
-      </pre>
-      <p>الشرح: تعريف دالة لحساب مربع عدد واستخدامها داخل حلقة.</p>
-    </div>
-  </div>
-
-</div>
-
-<script>
-  const hash = window.location.hash.replace('#', '') || 'python';
-  const activeBook = document.getElementById(hash.toLowerCase());
-  if (activeBook) activeBook.classList.add('active');
-</script>
-
-</body>
-</html>
