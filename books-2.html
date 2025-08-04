@@ -1,715 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <title>📘 كتاب SQL</title>
-  <link rel="icon" href="logo.png">
-  <style>
-    body {
-      background-image: url('logo.png');
-      background-size: cover;
-      background-attachment: fixed;
-      color: white;
-      font-family: 'Arial', sans-serif;
-      padding: 0 20px;
-    }
-    h1, h2 { color: #ffd700; }
-    .toc a {
-      color: #00ffff;
-      text-decoration: none;
-      display: block;
-      margin: 5px 0;
-    }
-    iframe {
-      width: 100%;
-      height: 400px;
-      border: none;
-    }
-    .section {
-      margin-bottom: 50px;
-    }
-  </style>
-  <script>
-    // كود عرض الإعلان عند الفتح وكل 10 دقائق
-    function openAd() {
-      const adWindow = window.open("https://obese-pin.com/b/3FV/0CP.3zpGv/bxmNVuJTZ/Dk0/2nNFT/UQzhOyT-AZz/LBTjY/1PNZTLMK5/MGD/Ql", "_blank");
-      if (!adWindow) {
-        alert("🚫 يرجى إلغاء حظر النوافذ المنبثقة لمتابعة استخدام الموقع.");
-      }
-    }
-    window.onload = () => {
-      openAd();
-      setInterval(openAd, 600000); // كل 10 دقائق
-    };
-  </script>
-</head>
-<body>
-  <h1>📘 كتاب SQL</h1>
-
-  <div class="toc">
-    <h2>📑 جدول المحتويات</h2>
-    <a href="#intro">📖 المقدمة</a>
-    <a href="#basics">🔧 الأساسيات</a>
-    <a href="#apps">🚀 التطبيقات</a>
-    <a href="#full">📚 شرح شامل</a>
-    <a href="#video">🎥 فيديو الكورس</a>
-  </div>
-
-  <div class="section" id="intro">
-    <h2>📖 المقدمة</h2>
-    <p>SQL (Structured Query Language) هي اللغة المستخدمة لإدارة قواعد البيانات العلائقية. تعتبر أداة أساسية لأي مطوّر أو محلل بيانات. تساعدك على استرجاع وتعديل البيانات بسهولة.</p>
-  </div>
-
-  <div class="section" id="basics">
-    <h2>🔧 الأساسيات</h2>
-    <ul>
-      <li><strong>SELECT:</strong> لجلب البيانات من الجداول.</li>
-      <li><strong>WHERE:</strong> لتصفية النتائج بناءً على شروط.</li>
-      <li><strong>INSERT INTO:</strong> لإضافة بيانات جديدة.</li>
-      <li><strong>UPDATE:</strong> لتعديل البيانات الموجودة.</li>
-      <li><strong>DELETE:</strong> لحذف السجلات.</li>
-      <li><strong>JOIN:</strong> لربط البيانات من جداول متعددة.</li>
-      <li><strong>GROUP BY:</strong> لتجميع البيانات.</li>
-    </ul>
-  </div>
-
-  <div class="section" id="apps">
-    <h2>🚀 التطبيقات</h2>
-    <p>سنقوم ببناء قاعدة بيانات لمتجر إلكتروني تشمل جداول للمنتجات والعملاء والطلبات، ثم نستخدم SQL لإنشاء تقارير مثل أكثر المنتجات مبيعًا، وعدد الطلبات لكل عميل.</p>
-  </div>
-
-  <div class="section" id="full">
-    <h2>📚 شرح شامل للغة SQL</h2>
-    <p>
-      SQL لغة قوية وسهلة التعلم نسبيًا. تنقسم إلى أقسام رئيسية:<br>
-      <strong>1. DDL (Data Definition Language):</strong> لإنشاء الجداول مثل CREATE TABLE، ALTER، DROP.<br>
-      <strong>2. DML (Data Manipulation Language):</strong> للتعامل مع البيانات مثل SELECT، INSERT، UPDATE، DELETE.<br>
-      <strong>3. DCL (Data Control Language):</strong> للتحكم في الصلاحيات مثل GRANT، REVOKE.<br>
-      <strong>4. TCL (Transaction Control):</strong> للتحكم في المعاملات مثل COMMIT و ROLLBACK.<br><br>
-      تعتبر SQL أساسًا في عالم البيانات، وتُستخدم في MySQL و PostgreSQL و Oracle و Microsoft SQL Server وغيرها.
-    </p>
-  </div>
-
-  <div class="section" id="video">
-    <h2>🎥 فيديو الكورس</h2>
-    <iframe src="https://www.youtube.com/embed/videoseries?list=PLxbVBWjVdAEj8TmOUKPG0avUmLqSoQOpf" allowfullscreen></iframe>
-  </div>
-  <hr>
-<h1>📘 كتاب TypeScript</h1>
-
-<div class="toc">
-  <h2>📑 جدول المحتويات</h2>
-  <a href="#intro-ts">📖 المقدمة</a>
-  <a href="#basics-ts">🔧 الأساسيات</a>
-  <a href="#apps-ts">🚀 التطبيقات</a>
-  <a href="#full-ts">📚 شرح شامل</a>
-  <a href="#video-ts">🎥 فيديو الكورس</a>
-</div>
-
-<div class="section" id="intro-ts">
-  <h2>📖 المقدمة</h2>
-  <p>
-    TypeScript هي لغة برمجة مبنية على JavaScript تضيف لها نظام "أنواع البيانات" الثابتة، وتسمح بتطوير تطبيقات كبيرة بفعالية. وهي مفتوحة المصدر وتُستخدم على نطاق واسع في المشاريع الاحترافية.
-  </p>
-</div>
-
-<div class="section" id="basics-ts">
-  <h2>🔧 الأساسيات</h2>
-  <ul>
-    <li><strong>أنواع البيانات:</strong> string، number، boolean، array، tuple، enum، any، void، never، unknown.</li>
-    <li><strong>الأنواع المخصصة:</strong> يمكن إنشاء Types و Interfaces لتعريف شكل الكائنات.</li>
-    <li><strong>الوظائف (Functions):</strong> يمكن تحديد نوع المُدخلات ونوع القيمة الراجعة.</li>
-    <li><strong>التحقق من الأنواع:</strong> يساعد في اكتشاف الأخطاء في وقت الكتابة.</li>
-    <li><strong>التحويل من JavaScript:</strong> كل كود JavaScript صالح يعتبر كود TypeScript صالح، ويمكن التوسع عليه بالأنواع.</li>
-  </ul>
-</div>
-
-<div class="section" id="apps-ts">
-  <h2>🚀 التطبيقات</h2>
-  <p>سنقوم بإنشاء تطبيق قائمة مهام (ToDo App) باستخدام TypeScript، مما يُظهر كيف تساعدنا اللغة في كتابة كود آمن ومنظم ومتين وقابل للتوسع.</p>
-</div>
-
-<div class="section" id="full-ts">
-  <h2>📚 شرح شامل للغة TypeScript</h2>
-  <p>
-    <strong>الفرق عن JavaScript:</strong> TypeScript تضيف فقط نظام الأنواع، لكنها تُحوَّل إلى JavaScript قبل التشغيل (compile to JS).<br><br>
-
-    <strong>أنواع متقدمة:</strong> Generics، Union & Intersection Types، Type Guards، Literal Types، Conditional Types.<br><br>
-
-    <strong>واجهة العمل مع TypeScript:</strong><br>
-    - <code>tsc</code> هو مترجم TypeScript.<br>
-    - الملف بامتداد <code>.ts</code> يتم تحويله إلى <code>.js</code>.<br>
-    - يمكن استخدام TypeScript مع React و Angular بسهولة.<br><br>
-
-    <strong>نصائح:</strong><br>
-    - ابدأ من مشروع JavaScript، وادخل TypeScript تدريجيًا.<br>
-    - راجع دائمًا تعريف الأنواع في المكتبات الخارجية.<br>
-    - استخدم ESLint و TypeScript معا للحصول على أقوى تحليل للكود.
-  </p>
-</div>
-
-<div class="section" id="video-ts">
-  <h2>🎥 فيديو الكورس</h2>
-  <iframe src="https://www.youtube.com/embed/videoseries?list=PLDoPjvoNmBAy532K9M_fjiAmrJ0gkCyLJ" allowfullscreen></iframe>
-</div>
-<hr>
-<h1>📘 كتاب Go</h1>
-
-<div class="toc">
-  <h2>📑 جدول المحتويات</h2>
-  <a href="#intro-go">📖 المقدمة</a>
-  <a href="#basics-go">🔧 الأساسيات</a>
-  <a href="#apps-go">🚀 التطبيقات</a>
-  <a href="#full-go">📚 شرح شامل</a>
-  <a href="#video-go">🎥 فيديو الكورس</a>
-</div>
-
-<div class="section" id="intro-go">
-  <h2>📖 المقدمة</h2>
-  <p>
-    Go (أو Golang) هي لغة برمجة طُورت في Google لتكون بسيطة، سريعة، وفعالة في بناء تطبيقات الشبكات والخوادم. تتميز بالسرعة والوضوح وسهولة الصيانة.
-  </p>
-</div>
-
-<div class="section" id="basics-go">
-  <h2>🔧 الأساسيات</h2>
-  <ul>
-    <li><strong>التركيب الأساسي:</strong> كل برنامج يبدأ بالدالة <code>main()</code>.</li>
-    <li><strong>المتغيرات:</strong> تُعلن باستخدام <code>var</code> أو <code>:=</code>.</li>
-    <li><strong>أنواع البيانات:</strong> int, float, string, bool, array, slice, map.</li>
-    <li><strong>الحلقات:</strong> يوجد نوع واحد من الحلقات وهو <code>for</code>.</li>
-    <li><strong>الدوال:</strong> تُكتب باستخدام الكلمة المفتاحية <code>func</code>، وتدعم تعدد القيم المرجعة.</li>
-    <li><strong>التحكم:</strong> if, switch, defer, panic, recover.</li>
-  </ul>
-</div>
-
-<div class="section" id="apps-go">
-  <h2>🚀 التطبيقات</h2>
-  <p>
-    سنبني خادم ويب بسيط باستخدام مكتبة <code>net/http</code> لمعالجة الطلبات، مما يُظهر قوة Go في تطوير البنية التحتية الخلفية (Back-end).
-  </p>
-</div>
-
-<div class="section" id="full-go">
-  <h2>📚 شرح شامل للغة Go</h2>
-  <p>
-    <strong>الواجهات (Interfaces):</strong> تسمح بتعدد الأشكال دون وراثة.<br><br>
-
-    <strong>Goroutines:</strong> تستخدم لتنفيذ التعليمات بالتوازي، وهي من أهم ميزات Go لمعالجة المهام المتزامنة بشكل فعال.<br><br>
-
-    <strong>القنوات (Channels):</strong> تُستخدم للتواصل بين goroutines بطريقة آمنة ومتزامنة.<br><br>
-
-    <strong>الحزم (Packages):</strong> Go تُشجع تنظيم الكود في حزم. كل ملف يجب أن يُصرّح باسم الحزمة في أوله.<br><br>
-
-    <strong>نظام الإدارة:</strong> Go تستخدم أداة <code>go mod</code> لإدارة تبعيات المشروع.<br><br>
-
-    <strong>نصائح:</strong><br>
-    - اتبع نمط Go (gofmt).<br>
-    - لا تستخدم "if err != nil" فقط، بل فكر كيف تتعامل مع الخطأ فعلاً.<br>
-    - تعلّم كتابة اختبارات باستخدام <code>testing</code>.
-  </p>
-</div>
-
-<div class="section" id="video-go">
-  <h2>🎥 فيديو الكورس</h2>
-  <iframe src="https://www.youtube.com/embed/videoseries?list=PLqPejUavRNTX3QzxHEr_IVDq459oRtFrf" allowfullscreen></iframe>
-</div>
-<hr>
-<h1>📘 كتاب Rust</h1>
-
-<div class="toc">
-  <h2>📑 جدول المحتويات</h2>
-  <a href="#intro-rust">📖 المقدمة</a>
-  <a href="#basics-rust">🔧 الأساسيات</a>
-  <a href="#apps-rust">🚀 التطبيقات</a>
-  <a href="#full-rust">📚 شرح شامل</a>
-  <a href="#video-rust">🎥 فيديو الكورس</a>
-</div>
-
-<div class="section" id="intro-rust">
-  <h2>📖 المقدمة</h2>
-  <p>
-    لغة Rust هي لغة برمجة تركز على الأداء والسلامة، وخاصة الأمان في التعامل مع الذاكرة. تُستخدم Rust بشكل كبير في الأنظمة المتقدمة، المتصفحات، وألعاب الفيديو.
-  </p>
-</div>
-
-<div class="section" id="basics-rust">
-  <h2>🔧 الأساسيات</h2>
-  <ul>
-    <li><strong>المتغيرات:</strong> تستخدم الكلمة المفتاحية <code>let</code>، ويمكن جعلها قابلة للتغيير بـ <code>mut</code>.</li>
-    <li><strong>أنواع البيانات:</strong> تشمل <code>i32, f64, bool, char, String</code> وغيرها.</li>
-    <li><strong>التحكم:</strong> <code>if</code>, <code>match</code>, <code>loop</code>, <code>while</code>, <code>for</code>.</li>
-    <li><strong>الدوال:</strong> تُعرف باستخدام <code>fn</code>، وتُرجع القيم بدون <code>return</code> باستخدام التعبيرات.</li>
-    <li><strong>المصفوفات:</strong> <code>[i32; 5]</code> و <code>Vec&lt;T&gt;</code>.</li>
-  </ul>
-</div>
-
-<div class="section" id="apps-rust">
-  <h2>🚀 التطبيقات</h2>
-  <p>
-    تطبيق صغير لتحليل النصوص، حيث نقرأ من ملف ونحسب عدد الكلمات، باستخدام مكتبة <code>std::fs</code>، و <code>HashMap</code> لحساب التكرار.
-  </p>
-</div>
-
-<div class="section" id="full-rust">
-  <h2>📚 شرح شامل للغة Rust</h2>
-  <p>
-    <strong>نظام التملك (Ownership):</strong> مفهوم فريد في Rust يضمن الأمان في إدارة الذاكرة دون الحاجة لـ Garbage Collector.<br><br>
-
-    <strong>الاقتراض (Borrowing):</strong> يمكن تمرير المتغيرات كمرجع <code>&</code> أو مرجع قابل للتعديل <code>&mut</code>.<br><br>
-
-    <strong>أنماط الحياة (Lifetimes):</strong> تُستخدم لحل مشاكل الإشارة إلى البيانات بعد انتهائها.<br><br>
-
-    <strong>التطابق (Pattern Matching):</strong> من خلال <code>match</code> و <code>if let</code>.<br><br>
-
-    <strong>التعامل مع الأخطاء:</strong> باستخدام <code>Result</code> و <code>Option</code> بدلاً من الاستثناءات.<br><br>
-
-    <strong>الحزم (Crates):</strong> تُدار بواسطة <code>Cargo</code>، أداة بناء المشاريع الرسمية في Rust.<br><br>
-
-    <strong>التزامن الآمن:</strong> Rust تجعل التزامن سهلًا وآمنًا باستخدام <code>Arc</code>, <code>Mutex</code>, <code>threads</code>.
-  </p>
-</div>
-
-<div class="section" id="video-rust">
-  <h2>🎥 فيديو الكورس</h2>
-  <iframe src="https://www.youtube.com/embed/videoseries?list=PL0jkvqZWrX43OyAKikHIGSG2fNCjCCoW5" allowfullscreen></iframe>
-</div>
-<hr>
-<h1>📘 كتاب HTML & CSS</h1>
-
-<div class="toc">
-  <h2>📑 جدول المحتويات</h2>
-  <a href="#intro-htmlcss">📖 المقدمة</a>
-  <a href="#basics-htmlcss">🔧 الأساسيات</a>
-  <a href="#apps-htmlcss">🚀 التطبيقات</a>
-  <a href="#full-htmlcss">📚 شرح شامل</a>
-  <a href="#video-htmlcss">🎥 فيديو الكورس</a>
-</div>
-
-<div class="section" id="intro-htmlcss">
-  <h2>📖 المقدمة</h2>
-  <p>
-    HTML و CSS هما أساس تصميم صفحات الويب. HTML تعني "لغة ترميز النص التشعبي" وتُستخدم لبناء هيكل الصفحة، بينما CSS تعني "أوراق الأنماط المتتالية" وتُستخدم لتنسيق المظهر والتصميم.
-  </p>
-</div>
-
-<div class="section" id="basics-htmlcss">
-  <h2>🔧 الأساسيات</h2>
-  <ul>
-    <li><strong>HTML:</strong> وسوم مثل <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;div&gt;</code>.</li>
-    <li><strong>CSS:</strong> خاصيات مثل <code>color</code>, <code>background</code>, <code>font-size</code>, <code>margin</code>, <code>padding</code>, <code>display</code>.</li>
-    <li><strong>التضمين:</strong> تضمين CSS داخل <code>&lt;style&gt;</code> أو من ملف خارجي <code>style.css</code>.</li>
-  </ul>
-</div>
-
-<div class="section" id="apps-htmlcss">
-  <h2>🚀 التطبيقات</h2>
-  <p>
-    تصميم صفحة ويب تحتوي على رأس (Header)، شريط تنقل، محتوى، وتذييل، باستخدام Flexbox لتوزيع العناصر بشكل مرن وتفاعلي على جميع الشاشات.
-  </p>
-</div>
-
-<div class="section" id="full-htmlcss">
-  <h2>📚 شرح شامل للغة HTML & CSS</h2>
-  <p>
-    <strong>HTML:</strong><br>
-    - <code>&lt;head&gt;</code> يحتوي على بيانات وصفية، روابط ملفات CSS، عنوان الصفحة.<br>
-    - <code>&lt;body&gt;</code> يحتوي على المحتوى المرئي للزوار.<br>
-    - وسوم دلالية مثل <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;main&gt;</code> لتحسين تنظيم الصفحة و SEO.<br><br>
-
-    <strong>CSS:</strong><br>
-    - <strong>Selectors:</strong> لتحديد العناصر (مثل: <code>p</code>, <code>.class</code>, <code>#id</code>).<br>
-    - <strong>Box Model:</strong> كل عنصر له <code>margin</code>, <code>border</code>, <code>padding</code>, <code>content</code>.<br>
-    - <strong>Layout:</strong> باستخدام <code>Flexbox</code> و <code>Grid</code>.<br>
-    - <strong>Responsive Design:</strong> باستخدام <code>@media queries</code> لتعديل التصميم حسب حجم الشاشة.<br>
-    - <strong>Transitions & Animations:</strong> لتأثيرات بصرية سلسة وتفاعلية.<br><br>
-
-    <strong>أفضل الممارسات:</strong><br>
-    - فصل التنسيق (CSS) عن الهيكل (HTML).<br>
-    - استخدام أسماء أصناف وصفية لتسهيل الصيانة.<br>
-    - تجنب التكرار، والاستفادة من الوراثة في CSS.
-  </p>
-</div>
-
-<div class="section" id="video-htmlcss">
-  <h2>🎥 فيديو الكورس</h2>
-  <iframe src="https://www.youtube.com/embed/videoseries?list=PLknwEmKsW8OuN04Odt2sJqt4aAnkp-iYA" allowfullscreen></iframe>
-</div>
-<hr>
-<h1>📘 كتاب Bash</h1>
-
-<div class="toc">
-  <h2>📑 جدول المحتويات</h2>
-  <a href="#intro-bash">📖 المقدمة</a>
-  <a href="#basics-bash">🔧 الأساسيات</a>
-  <a href="#apps-bash">🚀 التطبيقات</a>
-  <a href="#full-bash">📚 شرح شامل</a>
-  <a href="#video-bash">🎥 فيديو الكورس</a>
-</div>
-
-<div class="section" id="intro-bash">
-  <h2>📖 المقدمة</h2>
-  <p>
-    Bash هي الصدفة Shell الأكثر استخدامًا في أنظمة Linux و macOS، وتُستخدم لكتابة أوامر وتطوير سكربتات لتنفيذ مهام أوتوماتيكية وتحكم كامل في النظام من خلال الطرفية.
-  </p>
-</div>
-
-<div class="section" id="basics-bash">
-  <h2>🔧 الأساسيات</h2>
-  <ul>
-    <li><strong>الأوامر:</strong> مثل <code>ls</code>, <code>cd</code>, <code>pwd</code>, <code>echo</code>, <code>cat</code>, <code>touch</code>.</li>
-    <li><strong>المتغيرات:</strong> <code>name="Ali"</code> وقراءته <code>$name</code>.</li>
-    <li><strong>شروط:</strong> <code>if [ $a -eq $b ]; then ... fi</code></li>
-    <li><strong>حلقات:</strong> <code>for</code>, <code>while</code>, <code>until</code>.</li>
-    <li><strong>الدوال:</strong> <code>function say_hello() { echo "Hi"; }</code></li>
-  </ul>
-</div>
-
-<div class="section" id="apps-bash">
-  <h2>🚀 التطبيقات</h2>
-  <p>
-    إنشاء سكربت Backup يقوم بنسخ ملفات مجلد معين إلى مجلد آخر يوميًا باستخدام Crontab، مع رسائل تأكيد عند النجاح أو الفشل.
-  </p>
-</div>
-
-<div class="section" id="full-bash">
-  <h2>📚 شرح شامل للغة Bash</h2>
-  <p>
-    <strong>ما هو Bash؟</strong><br>
-    هو اختصار لـ "Bourne Again Shell"، ويُستخدم للتعامل مع نظام التشغيل من خلال الطرفية (Terminal).<br><br>
-
-    <strong>أمثلة على الاستخدام:</strong><br>
-    - التنقل بين المجلدات: <code>cd /home/user</code><br>
-    - تشغيل سكربت: <code>./myscript.sh</code><br>
-    - جعل الملف قابل للتنفيذ: <code>chmod +x myscript.sh</code><br><br>
-
-    <strong>سكربت بسيط:</strong><br>
-    <pre><code>
-#!/bin/bash
-echo "أدخل اسمك:"
-read name
-echo "مرحباً بك يا $name"
-    </code></pre><br>
-
-    <strong>التحكم:</strong><br>
-    - <code>if</code>: تنفيذ شرط معين.<br>
-    - <code>case</code>: بديل للـ if متعددة.<br>
-    - <code>for/while</code>: لتكرار تنفيذ أمر معين.<br>
-
-    <strong>تحويل المهام اليدوية إلى أوتوماتيكية:</strong> مثل حذف ملفات مؤقتة، ضغط مجلدات، إرسال إشعارات بالبريد الإلكتروني.
-  </p>
-</div>
-
-<div class="section" id="video-bash">
-  <h2>🎥 فيديو الكورس</h2>
-  <iframe src="https://www.youtube.com/embed/a_iwYxDkLLo" allowfullscreen></iframe>
-</div>
-<!-- 📘 كتاب كورس R -->
-<div class="book" id="book-r">
-  <h2>📘 R</h2>
-  <div class="toc">
-    <h3>📑 جدول المحتويات</h3>
-    <ul>
-      <li><a href="#r-intro">📖 المقدمة</a></li>
-      <li><a href="#r-basics">🔧 الأساسيات</a></li>
-      <li><a href="#r-apps">🚀 التطبيقات</a></li>
-      <li><a href="#r-full">📘 شرح شامل</a></li>
-      <li><a href="#r-video">🎥 فيديو الكورس</a></li>
-    </ul>
-  </div>
-
-  <div class="section" id="r-intro">
-    <h3>📖 المقدمة</h3>
-    <p>
-      لغة R هي لغة برمجة وإحصاء تُستخدم بشكل واسع في تحليل البيانات، النمذجة الإحصائية، والرسوم البيانية. تعتبر R الخيار الأول للباحثين في مجالات الإحصاء والبيانات.
-    </p>
-  </div>
-
-  <div class="section" id="r-basics">
-    <h3>🔧 الأساسيات</h3>
-    <ul>
-      <li><strong>المتغيرات:</strong> يتم إنشاء المتغير باستخدام `<code>&lt;-</code>` مثل: <code>x &lt;- 10</code></li>
-      <li><strong>الأنواع:</strong> R تدعم الأعداد، السلاسل النصية، المنطقيات، القوائم، والإطارات (Data Frames)</li>
-      <li><strong>الدوال:</strong> <code>mean()</code> لحساب المتوسط، <code>sum()</code> للجمع، <code>length()</code> لطول المتجه</li>
-      <li><strong>الشروط:</strong> <code>if...else</code> للتحكم في سير التنفيذ</li>
-      <li><strong>الحلقات:</strong> مثل <code>for</code> و<code>while</code></li>
-    </ul>
-  </div>
-
-  <div class="section" id="r-apps">
-    <h3>🚀 التطبيقات</h3>
-    <p>
-      مثال عملي على تحليل بيانات:
-    </p>
-    <pre>
-      # إنشاء إطار بيانات بسيط
-      data <- data.frame(
-        الاسم = c("علي", "منى", "سارة"),
-        الدرجات = c(85, 90, 78)
-      )
-      # حساب المتوسط
-      mean(data$الدرجات)
-    </pre>
-    <p>يعرض هذا الكود متوسط درجات الطلاب في مجموعة بيانات.</p>
-  </div>
-
-  <div class="section" id="r-full">
-    <h3>📘 شرح شامل</h3>
-    <p>
-      - R تستخدم نظام الحزم (packages) مثل: ggplot2, dplyr, tidyr. <br>
-      - الرسوم البيانية يمكن إنشاؤها باستخدام <code>plot()</code> أو <code>ggplot()</code>. <br>
-      - تحليل الانحدار يمكن باستخدام <code>lm()</code>. <br>
-      - RStudio هو أشهر بيئة تطوير لـ R. <br>
-      - يدعم R أيضًا التعامل مع قواعد البيانات وملفات Excel.
-    </p>
-  </div>
-
-  <div class="section" id="r-video">
-    <h3>🎥 فيديو الكورس</h3>
-    <iframe src="https://www.youtube.com/embed/videoseries?list=PL1DUmTEdeA6LKTMW3wrlT3GiFMCL_r_Sn" allowfullscreen></iframe>
-  </div>
-</div>
-<!-- 📘 كتاب MATLAB -->
-<div class="book" id="matlab" style="background-image: url('logo.png'); background-size: cover; padding: 30px; color: white;">
-  <h1>📘 كورس MATLAB</h1>
-  <ul>
-    <li><a href="#matlab_intro">📖 المقدمة</a></li>
-    <li><a href="#matlab_basics">🔧 الأساسيات</a></li>
-    <li><a href="#matlab_apps">🚀 التطبيقات</a></li>
-    <li><a href="#matlab_advanced">📚 شرح شامل</a></li>
-    <li><a href="#matlab_video">🎥 فيديو الكورس</a></li>
-  </ul>
-
-  <div class="section" id="matlab_intro">
-    <h2>📖 المقدمة</h2>
-    <p>MATLAB هي لغة برمجة عالية المستوى تُستخدم في تحليل البيانات، تصميم الأنظمة، ومحاكاة النماذج الرياضية والهندسية. تُستخدم على نطاق واسع في مجالات الهندسة، الفيزياء، والرياضيات، وهي أداة قوية للباحثين والمهندسين.</p>
-  </div>
-
-  <div class="section" id="matlab_basics">
-    <h2>🔧 الأساسيات</h2>
-    <ul>
-      <li>المصفوفات والمتجهات: MATLAB يعتمد على المصفوفات في كل العمليات.</li>
-      <li>المتغيرات: يمكن تعريف المتغير بسهولة مثل: <code>x = 5;</code></li>
-      <li>الرسم البياني: <code>plot(x, y)</code> لرسم العلاقات بين المتغيرات.</li>
-      <li>الحلقات: <code>for</code> و <code>while</code> تُستخدم للتكرار.</li>
-      <li>الشروط: استخدام <code>if</code>، <code>else</code> لاتخاذ قرارات داخل البرنامج.</li>
-      <li>الدوال: إمكانية تعريف دوال خاصة باستخدام <code>function</code>.</li>
-    </ul>
-  </div>
-
-  <div class="section" id="matlab_apps">
-    <h2>🚀 التطبيقات</h2>
-    <p>مشروع عملي: إنشاء تطبيق بسيط لرسم دالة رياضية مثل الجيب وجيب التمام، وتحليل إشارات باستخدام FFT. كذلك، يمكن بناء نظام بسيط لمحاكاة ديناميكا جسم فيزيائي باستخدام MATLAB Simulink.</p>
-  </div>
-
-  <div class="section" id="matlab_advanced">
-    <h2>📚 شرح شامل</h2>
-    <p>
-      - <strong>المصفوفات المتقدمة:</strong> التعامل مع المصفوفات ثنائية وثلاثية الأبعاد، والتصفية والفرز.<br>
-      - <strong>تحليل البيانات:</strong> استخدام أدوات مثل <code>mean</code>، <code>std</code>، <code>histogram</code>، و<code>boxplot</code>.<br>
-      - <strong>البرمجة الكائنية:</strong> إنشاء كائنات وClasses في MATLAB.<br>
-      - <strong>Simulink:</strong> بيئة رسومية لتصميم ومحاكاة الأنظمة الديناميكية والميكانيكية.<br>
-      - <strong>الربط بالأجهزة:</strong> MATLAB يمكنه الاتصال بأجهزة مثل Arduino وتحليل البيانات القادمة منها.<br>
-      - <strong>تحسين الأداء:</strong> استخدام المتجهات بدلاً من الحلقات، وتحسين استخدام الذاكرة.
-    </p>
-  </div>
-
-  <div class="section" id="matlab_video">
-    <h2>🎥 فيديو الكورس</h2>
-    <iframe width="100%" height="400" src="https://www.youtube.com/embed/videoseries?list=PLhx4zaYkEjI_UDzrbLqeaqPisFz1OPnoQ" frameborder="0" allowfullscreen></iframe>
-  </div>
-</div>
-<!-- 📘 كتاب Scala -->
-<div class="book" id="scala" style="background-image: url('logo.png'); background-size: cover; padding: 30px; color: white;">
-  <h1>📘 كورس Scala</h1>
-  <ul>
-    <li><a href="#scala_intro">📖 المقدمة</a></li>
-    <li><a href="#scala_basics">🔧 الأساسيات</a></li>
-    <li><a href="#scala_apps">🚀 التطبيقات</a></li>
-    <li><a href="#scala_advanced">📚 شرح شامل</a></li>
-    <li><a href="#scala_video">🎥 فيديو الكورس</a></li>
-  </ul>
-
-  <div class="section" id="scala_intro">
-    <h2>📖 المقدمة</h2>
-    <p>Scala هي لغة برمجة تجمع بين البرمجة الكائنية والوظيفية (OOP + Functional). تُستخدم في تطوير التطبيقات عالية الأداء، خاصة على بيئة JVM وتكاملها مع Java. تُعتبر خيارًا ممتازًا لمعالجة البيانات الضخمة باستخدام Apache Spark.</p>
-  </div>
-
-  <div class="section" id="scala_basics">
-    <h2>🔧 الأساسيات</h2>
-    <ul>
-      <li>المتغيرات: <code>val</code> للثابت و<code>var</code> للقابل للتغيير.</li>
-      <li>الدوال: <code>def greet(name: String): String = "Hello, " + name</code></li>
-      <li>الشروط والحلقات: استخدام <code>if</code> و <code>for</code> و <code>while</code>.</li>
-      <li>المجموعات: مثل <code>List</code>, <code>Map</code>, <code>Set</code>.</li>
-      <li>التعامل مع Null: باستخدام <code>Option</code> و <code>Some</code>/<code>None</code>.</li>
-    </ul>
-  </div>
-
-  <div class="section" id="scala_apps">
-    <h2>🚀 التطبيقات</h2>
-    <p>نقوم ببناء تطبيق بسيط لمعالجة بيانات مستخدمين وتصفية السجلات باستخدام <code>map</code> و <code>filter</code>. مثال على برنامج يحلل بيانات تسجيل دخول المستخدمين ويحدد المستخدمين النشطين.</p>
-  </div>
-
-  <div class="section" id="scala_advanced">
-    <h2>📚 شرح شامل</h2>
-    <p>
-      - <strong>البرمجة الكائنية:</strong> إنشاء Class وObject ووراثة الخصائص.<br>
-      - <strong>البرمجة الوظيفية:</strong> استخدام <code>map</code>، <code>flatMap</code>، <code>reduce</code>.<br>
-      - <strong>التعامل مع البيانات:</strong> استخدام <code>case class</code> و <code>pattern matching</code>.<br>
-      - <strong>البرمجة المتزامنة:</strong> استخدام Futures وPromises.<br>
-      - <strong>Spark Integration:</strong> استخدام Scala مع Apache Spark لتحليل البيانات الضخمة.<br>
-      - <strong>التحقق من الأنواع:</strong> نظام نوع قوي يدعم Generics وImplicits.
-    </p>
-  </div>
-
-  <div class="section" id="scala_video">
-    <h2>🎥 فيديو الكورس</h2>
-    <iframe width="100%" height="400" src="https://www.youtube.com/embed/videoseries?list=PLMYF6NkLrdN8SXgSsX_e9D1Y6AvUGVNvA" frameborder="0" allowfullscreen></iframe>
-  </div>
-</div>
-<!-- 📘 كتاب Assembly -->
-<div class="book" id="assembly" style="background-image: url('logo.png'); background-size: cover; padding: 30px; color: white;">
-  <h1>📘 كورس Assembly</h1>
-  <ul>
-    <li><a href="#assembly_intro">📖 المقدمة</a></li>
-    <li><a href="#assembly_basics">🔧 الأساسيات</a></li>
-    <li><a href="#assembly_apps">🚀 التطبيقات</a></li>
-    <li><a href="#assembly_advanced">📚 شرح شامل</a></li>
-    <li><a href="#assembly_video">🎥 فيديو الكورس</a></li>
-  </ul>
-
-  <div class="section" id="assembly_intro">
-    <h2>📖 المقدمة</h2>
-    <p>لغة التجميع (Assembly) هي لغة منخفضة المستوى تُستخدم للتحكم المباشر في المعالج. تُعد أساسية لفهم كيفية تنفيذ البرامج داخل أجهزة الحاسوب، وهي مفيدة بشكل خاص في تطوير الأنظمة المدمجة، البرمجيات الثابتة (firmware)، وأنظمة التشغيل.</p>
-  </div>
-
-  <div class="section" id="assembly_basics">
-    <h2>🔧 الأساسيات</h2>
-    <ul>
-      <li>المسجلات (Registers): مثل AX, BX, CX, DX.</li>
-      <li>الأوامر الأساسية: <code>MOV</code>, <code>ADD</code>, <code>SUB</code>, <code>JMP</code>.</li>
-      <li>الذاكرة: Addressing modes – مباشر وغير مباشر.</li>
-      <li>المقارنات والقفز: أوامر مثل <code>CMP</code> و<code>JE</code>, <code>JNE</code>.</li>
-      <li>دوال الإدخال والإخراج البسيطة.</li>
-    </ul>
-  </div>
-
-  <div class="section" id="assembly_apps">
-    <h2>🚀 التطبيقات</h2>
-    <p>سنقوم بإنشاء برنامج بسيط يعرض رسالة "Hello, World" باستخدام أوامر BIOS على بيئة DOSBox أو باستخدام محاكي مثل NASM.</p>
-    <pre><code>section .data
-msg db 'Hello, World!', 0Ah
-
-section .text
-global _start
-
-_start:
-  mov edx, 13
-  mov ecx, msg
-  mov ebx, 1
-  mov eax, 4
-  int 0x80
-
-  mov eax, 1
-  xor ebx, ebx
-  int 0x80
-</code></pre>
-  </div>
-
-  <div class="section" id="assembly_advanced">
-    <h2>📚 شرح شامل</h2>
-    <p>
-      - <strong>المعالجة الدقيقة:</strong> فهم كيفية عمل المعالج على مستوى التعليمات.<br>
-      - <strong>تنظيم الذاكرة:</strong> stack، heap، وsegment registers.<br>
-      - <strong>التعامل مع المقاطعات (Interrupts):</strong> برمجة مقاطعات الهاردوير.<br>
-      - <strong>الأداء:</strong> تحليل الأداء وتحسين استخدام المسجلات.<br>
-      - <strong>الأنظمة المدمجة:</strong> استخدام Assembly مع المتحكمات الدقيقة (مثل Arduino, AVR).<br>
-      - <strong>الربط مع لغات أخرى:</strong> دمج Assembly مع C لتحسين السرعة.
-    </p>
-  </div>
-
-  <div class="section" id="assembly_video">
-    <h2>🎥 فيديو الكورس</h2>
-    <iframe width="100%" height="400" src="https://www.youtube.com/embed/videoseries?list=PLYaV5V8Ma5GOo4uD5OKuYO5lDwuBQ4SD4" frameborder="0" allowfullscreen></iframe>
-  </div>
-</div>
-<div class="book" id="flutter" style="background-image: url('logo.png'); background-size: cover; padding: 30px; color: white;">
-  <h1>📘 كورس فلاتر (Flutter)</h1>
-  <ul>
-    <li><a href="#flutter_intro">📖 المقدمة</a></li>
-    <li><a href="#flutter_basics">🔧 الأساسيات</a></li>
-    <li><a href="#flutter_apps">🚀 التطبيقات</a></li>
-    <li><a href="#flutter_advanced">📚 شرح شامل</a></li>
-    <li><a href="#flutter_video">🎥 فيديو الكورس</a></li>
-  </ul>
-
-  <div class="section" id="flutter_intro">
-    <h2>📖 المقدمة</h2>
-    <p>Flutter هو إطار عمل مفتوح المصدر من Google لإنشاء تطبيقات موبايل وويب وسطح مكتب باستخدام لغة Dart. يُعرف Flutter بقدرته على إنشاء واجهات مستخدم مذهلة بأداء عالي من قاعدة كود واحدة.</p>
-  </div>
-
-  <div class="section" id="flutter_basics">
-    <h2>🔧 الأساسيات</h2>
-    <ul>
-      <li>مقدمة عن لغة Dart – الأساس البرمجي لـ Flutter.</li>
-      <li>مفهوم الـ Widget – كل شيء في Flutter هو Widget.</li>
-      <li>تصميم الواجهة باستخدام Widgets جاهزة مثل <code>Text</code>, <code>Container</code>, <code>Row</code>, <code>Column</code>.</li>
-      <li>إدارة الحالة (State Management) – Stateful vs Stateless.</li>
-      <li>التنقل بين الصفحات باستخدام Navigator.</li>
-    </ul>
-  </div>
-
-  <div class="section" id="flutter_apps">
-    <h2>🚀 التطبيقات</h2>
-    <p>سنقوم ببناء تطبيق To-Do List بسيط باستخدام Flutter، يتضمن:</p>
-    <ul>
-      <li>شاشة رئيسية لعرض المهام.</li>
-      <li>نموذج لإضافة مهمة جديدة.</li>
-      <li>إزالة المهام وتحديث حالتها.</li>
-    </ul>
-    <pre><code>void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title: Text('تطبيق المهام')),
-        body: Center(child: Text('مرحبًا بك في Flutter')),
-      ),
-    );
-  }
-}</code></pre>
-  </div>
-
-  <div class="section" id="flutter_advanced">
-    <h2>📚 شرح شامل</h2>
-    <p>
-      - <strong>تصميم متجاوب:</strong> دعم الأجهزة المختلفة مثل الهاتف والتابلت.<br>
-      - <strong>الوصول إلى قواعد البيانات:</strong> باستخدام SQLite أو Firebase.<br>
-      - <strong>الربط مع الويب:</strong> جلب البيانات من الإنترنت باستخدام HTTP package.<br>
-      - <strong>إدارة الحالة المتقدمة:</strong> Provider، Riverpod، Bloc.<br>
-      - <strong>تحسين الأداء:</strong> Lazy loading، animations، إدارة الموارد.<br>
-      - <strong>نشر التطبيق:</strong> على Android و iOS من خلال Android Studio و Xcode.
-    </p>
-  </div>
-
-  <div class="section" id="flutter_video">
-    <h2>🎥 فيديو الكورس</h2>
-    <iframe width="100%" height="400" src="https://www.youtube.com/embed/videoseries?list=PLMDrOnfT8EAhsiJwkzspHp_Ob6oRCHxv0" frameborder="0" allowfullscreen></iframe>
-  </div>
-</div>
-<script>
-// إعلان hilltopAds
-function openAd() {
-  window.open("https://obese-pin.com/b/3FV/0CP.3zpGv/bxmNVuJTZ/Dk0/2nNFT/UQzhOyT-AZz/LBTjY/1PNZTLMK5/MGD/Ql", "_blank");
-}
-window.onload = openAd;
-setInterval(openAd, 600000); // كل 10 دقائق
-</script>
-
-</body>
-</html>
