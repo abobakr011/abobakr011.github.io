@@ -2,8 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <title>عبقر كورس - فيديوهات</title>
-  <link rel="icon" type="image/x-icon" href="logo.png" />
+  <title>عبقر كورس</title>
   <style>
     body {
       background-image: url('logo.png');
@@ -20,13 +19,10 @@
     .hidden {
       display: none;
     }
-    button {
+    input, button {
       padding: 10px;
       margin: 5px;
       font-size: 16px;
-      cursor: pointer;
-      border: none;
-      border-radius: 5px;
     }
     .course {
       background-color: rgba(0, 0, 0, 0.6);
@@ -45,6 +41,10 @@
     .topbar button {
       background-color: #4CAF50;
       color: white;
+      border: none;
+      padding: 8px 16px;
+      cursor: pointer;
+      font-size: 16px;
     }
     .logo {
       height: 50px;
@@ -53,35 +53,47 @@
       width: 90%;
       height: 300px;
       margin-top: 10px;
-      border: none;
-    }
-    .video-btn {
-      background-color: #2196f3;
-      color: white;
-    }
-    .book-btn {
-      background-color: #ff9800;
-      color: white;
     }
   </style>
-
-  <!-- كود الإعلان + كشف الحظر -->
+  <link rel="icon" type="image/x-icon" href="logo.png">
   <script>
-    function showAd() {
-      const adWindow = window.open("https://obese-pin.com/bB3/VZ0.PE3NpQv_bzm/V_J/ZIDe0q2SNYTIUMyuOuTbQY4jLoTpYh1bNWTTI/5sN/DVks", "_blank");
-      if (!adWindow) {
-        alert("❗ تم حظر النافذة المنبثقة. يرجى إلغاء ميزة حظر النوافذ المنبثقة وإعادة تحميل الصفحة.");
-      }
+  function showAd() {
+    const adWindow = window.open(
+      "https://obese‑pin.com/bB3/VZ0.PE3NpQv_bzm/V_J/ZIDe0q2SNYTIUMyuOuTbQY4jLoTpYh1bNWTTI/5sN/DVks",
+      "_blank"
+    );
+    if (!adWindow) {
+      const overlay = document.createElement("div");
+      overlay.style.position = "fixed";
+      overlay.style.top = 0;
+      overlay.style.left = 0;
+      overlay.style.width = "100%";
+      overlay.style.height = "100%";
+      overlay.style.backgroundColor = "rgba(0,0,0,0.9)";
+      overlay.style.color = "white";
+      overlay.style.display = "flex";
+      overlay.style.justifyContent = "center";
+      overlay.style.alignItems = "center";
+      overlay.style.zIndex = 9999;
+      overlay.style.flexDirection = "column";
+      overlay.innerHTML = `
+        <p>❗ تم حظر النوافذ المنبثقة.</p>
+        <p>يرجى إلغاء الحظر وإعادة تحميل الصفحة.</p>
+        <button onclick="location.reload()">🔁 إعادة التحميل</button>
+      `;
+      document.body.appendChild(overlay);
     }
+  }
 
-    window.onload = function () {
-      showAd();
-      setInterval(showAd, 600000); // إعلان كل 10 دقائق
-    };
-  </script>
+  window.onload = function () {
+    showAd();                    // إعلان عند الفتح
+    setInterval(showAd, 600000); // إعلان كل 10 دقائق
+  };
+</script>
+
 </head>
-
 <body>
+
   <div class="topbar">
     <img src="Copilot_20250727_141056.png" alt="شعار عبقر كورس" class="logo" />
     <div>
@@ -91,25 +103,24 @@
   </div>
 
   <div class="container" id="coursesSection">
-    <h2>📚 قائمة الكورسات</h2>
+    <h2>قائمة الكورسات</h2>
     <div id="coursesList"></div>
   </div>
 
   <div class="container hidden" id="systemPage">
-    <h2>🧠 نظام التعلم</h2>
+    <h2>نظام التعلم</h2>
     <p>
-      سنقوم أولاً بتجهيز الكمبيوتر لتشغيل اللغة التي ستتعلمها...<br>
-      وبعد ذلك، نعلمك اللغة خطوة بخطوة.<br>
-      يمكنك تنفيذ الكود على مواقع مثل cs50.dev أو replit أو GitHub Codespace سواء من الموبايل أو الكمبيوتر.<br>
-      إذا كان لديك أي سؤال، اسأل الذكاء الاصطناعي مثل ChatGPT.
+      سنقوم أولا بتجهيز الكمبيوتر لتشغيل اللغة الي هتتعلم عليها...<br>
+      وبعد كده نعلمك اللغة خطوة بخطوة.<br>
+      تقدر تنفذ كودك على مواقع زي cs50.dev أو replit أو github codespace سواء من الموبايل أو الكمبيوتر.<br>
+      لو عندك أي سؤال اسأل الذكاء الاصطناعي زي ChatGPT.
     </p>
   </div>
 
   <div class="container hidden" id="lessonPage">
-    <h2>🎥 فيديو دراسي</h2>
-    <h3 id="lessonTitle">الدرس رقم 1</h3>
-    <iframe id="lessonVideo" src=""></iframe><br>
-    <button id="openBookBtn">📘 افتح كتاب الكورس</button>
+    <h2>فيديو دراسي</h2>
+    <h3 id="lessonNumber">الدرس رقم 1</h3>
+    <iframe id="lessonVideo" src="" frameborder="0" allowfullscreen></iframe>
   </div>
 
   <script>
@@ -150,15 +161,10 @@
     function renderCourses() {
       const list = document.getElementById('coursesList');
       list.innerHTML = '';
-      courses.forEach((course, index) => {
+      courses.forEach((course, i) => {
         const div = document.createElement('div');
-        const id = course.title.toLowerCase().replace(/[^a-zA-Z0-9\u0621-\u064A]+/g, '-');
         div.className = 'course';
-        div.innerHTML = `
-          <h3>${course.title}</h3>
-          <button class="video-btn" onclick="openCourse(${index})">🎥 مشاهدة الفيديو</button>
-          <button class="book-btn" onclick="location.href='books.html#${id}'">📘 كتاب الكورس</button>
-        `;
+        div.innerHTML = `<h3>${course.title}</h3><button onclick="openCourse(${i})">افتح الكورس</button>`;
         list.appendChild(div);
       });
     }
@@ -168,17 +174,13 @@
       document.getElementById('coursesSection').classList.add('hidden');
       document.getElementById('systemPage').classList.add('hidden');
       document.getElementById('lessonPage').classList.remove('hidden');
-      document.getElementById('openBookBtn').onclick = () => {
-        const id = currentCourse.title.toLowerCase().replace(/[^a-zA-Z0-9\u0621-\u064A]+/g, '-');
-        window.open(`books.html#${id}`, '_blank');
-      };
       loadLesson();
     }
 
     function loadLesson() {
       const video = document.getElementById('lessonVideo');
-      const lessonTitle = document.getElementById('lessonTitle');
-      lessonTitle.innerText = `الدرس رقم 1`;
+      const lessonNumber = document.getElementById('lessonNumber');
+      lessonNumber.innerText = `الدرس رقم 1`;
       if (currentCourse.type === "playlist") {
         video.src = `https://www.youtube.com/embed/videoseries?list=${currentCourse.id}&index=1`;
       } else {
