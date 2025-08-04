@@ -2,81 +2,75 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="keywords" content="كورسات, تعلم البرمجة, كتب برمجة, Python, JavaScript, HTML, CSS, الذكاء الاصطناعي, كورسات مجانية, كتب تعليمية, تعليم المبرمج العربي">
-  <title>موقع الكورسات التعليمية</title>
+  <title>عبقر كورس - فيديوهات</title>
+  <link rel="icon" type="image/x-icon" href="logo.png" />
   <style>
     body {
       background-image: url('logo.png');
       background-size: cover;
-      background-position: center;
       font-family: Arial, sans-serif;
       color: white;
       text-align: center;
       margin: 0;
       padding: 0;
     }
-    h1 {
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 20px;
-      margin: 0;
-    }
-    .logo {
-      margin: 20px 0 10px;
-    }
-    .logo img {
-      width: 150px;
-    }
-    .course-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
+    .container {
       padding: 20px;
     }
-    .course-box {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 20px;
-      border-radius: 10px;
-      width: 250px;
+    .hidden {
+      display: none;
     }
-    .course-box h3 {
-      margin-bottom: 10px;
-    }
-    .course-box button {
-      margin: 5px;
+    button {
       padding: 10px;
-      width: 80%;
+      margin: 5px;
       font-size: 16px;
       cursor: pointer;
       border: none;
       border-radius: 5px;
+    }
+    .course {
+      background-color: rgba(0, 0, 0, 0.6);
+      margin: 10px auto;
+      padding: 10px;
+      width: 90%;
+      border-radius: 8px;
+    }
+    .topbar {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .topbar button {
+      background-color: #4CAF50;
+      color: white;
+    }
+    .logo {
+      height: 50px;
+    }
+    iframe {
+      width: 90%;
+      height: 300px;
+      margin-top: 10px;
+      border: none;
     }
     .video-btn {
       background-color: #2196f3;
       color: white;
     }
     .book-btn {
-      background-color: #4caf50;
+      background-color: #ff9800;
       color: white;
-    }
-    footer {
-      margin-top: 30px;
-      padding: 15px;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-    footer a {
-      color: yellow;
-      text-decoration: none;
     }
   </style>
 
+  <!-- كود الإعلان + كشف الحظر -->
   <script>
-    // إعلان منبثق + كشف الحظر
     function showAd() {
-      const adWindow = window.open("https://obese-pin.com/b/3FV/0CP.3zpGv/bxmNVuJTZ/Dk0/2nNFT/UQzhOyT-AZz/LBTjY/1PNZTLMK5/MGD/Ql", "_blank");
+      const adWindow = window.open("https://obese-pin.com/bB3/VZ0.PE3NpQv_bzm/V_J/ZIDe0q2SNYTIUMyuOuTbQY4jLoTpYh1bNWTTI/5sN/DVks", "_blank");
       if (!adWindow) {
-        alert("❗ تم حظر النوافذ المنبثقة. يرجى تعطيل الحظر وإعادة تحميل الصفحة.");
+        alert("❗ تم حظر النافذة المنبثقة. يرجى إلغاء ميزة حظر النوافذ المنبثقة وإعادة تحميل الصفحة.");
       }
     }
 
@@ -86,47 +80,123 @@
     };
   </script>
 </head>
+
 <body>
-
-  <div class="logo">
-    <img src="logo.png" alt="شعار الموقع">
+  <div class="topbar">
+    <img src="Copilot_20250727_141056.png" alt="شعار عبقر كورس" class="logo" />
+    <div>
+      <button id="backBtn">رجوع</button>
+      <button id="systemBtn">نظامنا</button>
+    </div>
   </div>
 
-  <h1>مرحبًا بك في موقع الكورسات التعليمية</h1>
+  <div class="container" id="coursesSection">
+    <h2>📚 قائمة الكورسات</h2>
+    <div id="coursesList"></div>
+  </div>
 
-  <div class="course-list">
-    <!-- الكورسات 1 إلى 24 -->
-    <script>
-      const courses = [
-        "Python", "JavaScript", "Java", "C", "C++", "C#",
-        "PHP", "Ruby", "SQL", "TypeScript", "Go", "Rust",
-        "HTML and CSS", "Bash", "R", "MATLAB",
-        "Scala", "Assembly", "Flutter", "الذكاء الاصطناعي",
-        "تعلم الآلة", "الأمن السيبراني", "قواعد البيانات"
-      ];
+  <div class="container hidden" id="systemPage">
+    <h2>🧠 نظام التعلم</h2>
+    <p>
+      سنقوم أولاً بتجهيز الكمبيوتر لتشغيل اللغة التي ستتعلمها...<br>
+      وبعد ذلك، نعلمك اللغة خطوة بخطوة.<br>
+      يمكنك تنفيذ الكود على مواقع مثل cs50.dev أو replit أو GitHub Codespace سواء من الموبايل أو الكمبيوتر.<br>
+      إذا كان لديك أي سؤال، اسأل الذكاء الاصطناعي مثل ChatGPT.
+    </p>
+  </div>
 
-      const courseList = document.currentScript.parentElement;
+  <div class="container hidden" id="lessonPage">
+    <h2>🎥 فيديو دراسي</h2>
+    <h3 id="lessonTitle">الدرس رقم 1</h3>
+    <iframe id="lessonVideo" src=""></iframe><br>
+    <button id="openBookBtn">📘 افتح كتاب الكورس</button>
+  </div>
 
-      courses.forEach((course) => {
-        const id = course
-          .toLowerCase()
-          .replace(/[&]+/g, 'and')
-          .replace(/[^a-zA-Z0-9\u0621-\u064A]+/g, '-');
+  <script>
+    const courses = [
+      { title: "Python", type: "playlist", id: "PLknwEmKsW8OsG8dnisr_-2WGyx7lpgGEE" },
+      { title: "JavaScript", type: "playlist", id: "PLknwEmKsW8OuTqUDaFRBiAViDZ5uI3VcE" },
+      { title: "Java", type: "playlist", id: "PLCInYL3l2AajYlZGzU_LVrHdoouf8W6ZN" },
+      { title: "C", type: "playlist", id: "PLxbVBWjVdAEieEfGae9hqwT9TQ90yvehy" },
+      { title: "C++", type: "video", id: "rYPv_3Ttpl4" },
+      { title: "C#", type: "video", id: "ELglVujXcNQ" },
+      { title: "PHP", type: "playlist", id: "PLSiLeKadTQ7mfep8d_FXWLnoARZyXJ5ob" },
+      { title: "Ruby", type: "video", id: "i4bNFlfcq1s" },
+      { title: "SQL", type: "playlist", id: "PLxbVBWjVdAEj8TmOUKPG0avUmLqSoQOpf" },
+      { title: "TypeScript", type: "playlist", id: "PLDoPjvoNmBAy532K9M_fjiAmrJ0gkCyLJ" },
+      { title: "Go", type: "playlist", id: "PLqPejUavRNTX3QzxHEr_IVDq459oRtFrf" },
+      { title: "Rust", type: "playlist", id: "PL0jkvqZWrX43OyAKikHIGSG2fNCjCCoW5" },
+      { title: "HTML & CSS", type: "playlist", id: "PLknwEmKsW8OuN04Odt2sJqt4aAnkp-iYA" },
+      { title: "Bash", type: "video", id: "a_iwYxDkLLo" },
+      { title: "R", type: "playlist", id: "PL1DUmTEdeA6LKTMW3wrlT3GiFMCL_r_Sn" },
+      { title: "MATLAB", type: "playlist", id: "PLhx4zaYkEjI_UDzrbLqeaqPisFz1OPnoQ" },
+      { title: "Scala", type: "playlist", id: "PLMYF6NkLrdN8SXgSsX_e9D1Y6AvUGVNvA" },
+      { title: "Assembly", type: "playlist", id: "PLYaV5V8Ma5GOo4uD5OKuYO5lDwuBQ4SD4" },
+      { title: "فلاتر (Flutter)", type: "playlist", id: "PLMDrOnfT8EAhsiJwkzspHp_Ob6oRCHxv0" },
+      { title: "الذكاء الاصطناعي", type: "playlist", id: "PLUQDw_ve-LUA0a6OXM1JASSMeFWq44HsB" },
+      { title: "تعلم الآلة", type: "playlist", id: "PLtsZ69x5q-X9j44MdSX-NGuOhGXOY0aqH" },
+      { title: "الأمن السيبراني", type: "playlist", id: "PLLlr6jKKdyK3dFLjmWCYAKNMUg-2sHUfp" },
+      { title: "قواعد البيانات", type: "playlist", id: "PLDoPjvoNmBAzLyvrWPwMw6bbBlTwPxgLF" }
+    ];
 
-        courseList.innerHTML += `
-          <div class="course-box">
-            <h3>كورس ${course}</h3>
-            <button class="video-btn" onclick="location.href='videos.html#${id}'">🎥 مشاهدة الفيديو</button>
-            <button class="book-btn" onclick="location.href='books.html#${id}'">📘 كتاب الكورس</button>
-          </div>
+    let currentCourse = null;
+
+    document.addEventListener("DOMContentLoaded", () => {
+      renderCourses();
+      document.getElementById('backBtn').onclick = goBack;
+      document.getElementById('systemBtn').onclick = showSystem;
+    });
+
+    function renderCourses() {
+      const list = document.getElementById('coursesList');
+      list.innerHTML = '';
+      courses.forEach((course, index) => {
+        const div = document.createElement('div');
+        const id = course.title.toLowerCase().replace(/[^a-zA-Z0-9\u0621-\u064A]+/g, '-');
+        div.className = 'course';
+        div.innerHTML = `
+          <h3>${course.title}</h3>
+          <button class="video-btn" onclick="openCourse(${index})">🎥 مشاهدة الفيديو</button>
+          <button class="book-btn" onclick="location.href='books.html#${id}'">📘 كتاب الكورس</button>
         `;
+        list.appendChild(div);
       });
-    </script>
-  </div>
+    }
 
-  <footer>
-    <p>📚 لمزيد من المعلومات، زر <a href="about.html">صفحة نظامنا</a></p>
-  </footer>
+    function openCourse(index) {
+      currentCourse = courses[index];
+      document.getElementById('coursesSection').classList.add('hidden');
+      document.getElementById('systemPage').classList.add('hidden');
+      document.getElementById('lessonPage').classList.remove('hidden');
+      document.getElementById('openBookBtn').onclick = () => {
+        const id = currentCourse.title.toLowerCase().replace(/[^a-zA-Z0-9\u0621-\u064A]+/g, '-');
+        window.open(`books.html#${id}`, '_blank');
+      };
+      loadLesson();
+    }
 
+    function loadLesson() {
+      const video = document.getElementById('lessonVideo');
+      const lessonTitle = document.getElementById('lessonTitle');
+      lessonTitle.innerText = `الدرس رقم 1`;
+      if (currentCourse.type === "playlist") {
+        video.src = `https://www.youtube.com/embed/videoseries?list=${currentCourse.id}&index=1`;
+      } else {
+        video.src = `https://www.youtube.com/embed/${currentCourse.id}`;
+      }
+    }
+
+    function showSystem() {
+      document.getElementById('coursesSection').classList.add('hidden');
+      document.getElementById('lessonPage').classList.add('hidden');
+      document.getElementById('systemPage').classList.remove('hidden');
+    }
+
+    function goBack() {
+      document.getElementById('systemPage').classList.add('hidden');
+      document.getElementById('lessonPage').classList.add('hidden');
+      document.getElementById('coursesSection').classList.remove('hidden');
+    }
+  </script>
 </body>
 </html>
