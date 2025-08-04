@@ -1,701 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>📘 كتب الكورسات (عبقر كورس)</title>
-  <link rel="icon" href="logo.png"/>
-  <style>
-    body {
-      background-image: url('logo.png');
-      background-size: cover;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      color: #fff;
-      text-align: center;
-    }
-    .book {
-      display: none;
-      background: rgba(0,0,0,0.7);
-      margin: 60px auto;
-      padding: 20px;
-      max-width: 800px;
-      border-radius: 10px;
-    }
-    .book.active {
-      display: block;
-    }
-    h1.book-title {
-      font-size: 2em;
-      color: #4CAF50;
-      margin-bottom: 20px;
-    }
-    .section {
-      text-align: right;
-      margin-bottom: 25px;
-    }
-    .section h2 {
-      font-size: 1.4em;
-      margin-bottom: 10px;
-      color: #00bcd4;
-    }
-    .section pre {
-      background: #222;
-      color: #0f0;
-      padding: 15px;
-      border-radius: 5px;
-      overflow-x: auto;
-      font-family: Consolas, monospace;
-    }
-    a.up {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #4caf50;
-      padding: 10px 20px;
-      border-radius: 50px;
-      color: white;
-      text-decoration: none;
-      font-size: 16px;
-    }
-    .ad-overlay {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      text-align: center;
-      background: rgba(0,0,0,0.9);
-      color: white;
-      padding: 30px;
-      box-sizing: border-box;
-      z-index: 999;
-      display: none;
-    }
-  </style>
-
-  <!-- كود HilltopAds مع كشف الحظر -->
-  <script>
-    function showAd() {
-      const w = window.open(
-        "https://obese‑pin.com/bB3/VZ0.PE3NpQv_bzm/V_J/ZIDe0q2SNYTIUMyuOuTbQY4jLoTpYh1bNWTTI/5sN/DVks",
-        "_blank"
-      );
-      if (!w) {
-        const o = document.createElement("div");
-        o.className = "ad-overlay";
-        o.innerHTML = `
-          <p>❗ تم حظر النافذة المنبثقة.</p>
-          <p>يرجى إلغاء ميزة حظر النوافذ المنبثقة، ثم <a onclick="location.reload()">إعادة المحاولة</a>.</p>
-        `;
-        document.body.appendChild(o);
-        o.style.display = "block";
-      }
-    }
-    window.onload = () => {
-      showAd();
-      setInterval(showAd, 600000);
-    };
-  </script>
-</head>
-
-<body>
-
-  <!-- 🧾 كتب الكورسات حسب hash -->
-  <div id="python" class="book">
-    <h1 class="book-title">📘 Python</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>بايثون هي لغة برمجة عالية المستوى، مفسَّرة، ديناميكية، تُستخدم في تطوير الويب، تحليل البيانات، والذكاء الاصطناعي. اللغة لا تحتاج إعلان أنوع للمتغيرات، وهذا يسهل كتابتها وتجربتها بسرعة أثناء التطوير :contentReference[oaicite:0]{index=0}.</p>
-    </div>
-    <div class="section">
-      <h2>🔧 أساسيات: المتغيرات والحلقات والشروط</h2>
-      <pre>
-name = "أحمد"
-age = 25
-print(f"الاسم: {name}, العمر: {age}")
-
-for i in range(5):
-    print("عدد:", i)
-
-if age >= 18:
-    print("بالغ")
-else:
-    print("قاصر")
-      </pre>
-      <p>الوصف: يستخدم f-string للطباعة، حلقة for، شرط if/else.</p>
-    </div>
-    <div class="section">
-      <h2>🧮 الدوال والمشاريع البسيطة</h2>
-      <pre>
-def greet(name):
-    print("مرحبًا " + name)
-
-def factorial(n):
-    if n < 2: return 1
-    return n * factorial(n - 1)
-
-greet(name)
-print("مضاعف", age, "هو", factorial(age))
-      </pre>
-      <p>مثال عملي: دالة تحيات ودالة لحساب العامل التكراري.</p>
-    </div>
-  </div>
-
-  <div id="javascript" class="book">
-    <h1 class="book-title">📘 JavaScript</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>جافاسكريبت لغة البرمجة التفاعلية للويب، تُستخدم مع HTML وCSS لإضفاء الحيوية على صفحات الويب، وتستخدم كذلك في الخوادم مع Node.js.</p>
-    </div>
-    <div class="section">
-      <h2>🔧 أساسيات الدوال والحلقات</h2>
-      <pre>
-let name = "Ali";
-let age = 20;
-
-function greet() {
-  console.log("Hello " + name);
-}
-
-for (let i = 0; i < 5; i++) {
-  console.log("عدد:", i);
-}
-
-if (age >= 18) {
-  console.log("بالغ");
-} else {
-  console.log("قاصر");
-}
-
-greet();
-      </pre>
-      <p>شرح: يحتوي على الأمثلة الأساسية للتعامل مع المتغيرات والشروط والحلقات والدوال.</p>
-    </div>
-    <div class="section">
-      <h2>🚀 لتطبيق: تفاعل مع HTML</h2>
-      <pre>
-// HTML: <button id="btn">اضغطني</button>
-document.getElementById("btn").onclick = () => {
-  alert("مرحبًا بالعالم!");
-};
-      </pre>
-      <p>مثال بسيط تفاعل زر Alert.</p>
-    </div>
-  </div>
-
-  <div id="java" class="book">
-    <h1 class="book-title">📘 Java</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>Java لغة برمجة كائنية التوجه، قوية، مناسبة لتطوير تطبيقات الأندرويد، البرامج المؤسسية، وتطبيقات الويب.</p>
-    </div>
-    <div class="section">
-      <h2>🔧 Hello World والشروط</h2>
-      <pre>
-public class Hello {
-  public static void main(String[] args) {
-    System.out.println("مرحبًا");
-    int x = 10;
-    if (x > 5) {
-      System.out.println("x أكبر من 5");
-    }
-  }
-}
-      </pre>
-      <p>شرح: عرض Hello World وإظهار كيفية كتابة شروط if.</p>
-    </div>
-    <div class="section">
-      <h2>🚀 تطبيق: استخدام Eclipse/VS Code</h2>
-      <p>أنشئ Class جديد، واحفظه باسم Hello.java، ثم شغّله باستخدام “Run as Java Application”.</p>
-    </div>
-  </div>
-
-  <div id="c" class="book">
-    <h1 class="book-title">📘 C</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>C هي لغة برمجة منخفضة المستوى، تُستخدم في برمجة الأنظمة وتطبيقات الأداء العالي.</p>
-    </div>
-    <div class="section">
-      <h2>🔧 Hello World والمتغيرات</h2>
-      <pre>
-#include &lt;stdio.h&gt;
-
-int main(void) {
-  printf("مرحبًا\n");
-  int age = 30;
-  float salary = 1234.56;
-  char grade = 'A';
-  return 0;
-}
-      </pre>
-      <p>شرح أساسيات إعلان المتغيرات وأنواع البيانات.</p>
-    </div>
-    <div class="section">
-      <h2>🚀 تطبيق: تجميع بواسطة gcc</h2>
-      <p>اكتب الكود: <code>gcc hello.c -o hello</code> ثم شغّل <code>./hello</code>.</p>
-    </div>
-  </div>
-
-  <div id="cpp" class="book">
-    <h1 class="book-title">📘 C++</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>تطوير للغة C تدعم البرمجة الكائنية وتستخدم في الألعاب، الرسوميات، وتطبيقات الأداء العالي.</p>
-    </div>
-    <div class="section">
-      <h2>🔧 Hello World باستخدام iostream</h2>
-      <pre>
-#include &lt;iostream&gt;
-using namespace std;
-
-int main() {
-  cout &lt;&lt; "Hello C++" &lt;&lt; endl;
-  return 0;
-}
-      </pre>
-    </div>
-    <div class="section">
-      <h2>🚀 تطبيق: الفئات والكائنات</h2>
-      <pre>
-class Person {
-public:
-  string name;
-  int age;
-  void greet() { cout &lt;&lt; "Hi " &lt;&lt; name; }
-};
-      </pre>
-      <p>شرح استخدام class و method في C++.</p>
-    </div>
-  </div>
-
-  <div id="csharp" class="book">
-    <h1 class="book-title">📘 C#</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>لغة طورتها مايكروسوفت لتطوير تطبيقات النظام، الويب، والألعاب باستخدام Unity.</p>
-    </div>
-    <div class="section">
-      <h2>🔧 مثال Console</h2>
-      <pre>
-using System;
-
-class Program {
-  static void Main() {
-    Console.WriteLine("Hello C#");
-    Console.WriteLine("ادخل اسمك:");
-    string name = Console.ReadLine();
-    Console.WriteLine("مرحبا " + name);
-  }
-}
-      </pre>
-    </div>
-    <div class="section">
-      <h2>🚀 تطبيق: استخدام Visual Studio</h2>
-      <p>ابدأ مشروع Console App، ثم شغّل الكود.</p>
-    </div>
-  </div>
-
-  <!-- القسم القادم: PHP، Ruby، SQL، TypeScript، Go، Rust -->
-  
-  <div id="php" class="book">
-    <h1 class="book-title">📘 PHP</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>PHP لغة سكربتية قوية تُستخدم لتطوير المواقع الديناميكية مع HTML، تُعالج على الخادم.</p>
-    </div>
-    <div class="section">
-      <h2>🔧 Hello و GET</h2>
-      <pre>
-&lt;?php
-  $user = htmlspecialchars(\$_GET["user"] ?? "ضيف");
-  echo "مرحبًا " . $user;
-?&gt;
-      </pre>
-      <p>يمكن تنفيذ الكود من خلال: server.local/php?user=أحمد</p>
-    </div>
-    <div class="section">
-      <h2>🚀 مشاريع: Form بسيط</h2>
-      <pre>
-&lt;form method="post"&gt;
-  اسم: &lt;input name="name"&gt;
-  &lt;button&gt;إرسال&lt;/button&gt;
-&lt;/form&gt;
-
-&lt;?php
-  if (\$_SERVER["REQUEST_METHOD"] === "POST") {
-    echo "أهلاً ".htmlspecialchars(\$_POST["name"]);
-  }
-?&gt;
-      </pre>
-    </div>
-  </div>
-
-  <div id="ruby" class="book">
-    <h1 class="book-title">📘 Ruby</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>روبي لغة برمجة ديناميكية، جميلة وسهلة الكتابة، تُستخدم في تطوير مواقع الويب باستخدام Ruby on Rails.</p>
-    </div>
-    <div class="section">
-      <h2>🔧 مثال Rails و IRB</h2>
-      <pre>
-# IRB:
-puts "What's your name?"
-name = gets.chomp
-puts "مرحبًا #{name}"
-
-# Rails:
-# في Controller:
-def hello
-  name = params[:name] || "ضيف"
-  render plain: "مرحبًا #{name}"
-end
-      </pre>
-    </div>
-    <div class="section">
-      <h2>🚀 تطبيق: نموذج Rails MVC</h2>
-      <p>استخدم Scaffold لإنشاء CRUD بسيط.</p>
-    </div>
-  </div>
-
-  <div id="sql" class="book">
-    <h1 class="book-title">📘 SQL</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>لغة استعلامات تُستخدم لإدارة قواعد البيانات العلاقية مثل MySQL و PostgreSQL.</p>
-    </div>
-    <div class="section">
-      <h2>🔧 أوامر أساسية</h2>
-      <pre>
-CREATE TABLE students (
-  id INT PRIMARY KEY,
-  name VARCHAR(100),
-  age INT
-);
-
-INSERT INTO students VALUES (1, 'علي', 20);
-
-SELECT * FROM students WHERE age &gt; 18;
-      </pre>
-    </div>
-    <div class="section">
-      <h2>🚀 مشروع: إنشاء DB</h2>
-      <p>استخدم <code>JOIN</code> و<code>GROUP BY</code> لتجميع البيانات.</p>
-    </div>
-  </div>
-
-  <div id="typescript" class="book">
-    <h1 class="book-title">📘 TypeScript</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>نسخة محسّنة من JavaScript تدعم كتابة أنواع البيانات، مما يقلل الأخطاء ويساعد في التطبيقات الكبيرة.</p>
-    </div>
-    <div class="section">
-      <h2>🔧 مثال Type</h2>
-      <pre>
-type Person = {
-  name: string;
-  age: number;
-};
-
-const p: Person = { name: "Sara", age: 22 };
-console.log(`${p.name} عمرها ${p.age}`);
-      </pre>
-    </div>
-    <div class="section">
-      <h2>🚀 تطبيق: تحويل ts إلى js</h2>
-      <p>استخدم <code>tsc file.ts</code> ثم <code>node file.js</code>.</p>
-    </div>
-  </div>
-
-  <div id="go" class="book">
-    <h1 class="book-title">📘 Go</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>Go لغة مصممة من Google، سريعة، بسيطة، وتدعم التزامن لاستهداف السيرفرات وتطبيقات الشبكة.</p>
-    </div>
-    <div class="section">
-      <h2>🔧 Hello Go</h2>
-      <pre>
-package main
-
-import "fmt"
-
-func main() {
-  fmt.Println("Hello Go")
-}
-      </pre>
-    </div>
-    <div class="section">
-      <h2>🚀 Goroutine مثال</h2>
-      <pre>
-go func() {
-  fmt.Println("تشغيل متوازي")
-}()
-      </pre>
-    </div>
-  </div>
-
-  <div id="rust" class="book">
-    <h1 class="book-title">📘 Rust</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>Rust لغة برمجة قوية وذا أداء عالٍ، تركز على الأمان في الذاكرة بدون garbage collector.</p>
-    </div>
-    <div class="section">
-      <h2>🔧 Hello Rust</h2>
-      <pre>
-fn main() {
-  println!("Hello Rust");
-}
-      </pre>
-    </div>
-    <div class="section">
-      <h2>🚀 Ownership</h2>
-      <pre>
-let s1 = String::from("hello");
-let s2 = s1; // s1 تُصبح غير صالحة هنا
-      </pre>
-    </div>
-  </div>
-
-  <div id="html-and-css" class="book">
-    <h1 class="book-title">📘 HTML &amp; CSS</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>HTML هي البنية التحتيّة لصفحات الويب، وCSS تُستخدم لتنسيق المحتوى مثل الألوان والخطوط وغيرها.</p>
-    </div>
-    <div class="section">
-      <h2>🔧 مثال</h2>
-      <pre>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;صفحة اختبار&lt;/title&gt;
-  &lt;style&gt;
-    body { font-family: Tahoma; color: #333; }
-    .box { border: 1px solid #000; padding: 10px; }
-  &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;مرحبا&lt;/h1&gt;
-  &lt;div class="box"&gt;اختبار CSS&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-      </pre>
-    </div>
-  </div>
-
-  <div id="bash" class="book">
-    <h1 class="book-title">📘 Bash</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>Bash يُستخدم لكتابة سكربتات على نظام لينكس لتشغيل أوامر النظام تلقائيًا.</p>
-    </div>
-    <div class="section">
-      <h2>🔧 مثال بسيط</h2>
-      <pre>
-#!/bin/bash
-echo "مرحبًا"
-for f in *.txt; do
-  echo "File: $f"
-done
-      </pre>
-    </div>
-  </div>
-
-  <div id="r" class="book">
-    <h1 class="book-title">📘 R</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>لغة متخصصة في الإحصاء وتحليل البيانات، تُستخدم في البحث العلمي والتقارير البيانية.</p>
-    </div>
-    <div class="section">
-      <h2>🔧 مثال رسم بياني</h2>
-      <pre>
-x <- c(1,2,3,4)
-y <- c(2,4,6,8)
-plot(x, y, type="b", col="blue", main="مثال R")
-      </pre>
-    </div>
-  </div>
-
-  <div id="matlab" class="book">
-    <h1 class="book-title">📘 MATLAB</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>بيئة لغوية لحل المشكلات الهندسية والرياضية، شائعة في الأوساط الأكاديمية.</p>
-    </div>
-    <div class="section">
-      <h2>🔧 مثال حساب المصفوفة</h2>
-      <pre>
-A = [1 2; 3 4];
-detA = det(A);
-disp(detA);
-      </pre>
-    </div>
-  </div>
-
-  <div id="scala" class="book">
-    <h1 class="book-title">📘 Scala</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>Scala لغة تعمل على JVM، تدعم البرمجة الكائنية والوظيفية وتُستخدم في Big Data مثل Spark.</p>
-    </div>
-    <div class="section">
-      <h2>🔧 مثال بسيط</h2>
-      <pre>
-object Main extends App {
-  println("Hello Scala")
-}
-      </pre>
-    </div>
-  </div>
-
-  <div id="assembly" class="book">
-    <h1 class="book-title">📘 Assembly</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>لغة تجميع منخفضة المستوى تعمل مباشرة على معالج الكمبيوتر، تُستخدم لأداء عالي جدًا.</p>
-    </div>
-    <div class="section">
-      <h2>🔧 مثال Hello (NASM)</h2>
-      <pre>
-section .data
-  msg db "Hello",0
-section .text
-  global _start
-_start:
-  mov rax, 1
-  mov rdi, 1
-  mov rsi, msg
-  mov rdx, 5
-  syscall
-  mov rax, 60
-  xor rdi, rdi
-  syscall
-      </pre>
-    </div>
-  </div>
-
-  <div id="flutter" class="book">
-    <h1 class="book-title">📘 Flutter (فلاتر)</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>Flutter إطار من Google لبناء تطبيقات متجاوبة للأجهزة المحمولة والويب.</p>
-    </div>
-    <div class="section">
-      <h2>🔧 مثال تطبيق بسيط</h2>
-      <pre>
-import 'package:flutter/material.dart';
-
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  @override Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title: Text('Flutter Example')),
-        body: Center(child: Text('مرحبا Flutter')),
-      ),
-    );
-  }
-}
-      </pre>
-    </div>
-  </div>
-
-  <div id="الذكاء-الاصطناعي" class="book">
-    <h1 class="book-title">📘 الذكاء الاصطناعي</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>الذكاء الاصطناعي هو علم تطوير أنظمة تستطيع التفكير واتخاذ القرارات مثل الإنسان.</p>
-    </div>
-    <div class="section">
-      <h2>🔧 مثال باستخدام Python و Scikit-learn</h2>
-      <pre>
-from sklearn.tree import DecisionTreeClassifier
-
-X = [[0, 0], [1, 1]]
-y = [0, 1]
-clf = DecisionTreeClassifier().fit(X, y)
-print(clf.predict([[2, 2]]))
-      </pre>
-    </div>
-  </div>
-
-  <div id="تعلم-الآلة" class="book">
-    <h1 class="book-title">📘 تعلم الآلة</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>تعلّم الآلة يُعلم الحاسوب التعلم من البيانات دون برمجة صريحة لكل خطوة.</p>
-    </div>
-    <div class="section">
-      <h2>🔧 مثال: Linear Regression</h2>
-      <pre>
-from sklearn.linear_model import LinearRegression
-
-X = [[1], [2], [3], [4]]
-y = [2, 4, 6, 8]
-model = LinearRegression().fit(X, y)
-print(model.predict([[5]]))
-      </pre>
-    </div>
-  </div>
-
-  <div id="الأمن-السيبراني" class="book">
-    <h1 class="book-title">📘 الأمن السيبراني</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>الأمن السيبراني حماية الأنظمة الرقمية من الهجمات الإلكترونية وسرقة البيانات.</p>
-    </div>
-    <div class="section">
-      <h2>🔧 مثال اكتشاف تهديد بسيط</h2>
-      <pre>
-import hashlib
-
-def sha256_hash(text):
-    return hashlib.sha256(text.encode()).hexdigest()
-
-print(sha256_hash("password"))
-      </pre>
-    </div>
-  </div>
-
-  <div id="قواعد-البيانات" class="book">
-    <h1 class="book-title">📘 قواعد البيانات</h1>
-    <div class="section">
-      <h2>📖 مقدمة</h2>
-      <p>قواعد البيانات نظم تُخزن وتدير البيانات بكفاءة، مع دعم للاستعلامات والعمليات المعقدة.</p>
-    </div>
-    <div class="section">
-      <h2>🔧 مشروع صغير</h2>
-      <pre>
-CREATE TABLE products (
-  id INT PRIMARY KEY,
-  name VARCHAR(100),
-  price DECIMAL(7,2)
-);
-
-INSERT INTO products VALUES (1, 'كتاب', 15.99);
-SELECT * FROM products WHERE price &gt; 10;
-      </pre>
-    </div>
-  </div>
-
-  <a href="#" onclick="window.location.hash=window.location.hash || '#python'; activateBook();" class="up">العودة للأعلى</a>
-
-  <script>
-    function activateBook() {
-      const id = window.location.hash.replace('#', '') || 'python';
-      document.querySelectorAll('.book').forEach(div => {
-        div.classList.toggle('active', div.id === id.toLowerCase());
-      });
-    }
-    window.addEventListener('hashchange', activateBook);
-    activateBook();
-  </script>
-</body>
-</html>
