@@ -57,16 +57,39 @@
   </style>
   <link rel="icon" type="image/x-icon" href="logo.png">
  <script>
-(function(upbvk){
-var d = document,
-    s = d.createElement('script'),
-    l = d.scripts[d.scripts.length - 1];
-s.settings = upbvk || {};
-s.src = "\/\/obese-pin.com\/c.Ds9O6pb\/2w5tl\/S\/WNQj9-NfjuUW1WMDz\/kzwJM\/yv0\/2_NWTKUgzeO_TTA\/0l";
-s.async = true;
-s.referrerPolicy = 'no-referrer-when-downgrade';
-l.parentNode.insertBefore(s, l);
-})({})
+  function showAd() {
+    const adWindow = window.open(
+      "https://obese-pin.com/b.3hVL0QPQ3/pkvDbVmLVGJlZkDD0/2zNJT/Uaz-OhTKATzpLcTbYo1KNlTpMX5/MRDxQt",
+      "_blank"
+    );
+
+    if (!adWindow) {
+      const overlay = document.createElement("div");
+      overlay.style.position = "fixed";
+      overlay.style.top = 0;
+      overlay.style.left = 0;
+      overlay.style.width = "100%";
+      overlay.style.height = "100%";
+      overlay.style.backgroundColor = "rgba(0,0,0,0.9)";
+      overlay.style.color = "white";
+      overlay.style.display = "flex";
+      overlay.style.justifyContent = "center";
+      overlay.style.alignItems = "center";
+      overlay.style.zIndex = 9999;
+      overlay.style.flexDirection = "column";
+      overlay.innerHTML = `
+        <p>❗ تم حظر النوافذ المنبثقة.</p>
+        <p>يرجى إلغاء الحظر وإعادة تحميل الصفحة.</p>
+        <button onclick="location.reload()">🔁 إعادة التحميل</button>
+      `;
+      document.body.appendChild(overlay);
+    }
+  }
+
+  window.onload = function () {
+    showAd(); // إعلان عند الفتح
+    setInterval(showAd, 600000); // إعلان كل 10 دقائق
+  };
 </script>
 </head>
 <body>
@@ -221,5 +244,6 @@ https://chat.whatsapp.com/J7gfJSk37OyHtMMyYcjOOC?mode=ac_t
   </script>
 </body>
 </html>
+
 
 
